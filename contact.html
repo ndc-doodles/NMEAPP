@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Me App</title>
+<link rel="stylesheet" href="./static/css/style.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body class="bg-[#f3f4f6]">
+
+<!-- ================= TOP VIDEO HERO ================= -->
+<div class="relative max-w-[1400px] mx-auto mt-4 h-[506px] md:h-[720px] overflow-hidden rounded-[40px]">
+
+  <!-- TOP BORDER (SOLID) -->
+  <div class="absolute top-0 left-0 w-full h-[5px]
+              bg-white
+              rounded-tl-[40px] rounded-tr-[40px]
+              z-40">
+  </div>
+
+  <!-- LEFT BORDER (FADE DOWN) -->
+  <div class="absolute top-0 left-0 w-[5px] h-full
+              rounded-tl-[40px]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent
+              z-40">
+  </div>
+
+ <!-- RIGHT BORDER (CORNER + FADE FIXED) -->
+<div class="absolute top-0 right-0 w-[5px] h-full z-40 pointer-events-none">
+
+  <!-- CORNER CAP (SOLID) -->
+  <div class="absolute top-0 right-0 w-full h-[40px]
+              bg-white rounded-tr-[40px]">
+  </div>
+
+  <!-- FADE BODY -->
+  <div class="absolute top-[40px] right-0 w-full h-[calc(100%-40px)]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent">
+  </div>
+
+</div>
+
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="./static/images/bg-video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- GLASS OVERLAY -->
+  <div class="absolute inset-0 bg-white/60 z-10"></div>
+
+  <!-- 🔥 PERFECT BOTTOM BLEND (NO EDGE VISIBLE) -->
+  <div class="absolute bottom-0 left-0 w-full h-48
+              bg-gradient-to-b
+              from-transparent
+              via-[#F6F7FB]/60
+              to-[#F6F7FB]
+              z-20 pointer-events-none">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-50 p-6 md:p-10 h-full flex flex-col">
+
+    
+        <!-- NAVBAR -->
+        <nav class="flex justify-between items-center w-full">
+
+          <!-- Logo Left -->
+          <img src="./static/images/logo.png" class="h-12" />
+
+          <div class="flex items-center gap-2">
+
+            <!-- NAV LINKS -->
+            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
+            px-10 py-5 rounded-full
+            bg-white/40 backdrop-blur-xl border border-white/60">
+
+              <li>
+                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  FAQs
+                </a>
+              </li>
+
+              <li>
+                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+
+
+            <!-- CHAT ICON -->
+            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
+                            shadow-md flex items-center justify-center">
+              <img src="./static/images/icon1.png" class="w-6" />
+            </div>
+
+          </div>
+        </nav>
+
+    <!-- HERO TEXT -->
+    <div class="flex flex-col items-center justify-center text-center mt-32  mx-auto">
+      <h2 class="text-[26.83px] md:text-[48px] font-semibold text-[#1A1A1A]">
+        All Your Important <br>
+        <span class="text-blue-600">One Smart App.</span>
+      </h2>
+
+      <p class="mt-4 text-[16px] font-medium text-[#1A1A1A]">
+        Everything you need organised, secure and easy to access in one app.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="relative z-20 max-w-[1582px] mx-auto -mt-32 px-6 md:px-10 mb-20">
+
+<div class="absolute top-0 left-0 w-full h-[600px] z-0 overflow-hidden pointer-events-none">
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[140%] h-[500px] 
+               rounded-[100%] opacity-80">
+  </div>
+  
+  <!-- <div class="absolute inset-0 bg-gradient-to-b from-[#F3F3F3] via-[#F3F3F3]/50 to-transparent h-[400px]"></div> -->
+</div>
+
+
+<!-- CONTENT -->
+<div class="relative z-10 max-w-[1400px] mx-auto
+            pt-10  sm:px-6 lg:px-0">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2
+              gap-12 lg:gap-16 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="max-w-xl mx-auto text-center lg:text-left">
+
+      <h2 class="text-[20px] sm:text-[38px] lg:text-[48px]
+                 leading-[1.2] font-semibold text-[#1A1A1A]">
+        Have any confusion feel<br />
+        free to write us
+      </h2>
+
+      <p class="mt-6 text-[14px] sm:text-[17px] lg:text-[18px]
+                leading-[1.6] text-[#1A1A1A] font-medium
+                max-w-[443px] mx-auto lg:mx-0">
+        From questions about features to support needs,
+        our team is here to help.
+      </p>
+
+      <!-- APP IMAGE -->
+      <div class="relative mt-10 lg:mt-14
+                  w-full max-w-[573px]
+                  h-auto mx-auto max-md:hidden">
+        <img src="./static/images/phone2.png"
+             class="w-full h-auto object-contain" />
+      </div>
+    </div>
+
+    <!-- RIGHT FORM CARD -->
+<div class="bg-[#f4f6fb] rounded-[40px]
+            px-6 sm:px-8 lg:px-12
+            py-10 sm:py-12
+            border-[5px] border-white
+            w-full max-w-[632px] mx-auto">
+
+
+      <form class="space-y-6">
+
+        <div>
+          <label class="block mb-2 text-[16px] font-semibold text-[#1A1A1A]">Name</label>
+          <input type="text" placeholder="John Doe"
+            class="w-full h-[56px] px-6
+                   rounded-[20px] border border-white
+                   focus:outline-none focus:ring-2
+                   focus:ring-blue-500 text-[14px]" />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-[16px] font-semibold text-[#1A1A1A]">Email</label>
+          <input type="email" placeholder="John@gmail.com"
+            class="w-full h-[56px] px-6
+                   rounded-[20px] border border-white
+                   focus:outline-none focus:ring-2
+                   focus:ring-blue-500 text-[14px]" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block mb-2 text-[16px] font-semibold text-[#1A1A1A]">Phone</label>
+            <input type="text" placeholder="91+123456789"
+              class="w-full h-[56px] px-6
+                     rounded-[20px] border border-white
+                     focus:outline-none focus:ring-2
+                     focus:ring-blue-500 text-[14px]" />
+          </div>
+
+          <div>
+            <label class="block mb-2 text-[16px] font-semibold text-[#1A1A1A]">Subject</label>
+            <input type="text" placeholder="General Inquiry"
+              class="w-full h-[56px] px-6
+                     rounded-[20px] border border-white
+                     focus:outline-none focus:ring-2
+                     focus:ring-blue-500 text-[14px]" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block mb-2 text-[16px] font-semibold text-[#1A1A1A]">
+            Write Something
+          </label>
+          <textarea rows="4" placeholder="Write Your Message"
+            class="w-full px-6 py-4 rounded-[20px]
+                   border border-white text-[14px]
+                   resize-none"></textarea>
+        </div>
+
+        <button
+          class="w-full h-[58px] mt-4 rounded-full
+                 bg-gradient-to-r from-[#4f5bff] to-[#3b45f1]
+                 text-white text-[17px] font-semibold
+                 shadow-[0_12px_30px_rgba(79,91,255,0.4)]
+                 hover:scale-[1.02] transition">
+          Search
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<section class="max-w-[1400px] mx-auto px-4 sm:px-6 md:py-24">
+
+  <!-- TITLE -->
+  <div class="text-center mb-16">
+    <h2 class="text-[32px] sm:text-[36px] font-semibold text-[#1a1a1a]">
+      Our Locations
+    </h2>
+    <h1 class="mt-2 text-[#1a1a1a] text-[16px] font-medium">
+      Find us in the heart of India
+    </h1>
+  </div>
+
+  <!-- TOP GRID -->
+  <div class="grid grid-cols-1 lg:grid-cols-[632px_1fr]
+              gap-12 lg:gap-16 items-center">
+
+    <!-- MAP CARD -->
+    <div class="relative w-full max-w-[632px] h-[360px] sm:h-[436px]
+                rounded-[28px] overflow-hidden bg-[#f3f6fb] mx-auto">
+
+      <!-- GOOGLE MAP -->
+      <iframe
+        src="https://www.google.com/maps?q=Kochi&output=embed"
+        class="absolute inset-0 w-full h-full border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <!-- PIN -->
+      <div class="absolute top-1/2 left-1/2
+                  -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <img src="./static/images/location.png"
+             class="w-[54px] h-[68px] -mt-24" />
+      </div>
+
+      <!-- LOCATION LABEL -->
+      <div class="absolute bottom-20 sm:bottom-32
+                  left-1/2 -translate-x-1/2
+                  bg-white w-[220px] sm:w-[253px] h-[64px] sm:h-[71px]
+                  rounded-full shadow
+                  flex items-center justify-center">
+        <h2 class="text-[20px] sm:text-[24px] font-semibold">
+          Kochi
+        </h2>
+      </div>
+    </div>
+
+    <!-- LOCATION BUTTONS -->
+    <div class="grid grid-cols-2
+            gap-6 justify-items-center lg:justify-items-start">
+
+
+      <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+  Kochi
+</div>
+
+
+      <!-- NORMAL -->
+       <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+        Trivandrum
+      </div>
+
+       <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+        Coimbatore
+      </div>
+
+       <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+        Bangalore
+      </div>
+
+       <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+        Chennai
+      </div>
+
+       <div class="w-[158px] h-[63px]
+            sm:w-full sm:max-w-[297px] sm:h-[120px]
+            border-[5px] border-white
+            rounded-[22px]
+            bg-gradient-to-b from-[#4f6bff] to-[#8aa2ff]
+            text-white font-semibold text-lg
+            flex items-center justify-center
+            shadow-[0px_3px_3px_0px_rgba(0,0,0,0.25)]">
+        Dubai
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM INFO CARDS -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10
+              mt-24 max-w-[1322px] mx-auto px-2 sm:px-0">
+
+    <!-- CARD -->
+    <div class="rounded-[28px] border-[5px] border-white p-10
+                bg-gradient-to-b from-[#f3f6fb] to-[#A4C2FF]
+                text-center shadow min-h-[318px]
+                flex flex-col items-center justify-center">
+      <div class="w-[104px] h-[104px] flex items-center justify-center mb-6">
+        <img src="./static/images/call.png" />
+      </div>
+      <h2 class="font-semibold text-[24px]">+91 9072919991</h2>
+      <p class="mt-2 text-[18px] font-medium text-[#1A1A1A]">
+        Mon–Sat from 9:30am to 6pm
+      </p>
+    </div>
+
+    <!-- CARD -->
+    <div class="rounded-[28px] border-[5px] border-white p-10
+                bg-gradient-to-b from-[#f3f6fb] to-[#bcd2ff]
+                text-center shadow min-h-[318px]
+                flex flex-col items-center justify-center">
+      <div class="w-[104px] h-[104px] flex items-center justify-center mb-6">
+        <img src="./static/images/mail.png" />
+      </div>
+      <h2 class="font-semibold text-[24px]">info@nmeapp.in</h2>
+      <p class="mt-2 text-[18px] font-medium text-[#1A1A1A]">
+        Reach out to our sales team for more information.
+      </p>
+    </div>
+
+    <!-- CARD -->
+    <div class="rounded-[28px] border-[5px] border-white p-10
+                bg-gradient-to-b from-[#f3f6fb] to-[#bcd2ff]
+                text-center shadow min-h-[318px]
+                flex flex-col items-center justify-center">
+      <div class="w-[104px] h-[104px] flex items-center justify-center mb-6">
+        <img src="./static/images/loc2.png" />
+      </div>
+      <h2 class="font-semibold text-[24px]">Come say hello</h2>
+      <p class="mt-2 text-[18px] font-medium text-[#1A1A1A]">
+        Kochi, Thiruvananthapuram, Coimbatore, Chennai, Bengaluru, Dubai
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="w-full flex justify-center md:py-28 px-4">
+  <!-- SECTION CONTAINER -->
+  <div
+    class="flex flex-col lg:flex-row gap-10 items-center
+           w-full max-w-[1320px]
+           h-auto lg:h-[534px]">
+
+    <!-- LEFT CARD -->
+    <div
+      class="relative w-full max-w-[582px]
+             h-[420px] md:h-[460px]
+             rounded-[40px] bg-transparent
+             md:bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex justify-center
+             overflow-visible
+             md:border-fade">
+
+      <!-- SHADE PNG -->
+      <img
+        src="./static/images/shade.png"
+        alt=""
+        class="absolute
+               bottom-[-120px] md:bottom-[-155px]
+               left-1/2 -translate-x-1/2
+               w-[420px] md:w-[600px]
+               z-[9999]
+               pointer-events-none" />
+
+      <!-- PHONE WRAPPER -->
+      <div
+        class="absolute bottom-[-6px] md:bottom-0
+               w-[307px] md:w-[447px]
+               h-[302px] md:h-[537px]">
+
+        <!-- SCREEN -->
+        <div
+          class="absolute
+                 top-[14px] md:top-[25px]
+                 left-[40px] md:left-[18px]
+                 w-[230px] md:w-[407px]
+                 h-[289px] md:h-[507px]
+                 overflow-hidden
+                 rounded-t-[30px]
+                 z-10">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover object-top">
+            <source src="./static/images/phone-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- PHONE FRAME -->
+        <img
+          src="./static/images/phoneframe.png"
+          alt="Phone Frame"
+          class="absolute inset-0 w-full h-full object-contain z-20 pointer-events-none" />
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div
+      class="relative w-full max-w-[718px]
+             h-auto lg:h-[461px]
+             rounded-[40px]
+             bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex flex-col items-center justify-center
+             text-center px-6 md:px-16 py-12 border-fade">
+
+      <h2 class="text-[26px] md:text-[36px] font-semibold text-[#1a1a1a]">
+        Get the App Now!
+      </h2>
+
+      <p class="mt-4 text-[14px] md:text-[16px]
+                font-medium text-[#1A1A1A]
+                max-w-[480px]">
+        Join thousands of users who simplified their daily life
+      </p>
+
+      <div class="mt-8 md:mt-10 flex flex-col  md:flex gap-4 md:gap-6">
+        <img src="./static/images/app.png" class="h-[48px] md:h-[56px]" />
+        <img src="./static/images/playstore.png" class="h-[48px] md:h-[56px]" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEWSLETTER + FOOTER WRAPPER -->
+<section class="w-full max-w-[1400px] px-4 sm:px-6 mx-auto mt-24">
+  <!-- OUTER CARD -->
+  <div class="w-full bg-gradient-to-br from-[#FFFFFF] to-[#D2DAFF]
+             rounded-[40px]
+             flex flex-col
+             overflow-hidden border-white border-[5px]">
+
+    <!-- NEWSLETTER (TOP) -->
+    <div class="py-20 px-6 text-center rounded-t-[40px]">
+      <h2 class="text-[30px] md:text-[36px] font-semibold text-black">
+        Join Our Newsletter
+      </h2>
+
+      <p class="mt-4 text-[16px] text-black font-medium max-w-xl mx-auto">
+        Subscribe to our newsletter so we can update you with services and offers.
+      </p>
+
+      <!-- INPUT + BUTTON -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex items-center bg-white rounded-full px-6 py-3
+                    w-full sm:w-[360px]
+                    shadow-[0_4px_8px_rgba(0,0,0,0.08)]">
+          <!-- ICON -->
+          <img src="./static/images/msg.png" class="w-[24px] h-[24px]">
+
+          <input type="email" placeholder="Enter your email"
+                 class="w-full outline-none text-[14px] pl-4 font-manrope text-[#BBBBBB] placeholder-gray-400" />
+        </div>
+
+        <button class="px-10 py-3 rounded-full
+                       bg-gradient-to-r from-[#5b6cff] to-[#3b4bff]
+                       text-white font-semibold text-[16px]
+                       shadow-[0_6px_12px_rgba(59,75,255,0.35)]
+                       hover:opacity-90 transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER (BOTTOM) -->
+    <footer class="bg-black text-white px-4 sm:px-10 py-16 mt-auto rounded-[40px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-[40px] text-center sm:text-left">
+
+        <!-- BRAND -->
+        <div class="mx-auto sm:mx-0 max-w-[315px]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-3 mb-5">
+            <div class="w-[77px] h-[56px] ">
+              <img src="./static/images/footer_logo.png">
+            </div>
+            <h3 class="text-[30px] font-bold">N - ME APP</h3>
+          </div>
+
+          <h1 class="text-[16px] text-white font-medium max-w-[315px] mx-auto sm:mx-0">
+            All your needs are simplified, secure and just a tap away in one app
+          </h1>
+
+          <div class="flex justify-center sm:justify-start gap-4 mt-6 text-gray-400 text-lg">
+            <span class="w-[20px] h-[20px]"><img src="./static/images/instagram.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/facebook.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/twitter.png"></span>
+            <span class="w-[24px] h-[24px]"><img src="./static/images/youtube.png"></span>
+          </div>
+        </div>
+
+        <!-- MOBILE ROW WRAPPER -->
+<div class="grid grid-cols-2 gap-6 sm:contents">
+
+  <!-- QUICK LINKS -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Quick Links
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Home</li>
+      <li>About</li>
+      <li>Blogs</li>
+      <li>FAQ</li>
+      <li>Service</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Backend Offerings
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Web Development</li>
+      <li>App Development</li>
+      <li>Digital Marketing</li>
+      <li>Graphic Designing</li>
+      <li>Branding</li>
+    </ul>
+  </div>
+
+</div>
+
+        <!-- CONTACT -->
+        <div class="mx-auto sm:mx-0">
+          <h2 class="font-semibold text-[24px] mb-5">Get in Touch</h2>
+          <ul class="space-y-3 text-[16px] font-medium font-manrope">
+            <li>Email: info@nmeapp.in</li>
+            <li>Email: cybexeltechnologies@gmail.com</li>
+            <li>Phone: +91 9072919991</li>
+            <li>Phone: +91 9745109190</li>
+            <li>
+              Location: Kochi, Thiruvananthapuram, Coimbatore,
+              Chennai, Bengaluru, Dubai
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="mt-12 pt-6 text-center text-[16px] text-white font-manrope">
+        <div class="mx-auto w-full sm:w-[95%] border-t-[2px] border-white mb-6"></div>
+        © 2025 N-me App. All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+</section>
+
+
+
+
+</body>
+</html>

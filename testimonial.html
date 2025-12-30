@@ -1,0 +1,150 @@
+<section class="relative w-full px-6 mx-auto mt-24">
+
+  <!-- TITLE -->
+  <div class="text-center">
+    <h2 class="text-[36px] font-semibold text-black">What Our Customers Say</h2>
+    <p class="mt-3 text-black text-[16px] font-medium">
+      Honest reviews from the community that trusts and grows with N-Me.
+    </p>
+  </div>
+
+  <!-- BACKGROUND CONTAINER -->
+  <div class="relative bg-gradient-to-b from-[#DDE8FF]/0 to-[#A4C2FF] px-20 py-32 rounded-b-[40px] overflow-visible">
+
+    <!-- FADED BORDER OVERLAY -->
+    <div class="pointer-events-none absolute inset-0 rounded-b-[40px] border-b-[5px] border-x-[5px] border-white [mask-image:linear-gradient(to_top,black_10%,transparent_100%)]"></div>
+
+    <!-- LEFT ARROW -->
+    <button id="prev"
+      class="absolute left-6 top-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full bg-white shadow flex items-center justify-center text-2xl">
+      <img src="./static/images/left.png">
+    </button>
+
+    <!-- RIGHT ARROW -->
+    <button id="next"
+      class="absolute right-6 top-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full bg-white shadow flex items-center justify-center text-2xl">
+      <img src="./static/images/right.png">
+    </button>
+
+    <!-- CARDS -->
+    <div id="carousel" class="flex items-center justify-center gap-10 overflow-visible transition-transform duration-500">
+      <div class="carousel-card relative w-[323px] h-[434px] rounded-[32px] flex-shrink-0 scale-90 transition-all duration-500 origin-bottom overflow-hidden">
+        <img src="./static/images/t1.png" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-white/45 via-white/10 to-transparent"></div>
+        <div class="absolute bottom-6 w-full text-center px-6 text-white">
+          <h4 class="text-lg font-medium">Aravind Kumar</h4>
+          <div class="text-yellow-400">★★★★★</div>
+          <p class="mt-3 text-md leading-relaxed opacity-90 font-medium">
+            I posted my advertisement in minutes. The app is fast, smooth, and really helps local businesses.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-card relative w-[323px] h-[434px] rounded-[32px] flex-shrink-0 scale-110 transition-all duration-500 origin-bottom overflow-hidden">
+        <img src="./static/images/t2.png" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-t from-white/45 via-white/10 to-transparent"></div>
+        <div class="absolute bottom-8 w-full text-center px-8 text-white">
+          <h4 class="text-xl font-semibold">Jonathan Reed</h4>
+          <div class="text-yellow-500 mt-1">★★★★★</div>
+          <p class="mt-4 text-md font-medium leading-relaxed opacity-95">
+            N-Me has been a game-changer for my project. The team delivered fast, clean, and reliable work. Highly recommend!
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-card relative w-[323px] h-[434px] rounded-[32px] flex-shrink-0 scale-90 transition-all duration-500 origin-bottom overflow-hidden">
+        <img src="./static/images/t3.png" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-white/45 via-white/10 to-transparent"></div>
+        <div class="absolute bottom-6 w-full text-center px-6 text-white">
+          <h4 class="text-lg font-medium">Rahul Menon</h4>
+          <div class="text-yellow-400">★★★★★</div>
+          <p class="mt-3 text-md font-medium leading-relaxed opacity-90">
+            N-Me App makes it super easy to find nearby shops and offers. Very simple, clean, and useful!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOTS -->
+    <div class="flex justify-center gap-2 mt-12">
+      <span class="dot w-8 h-2 rounded-full bg-blue-600"></span>
+      <span class="dot w-2 h-2 rounded-full bg-white"></span>
+      <span class="dot w-2 h-2 rounded-full bg-white"></span>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const carousel = document.getElementById('carousel');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const dots = document.querySelectorAll('.dot');
+const gap = 40; // gap between cards
+
+// Update center card scaling
+function updateCenterCard() {
+  const cards = carousel.querySelectorAll('.carousel-card');
+  cards.forEach(card => {
+    card.classList.remove('scale-110');
+    card.classList.add('scale-90');
+  });
+  if (cards[1]) cards[1].classList.remove('scale-90');
+  if (cards[1]) cards[1].classList.add('scale-110');
+  updateDots();
+}
+
+// Update dots
+function updateDots() {
+  const cards = carousel.querySelectorAll('.carousel-card');
+  dots.forEach(dot => dot.classList.remove('bg-blue-600'));
+  if (cards[0] && cards[0].classList.contains('scale-110')) dots[0].classList.add('bg-blue-600');
+  if (cards[1] && cards[1].classList.contains('scale-110')) dots[1].classList.add('bg-blue-600');
+  if (cards[2] && cards[2].classList.contains('scale-110')) dots[2].classList.add('bg-blue-600');
+}
+
+// Initial setup
+updateCenterCard();
+
+// NEXT button
+nextBtn.addEventListener('click', () => {
+  const firstCard = carousel.firstElementChild;
+  const moveDistance = firstCard.offsetWidth + gap;
+
+  // Animate left
+  carousel.style.transition = 'transform 0.5s ease';
+  carousel.style.transform = `translateX(-${moveDistance}px)`;
+
+  carousel.addEventListener('transitionend', () => {
+    // Reorder after animation
+    carousel.style.transition = 'none';
+    carousel.appendChild(firstCard);
+    carousel.style.transform = 'translateX(0)';
+    updateCenterCard();
+  }, { once: true });
+});
+
+// PREV button
+prevBtn.addEventListener('click', () => {
+  const lastCard = carousel.lastElementChild;
+  const moveDistance = lastCard.offsetWidth + gap;
+
+  // Animate right
+  carousel.style.transition = 'none';
+  carousel.style.transform = `translateX(${moveDistance}px)`; // move right first
+
+  // Reorder after a frame to allow animation
+  requestAnimationFrame(() => {
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = 'translateX(0)';
+  });
+
+  carousel.addEventListener('transitionend', () => {
+    // Move last card to front after animation
+    carousel.style.transition = 'none';
+    carousel.insertBefore(lastCard, carousel.firstElementChild);
+    carousel.style.transform = 'translateX(0)';
+    updateCenterCard();
+  }, { once: true });
+});
+</script>

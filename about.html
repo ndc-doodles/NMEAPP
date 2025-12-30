@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Me App</title>
+
+  <link rel="stylesheet" href="./static/css/style.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#F6F7FB] font-[Manrope]">
+
+<!-- ================= TOP VIDEO HERO ================= -->
+<div class="relative max-w-[1400px] mx-auto mt-4 h-[720px] overflow-hidden rounded-[40px]">
+
+  <!-- TOP BORDER (SOLID) -->
+  <div class="absolute top-0 left-0 w-full h-[5px]
+              bg-white
+              rounded-tl-[40px] rounded-tr-[40px]
+              z-40">
+  </div>
+
+  <!-- LEFT BORDER (FADE DOWN) -->
+  <div class="absolute top-0 left-0 w-[5px] h-full
+              rounded-tl-[40px]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent
+              z-40">
+  </div>
+
+ <!-- RIGHT BORDER (CORNER + FADE FIXED) -->
+<div class="absolute top-0 right-0 w-[5px] h-full z-40 pointer-events-none">
+
+  <!-- CORNER CAP (SOLID) -->
+  <div class="absolute top-0 right-0 w-full h-[40px]
+              bg-white rounded-tr-[40px]">
+  </div>
+
+  <!-- FADE BODY -->
+  <div class="absolute top-[40px] right-0 w-full h-[calc(100%-40px)]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent">
+  </div>
+
+</div>
+
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="./static/images/bg-video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- GLASS OVERLAY -->
+  <div class="absolute inset-0 bg-white/60 z-10"></div>
+
+  <!-- 🔥 PERFECT BOTTOM BLEND (NO EDGE VISIBLE) -->
+  <div class="absolute bottom-0 left-0 w-full h-48
+              bg-gradient-to-b
+              from-transparent
+              via-[#F6F7FB]/60
+              to-[#F6F7FB]
+              z-20 pointer-events-none">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-50 p-6 md:p-10 h-full flex flex-col">
+
+    
+        <!-- NAVBAR -->
+        <nav class="flex justify-between items-center w-full">
+
+          <!-- Logo Left -->
+          <img src="./static/images/logo.png" class="h-12" />
+
+          <div class="flex items-center gap-2">
+
+            <!-- NAV LINKS -->
+            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
+            px-10 py-5 rounded-full
+            bg-white/40 backdrop-blur-xl border border-white/60">
+
+              <li>
+                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  FAQs
+                </a>
+              </li>
+
+              <li>
+                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+
+
+            <!-- CHAT ICON -->
+            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
+                            shadow-md flex items-center justify-center">
+              <img src="./static/images/icon1.png" class="w-6" />
+            </div>
+
+          </div>
+        </nav>
+    <!-- HERO TEXT -->
+    <div class="flex flex-col items-center justify-center text-center mt-32  mx-auto">
+      <h2 class="text-[26.83px] md:text-[48px] font-semibold text-[#1A1A1A]">
+        All Your Important <br>
+        <span class="text-blue-600">One Smart App.</span>
+      </h2>
+
+      <p class="mt-4 text-[16px] font-medium text-[#1A1A1A]">
+        Everything you need organised, secure and easy to access in one app.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="relative max-w-[1450px] mx-auto mt-[-329px] md:-mt-[250px] z-20 px-4 md:px-0">
+
+  <!-- IMAGE WRAPPER -->
+  <div class="rounded-[28px] overflow-hidden border-[4px] border-white
+              w-full max-w-[1257px] h-[518px] md:h-[513px] mx-auto">
+
+    <!-- DESKTOP IMAGE -->
+    <img src="./static/images/about.jpg"
+         class="hidden md:block w-full h-full object-cover" />
+
+    <!-- MOBILE IMAGE -->
+    <img src="./static/images/aboutt.jpg"
+         class="block md:hidden w-full h-full object-cover" />
+  </div>
+
+  <!-- ================= DESKTOP GLASS CARD ================= -->
+  <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 bottom-6
+              w-full max-w-[1163px]
+              h-[209px]
+              rounded-[28px]
+              bg-white/10
+              backdrop-blur-[12px]
+              border border-white/40
+              shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+              items-center gap-6
+              px-10 py-6">
+
+    <!-- LOGO -->
+    <div class="relative w-[141px] h-[141px] rounded-full flex items-center justify-center">
+      <div class="absolute inset-0 rounded-full border-[4px] border-white/90"></div>
+      <img src="./static/images/about2.png"
+           class="w-full h-full object-contain rounded-full pt-1" />
+    </div>
+
+    <!-- TEXT -->
+    <div class="max-w-[900px] text-left">
+      <h3 class="text-[26px] font-semibold text-[#1A1A1A]">
+        What is N-Me App?
+      </h3>
+
+      <p class="text-[16px] text-[#1A1A1A]/90 mt-3 leading-relaxed">
+        N-Me is a local business discovery and service connection platform designed
+        to help users find nearby businesses, shops and professionals, and to help
+        local sellers and service providers promote themselves online.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ================= MOBILE GRADIENT CARD ================= -->
+  <div class="flex md:hidden relative
+              w-[calc(100%-2rem)]
+              mx-auto
+              mt-[-16rem]
+              rounded-[28px]
+              bg-gradient-to-t from-[#FFFFFF] to-[#D0D0D0]
+              border border-[#EAEAEA]
+              shadow-[0_20px_40px_rgba(0,0,0,0.12)]
+              items-center gap-6
+              px-6 py-6">
+
+    <!-- TEXT ONLY (NO LOGO ON MOBILE) -->
+    <div class="text-center max-w-[335px] mx-auto">
+      <h3 class="text-[22px] font-semibold text-[#1A1A1A]">
+        What is N-Me App?
+      </h3>
+
+      <p class="text-[15px] text-[#1A1A1A]/90 mt-3 leading-relaxed">
+        N-Me is a local business discovery and service connection platform designed
+        to help users find nearby businesses, shops and professionals, and to help
+        local sellers and service providers promote themselves online.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- BRAND AMBASSADOR CARD -->
+<div class="max-w-[1372px] mx-auto mt-32 px-4">
+  <div class="relative overflow-hidden rounded-[28px] border-2 border-white shadow-lg
+              bg-gradient-to-r from-[#bcd3ff] via-[#e8f0ff] to-white
+              flex flex-col md:flex-row items-center justify-between
+              h-[360px] md:h-[393px]">
+
+    <!-- LEFT CONTENT -->
+    <div class="relative z-20 px-6 md:px-12 py-6 md:py-10 max-w-full md:max-w-[700px] text-center md:text-left">
+
+      <h2 class="text-[24.39px] md:text-[30px] font-bold text-black leading-tight">
+        Meet Our Brand<br>Ambassador
+      </h2>
+
+      <!-- NAME BADGE -->
+      <span class="inline-block mt-4 px-4 py-1 text-sm font-medium
+                   text-white bg-[#4c5cff] rounded-full">
+        Mr.Jayasurya
+      </span>
+
+      <!-- DESCRIPTION -->
+      <p class="mt-6 text-[15px] text-gray-700 leading-relaxed">
+        We proudly welcomed actor Jayasurya as the face of the N-Me brand.
+        His genuine personality, strong screen presence, and trusted reputation
+        perfectly match our vision. His association strengthens our identity
+        and inspires users to connect with N-Me with more confidence.
+      </p>
+
+    </div>
+
+    <!-- MOBILE BACKGROUND -->
+    <div class="absolute inset-0 md:hidden bg-[url('./static/images/amb.png')] bg-no-repeat bg-right-top bg-contain z-0">
+      <!-- Optional overlay for text readability -->
+      <div class="absolute inset-0 bg-white/30"></div>
+    </div>
+
+    <!-- RIGHT IMAGE DESKTOP -->
+    <div class="relative hidden md:flex md:w-[420px] md:h-full md:items-end md:justify-center">
+      <img src="./static/images/amb.png"
+           alt="Brand Ambassador"
+           class="w-[452px] h-auto object-contain" />
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<!-- MEET OUR TEAM SECTION -->
+<section class="max-w-[1440px] mx-auto px-8 py-20">
+
+  <!-- HEADER -->
+  <div class="flex flex-col md:flex-row justify-between md:items-start max-md:mb-8   mb-14 gap-4 md:gap-0">
+    <h2 class="text-[20px] md:text-[36px] max-md:text-center text-black">
+      Meet Our Team
+    </h2>
+
+    <p class="w-full md:w-[581px] h-[39px] text-center md:text-right font-medium text-black text-[10px] md:text-[16px] leading-relaxed">
+      Passionate individuals dedicated to transforming how communities
+      connect with local businesses
+    </p>
+  </div>
+
+  <!-- TEAM GRID / SCROLLABLE CARDS -->
+  <div class="overflow-x-auto md:overflow-x-visible hide-scrollbar">
+    <div class="flex md:grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 min-w-max md:min-w-0">
+
+      <!-- CARD 1 -->
+      <div class="group relative flex-shrink-0 w-[196.913px] h-[264.793px] md:w-full md:h-[420px] rounded-[28px] overflow-hidden cursor-pointer">
+        <img src="./static/images/p.png"
+             class="absolute inset-0 w-full h-full object-cover
+                    transition-all duration-500
+                    group-hover:scale-105 group-hover:blur-md" />
+        <div class="absolute inset-0 bg-black/10 opacity-0
+                    transition-opacity duration-500
+                    group-hover:opacity-100"></div>
+        <div class="absolute top-2 left-2 z-20 text-white text-[18px] font-light md:text-[24px]">+</div>
+        <div class="absolute top-2 right-2 z-20 text-white text-[14px] md:text-[18px] font-medium font-manrope">
+          Founder & CEO
+        </div>
+        <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
+          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
+          <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
+                    opacity-0 translate-y-2 md:translate-y-4
+                    transition-all duration-500
+                    group-hover:opacity-100 group-hover:translate-y-0">
+            Leading with vision, building with purpose
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="group relative flex-shrink-0 w-[196.913px] h-[264.793px] md:w-full md:h-[420px] rounded-[28px] overflow-hidden cursor-pointer">
+        <img src="./static/images/p.png"
+             class="absolute inset-0 w-full h-full object-cover
+                    transition-all duration-500
+                    group-hover:scale-105 group-hover:blur-md" />
+        <div class="absolute inset-0 bg-black/10 opacity-0
+                    transition-opacity duration-500
+                    group-hover:opacity-100"></div>
+        <div class="absolute top-2 left-2 z-20 text-white text-[18px] font-light md:text-[24px]">+</div>
+        <div class="absolute top-2 right-2 z-20 text-white text-[14px] md:text-[18px] font-medium font-manrope">
+          Founder & CEO
+        </div>
+        <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
+          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
+          <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
+                    opacity-0 translate-y-2 md:translate-y-4
+                    transition-all duration-500
+                    group-hover:opacity-100 group-hover:translate-y-0">
+            Leading with vision, building with purpose
+          </p>
+        </div>
+      </div>
+
+
+      <!-- CARD 1 -->
+      <div class="group relative flex-shrink-0 w-[196.913px] h-[264.793px] md:w-full md:h-[420px] rounded-[28px] overflow-hidden cursor-pointer">
+        <img src="./static/images/p.png"
+             class="absolute inset-0 w-full h-full object-cover
+                    transition-all duration-500
+                    group-hover:scale-105 group-hover:blur-md" />
+        <div class="absolute inset-0 bg-black/10 opacity-0
+                    transition-opacity duration-500
+                    group-hover:opacity-100"></div>
+        <div class="absolute top-2 left-2 z-20 text-white text-[18px] font-light md:text-[24px]">+</div>
+        <div class="absolute top-2 right-2 z-20 text-white text-[14px] md:text-[18px] font-medium font-manrope">
+          Founder & CEO
+        </div>
+        <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
+          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
+          <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
+                    opacity-0 translate-y-2 md:translate-y-4
+                    transition-all duration-500
+                    group-hover:opacity-100 group-hover:translate-y-0">
+            Leading with vision, building with purpose
+          </p>
+        </div>
+      </div>
+
+
+      <!-- CARD 1 -->
+      <div class="group relative flex-shrink-0 w-[196.913px] h-[264.793px] md:w-full md:h-[420px] rounded-[28px] overflow-hidden cursor-pointer">
+        <img src="./static/images/p.png"
+             class="absolute inset-0 w-full h-full object-cover
+                    transition-all duration-500
+                    group-hover:scale-105 group-hover:blur-md" />
+        <div class="absolute inset-0 bg-black/10 opacity-0
+                    transition-opacity duration-500
+                    group-hover:opacity-100"></div>
+        <div class="absolute top-2 left-2 z-20 text-white text-[18px] font-light md:text-[24px]">+</div>
+        <div class="absolute top-2 right-2 z-20 text-white text-[14px] md:text-[18px] font-medium font-manrope">
+          Founder & CEO
+        </div>
+        <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
+          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
+          <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
+                    opacity-0 translate-y-2 md:translate-y-4
+                    transition-all duration-500
+                    group-hover:opacity-100 group-hover:translate-y-0">
+            Leading with vision, building with purpose
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS somewhere in your stylesheet -->
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+</style>
+
+
+<!-- ================= EXPERIENCE N-ME APP ================= -->
+<section class="max-w-[1400px] mx-auto px-6 py-20">
+
+  <!-- TITLE -->
+  <div class="text-center mb-16">
+    <h2 class="text-[36px] font-bold text-black">Experience N-Me App</h2>
+    <p class="mt-3 text-gray-600">
+      Powerful features designed for seamless connections
+    </p>
+  </div>
+
+<!-- CARDS GRID WRAPPER -->
+<div class="max-w-[1400px] mx-auto">
+
+  <!-- CUSTOM GRID -->
+  <div class="grid grid-cols-[512px_782px] gap-6 justify-center">
+
+   <!-- ================= LEFT CARD ================= -->
+<div class="relative rounded-[32px] border-[3px] border-white
+            bg-gradient-to-b from-[#eef4ff] to-[#cddcff]
+            shadow-xl p-10 overflow-hidden
+            w-[512px] h-[421px]">
+
+  <h3 class="text-[22px] font-semibold text-black">Easy Navigation</h3>
+  <p class="text-gray-600 mt-2 max-w-[320px]">
+    Explore nearby businesses quickly with smart location suggestions.
+  </p>
+
+  <!-- MAP AREA -->
+<div class="relative mt-8 h-[260px]">
+
+
+<svg
+  class="absolute left-0 top-0 pointer-events-none z-0"
+  width="100%"
+  height="260"
+  viewBox="0 0 380 160"
+  preserveAspectRatio="xMidYMid meet"
+>
+
+
+    <!-- ROUTE LINE -->
+    <path
+      id="routePath"
+      d="
+        M60 30
+        L120 55
+        L170 120
+        L230 120
+        L300 45
+        L350 100
+      "
+      stroke="white"
+      stroke-width="4"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- MOVING BALL -->
+<circle
+  r="8"
+  fill="#453CFF"
+  filter="drop-shadow(0 0 6px #453CFF)"
+>
+  <animateMotion
+    dur="6s"
+    repeatCount="indefinite"
+    keyPoints="0;1;0"
+    keyTimes="0;0.5;1"
+    calcMode="linear"
+  >
+    <mpath href="#routePath" />
+  </animateMotion>
+</circle>
+
+
+  </svg>
+
+<div id="flagIcon"
+  class="absolute left-[-2px] top-[5px]
+         w-[80px] h-[80px] rounded-full
+         bg-gradient-to-b from-[#eef4ff] to-[#cddcff]
+         backdrop-blur-md
+         border border-white/70
+         flex items-center justify-center
+         shadow-md
+         overflow-hidden">
+
+<img
+  id="flagImg"
+  src="./static/images/flag.png"
+  class="w-[37px] h-[38px]
+         transition-transform duration-300 ease-out
+         will-change-transform
+         transform-gpu"
+/>
+
+</div>
+
+
+<!-- DESTINATION -->
+<div id="destIcon"
+  class="absolute right-[-6px] top-[141px]
+         w-[80px] h-[80px] rounded-full
+         bg-gradient-to-b from-[#eef4ff] to-[#cddcff]
+         backdrop-blur-md
+         border border-white/70
+         flex items-center justify-center
+         shadow-md">
+  <img
+    id="destImg"
+    src="./static/images/destination.png"
+    class="w-[36px] h-[36px] transition-transform duration-300"
+  />
+</div>
+
+
+
+  <!-- DECORATIVE DOTS -->
+
+<div class="absolute left-[72px] top-[160px] w-[40px] h-[40px] float-lr-slow">
+  <img src="./static/images/e1.png" class="opacity-60" />
+</div>
+
+
+ <div class="absolute left-[120px] top-[14px] w-[50px] h-[50px] float-lr">
+  <img src="./static/images/e2.png" class="opacity-60" />
+</div>
+
+
+<div class="absolute right-[100px] top-[10px] w-[68px] h-[68px] float-lr-fast">
+  <img src="./static/images/e3.png" class="opacity-60" />
+</div>
+
+
+</div>
+
+</div>
+
+
+<script>
+const path = document.getElementById("routePath");
+const flagIcon = document.getElementById("flagIcon");
+const destIcon = document.getElementById("destIcon");
+const flagImg = document.getElementById("flagImg");
+const destImg = document.getElementById("destImg");
+
+const pathLength = path.getTotalLength();
+let startTime = null;
+const duration = 6000;
+
+function getCenter(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    x: rect.left + rect.width / 2,
+    y: rect.top + rect.height / 2
+  };
+}
+
+function animate(time) {
+  if (!startTime) startTime = time;
+  const elapsed = (time - startTime) % duration;
+
+  const progress =
+    elapsed < duration / 2
+      ? elapsed / (duration / 2)
+      : 1 - (elapsed - duration / 2) / (duration / 2);
+
+  const point = path.getPointAtLength(progress * pathLength);
+  const svgRect = path.ownerSVGElement.getBoundingClientRect();
+
+  const ballX = svgRect.left + point.x;
+  const ballY = svgRect.top + point.y;
+
+  const flagPos = getCenter(flagIcon);
+  const destPos = getCenter(destIcon);
+
+  const distFlag = Math.hypot(ballX - flagPos.x, ballY - flagPos.y);
+  const distDest = Math.hypot(ballX - destPos.x, ballY - destPos.y);
+
+  flagImg.style.transform =
+    distFlag < 38 ? "scale(1.35)" : "scale(1)";
+
+  destImg.style.transform =
+    distDest < 38 ? "scale(1.35)" : "scale(1)";
+
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+</script>
+
+
+
+<!-- ================= RIGHT CARD ================= -->
+<div class="relative rounded-[32px] border-[3px] border-white
+            bg-gradient-to-b from-[#e8f0ff] to-[#bcd3ff] 
+            shadow-xl p-10 overflow-hidden
+            w-[782px] h-[431px]">
+
+  <h3 class="text-[22px] font-semibold text-black">My Job</h3>
+  <p class="text-gray-600 mt-2 max-w-[360px]">
+    Find and apply for relevant and professional jobs that match your skills instantly.
+  </p>
+
+<!-- animation section -->
+<div class="relative mt-8 h-[260px] overflow-hidden -mx-10">
+
+  <!-- BACK CARD (Cook) -->
+<div id="backCard"  class="absolute top-16 left-10
+            w-[469px] h-[144px]
+            rounded-[20px]
+            bg-white/70
+            backdrop-blur-xl
+            border-[2px] border-white
+            
+            p-6
+            z-10">
+
+
+    <div class="flex items-start gap-4">
+
+      <!-- Icon -->
+      <div class="w-[98px] h-[98px] rounded-2xl  flex items-center justify-center">
+        <img src="./static/images/cook.png">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+        <h2 class="text-[16px] font-semibold text-[#1A1A1A]">Cook</h2>
+        <p class="text-[12px] text-[#1A1A1A] mt-1 leading-snug">
+          Prepare Delicious Meals, Maintain Kitchen Standards
+        </p>
+
+        <div class="flex items-center justify-between mt-4 w-[311px] h-[30px]">
+          <p class="text-[12px] text-[#1A1A1A] flex items-center gap-1">
+            <img src="./static/images/blackloc.png"> Not Disclosed &nbsp;|&nbsp; Vacancy : 20
+          </p>
+
+          <button class="px-2 py-1.5 text-[12px]
+                         rounded-full
+                         bg-[#3C49FF] text- w-[89px] h-[30px]">
+            <p class="text-[12px] text-white">Apply Now</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="frontCard" class="absolute top-0 right-2
+            w-[469px] h-[144px]
+            rounded-[20px]
+            bg-white/70
+            backdrop-blur-xl
+            border-[2px] border-white
+            
+            p-6
+            z-20">
+
+
+    <!-- 3 dots -->
+    <div class="absolute top-5 right-5 text-gray-500">⋮</div>
+
+    <div class="flex items-start gap-4">
+
+      <!-- Icon -->
+      <div class="w-[98px] h-[98px] rounded-2xl  flex items-center justify-center">
+        <img src="./static/images/salesman.png">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+        <h2 class="text-[16px] font-semibold text-[#1A1A1A]">Sales man</h2>
+        <p class="text-[12px] text-[#1A1A1A] mt-1 leading-snug">
+Drive Sales, Build Client Relationships, and Succeed with us . Apply now!        </p>
+
+        <div class="flex items-center justify-between mt-4">
+          <p class="text-[12px] text-[#1A1A1A] flex items-center gap-1">
+            <img src="./static/images/blackloc.png"> Not Disclosed &nbsp;|&nbsp; Vacancy : 20
+          </p>
+
+          <button id="applyBtn"  class="px-2 py-1.5 text-[12px]
+                         rounded-full
+                         bg-[#3C49FF] text- w-[89px] h-[30px]">
+            <p class="text-[12px] text-white">Apply Now</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- CLICK ARROW -->
+<div id="clickArrow"
+     class="absolute right-[70px] top-[100px]
+            opacity-0 z-30
+            transition">
+  <img src="./static/images/arrow.png" class="w-10">
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+  </div>
+</div>
+
+</section>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+<script>
+function playAnimation() {
+
+  const btn = document.getElementById("applyBtn");
+
+  // RESET STATES (for next loop)
+  gsap.set("#backCard", { x: -220, y: 0, opacity: 0 });
+  gsap.set("#frontCard", {
+    x: 220,
+    y: 0,
+    opacity: 0,
+    scale: 1,
+    backgroundColor: "rgba(255,255,255,0.7)" // reset only at loop start
+  });
+  gsap.set("#clickArrow", {
+    opacity: 0,
+    x: 0,
+    y: 90,
+    scale: 1
+  });
+
+  // Reset button
+  btn.innerHTML = `<p class="text-[12px] text-white">Apply Now</p>`;
+  btn.classList.remove("bg-green-500");
+  btn.classList.add("bg-[#3C49FF]");
+
+  const tl = gsap.timeline({
+    delay: 1,
+    onComplete: () => setTimeout(playAnimation, 100)
+  });
+
+  // 1️⃣ Cards enter
+  tl.to("#backCard", {
+    x: 0,
+    opacity: 1,
+    duration: 1.4,
+    ease: "power3.out"
+  })
+  .to("#frontCard", {
+    x: 0,
+    opacity: 1,
+    duration: 1.4,
+    ease: "power3.out"
+  }, "-=0.9")
+
+  // 2️⃣ Arrow comes from bottom
+  .to("#clickArrow", {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: "power3.out"
+  })
+
+  // 3️⃣ FIRST CLICK → Front card bottom-center
+  .to("#clickArrow", {
+    x: -10,
+    y: 30,
+    duration: 1,
+    ease: "power2.inOut"
+  })
+  .to("#clickArrow", { scale: 0.85, duration: 0.25 })
+  .to("#clickArrow", { scale: 1, duration: 0.25 })
+
+  // 🔵 Front card turns BLUE and STAYS
+  .to("#frontCard", {
+    backgroundColor: "#5A8EFF",
+    duration: 0.4,
+    ease: "power2.out"
+  }, "<")
+
+  // subtle card press
+  .to("#frontCard", {
+    scale: 0.97,
+    duration: 0.3,
+    yoyo: true,
+    repeat: 1
+  }, "<")
+
+  // 4️⃣ Cards move slightly toward center
+  .to("#backCard", {
+    x: 30,
+    duration: 0.8,
+    ease: "power2.out"
+  })
+  .to("#frontCard", {
+    x: -30,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "<")
+
+  // 5️⃣ SECOND CLICK → Apply button
+  .to("#clickArrow", {
+    x: 32,
+    y: 12,
+    duration: 0.9,
+    ease: "power2.inOut"
+  })
+  .to("#clickArrow", { scale: 0.85, duration: 0.25 })
+  .to("#clickArrow", { scale: 1, duration: 0.25 })
+
+  // button press
+  .to("#applyBtn", {
+    scale: 0.95,
+    duration: 0.25,
+    yoyo: true,
+    repeat: 1
+  }, "<")
+
+  // 6️⃣ Button becomes Applied
+  .call(() => {
+    btn.innerHTML = `<p class="text-[12px] text-white">Applied</p>`;
+    btn.classList.remove("bg-[#3C49FF]");
+    btn.classList.add("bg-green-500");
+  })
+
+  // 7️⃣ Cards exit downward
+  .to(["#frontCard", "#backCard"], {
+    y: 150,
+    opacity: 0,
+    duration: 1.4,
+    ease: "power3.in"
+  }, "+=0.6")
+
+  // 8️⃣ Arrow fades
+  .to("#clickArrow", {
+    opacity: 0,
+    duration: 0.6
+  }, "-=0.8");
+}
+
+// START LOOP
+playAnimation();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="w-full flex justify-center py-16 md:py-28 px-4">
+  <!-- SECTION CONTAINER -->
+  <div
+    class="flex flex-col lg:flex-row gap-10 items-center
+           w-full max-w-[1320px]
+           h-auto lg:h-[534px]">
+
+    <!-- LEFT CARD -->
+    <div
+      class="relative w-full max-w-[582px]
+             h-[420px] md:h-[460px]
+             rounded-[40px] bg-transparent
+             md:bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex justify-center
+             overflow-visible
+             md:border-fade">
+
+      <!-- SHADE PNG -->
+      <img
+        src="./static/images/shade.png"
+        alt=""
+        class="absolute
+               bottom-[-120px] md:bottom-[-155px]
+               left-1/2 -translate-x-1/2
+               w-[420px] md:w-[600px]
+               z-[9999]
+               pointer-events-none" />
+
+      <!-- PHONE WRAPPER -->
+      <div
+        class="absolute bottom-[-6px] md:bottom-0
+               w-[307px] md:w-[447px]
+               h-[302px] md:h-[537px]">
+
+        <!-- SCREEN -->
+        <div
+          class="absolute
+                 top-[14px] md:top-[25px]
+                 left-[40px] md:left-[18px]
+                 w-[230px] md:w-[407px]
+                 h-[289px] md:h-[507px]
+                 overflow-hidden
+                 rounded-t-[30px]
+                 z-10">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover object-top">
+            <source src="./static/images/phone-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- PHONE FRAME -->
+        <img
+          src="./static/images/phoneframe.png"
+          alt="Phone Frame"
+          class="absolute inset-0 w-full h-full object-contain z-20 pointer-events-none" />
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div
+      class="relative w-full max-w-[718px]
+             h-auto lg:h-[461px]
+             rounded-[40px]
+             bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex flex-col items-center justify-center
+             text-center px-6 md:px-16 py-12 border-fade">
+
+      <h2 class="text-[26px] md:text-[36px] font-semibold text-[#1a1a1a]">
+        Get the App Now!
+      </h2>
+
+      <p class="mt-4 text-[14px] md:text-[16px]
+                font-medium text-[#1A1A1A]
+                max-w-[480px]">
+        Join thousands of users who simplified their daily life
+      </p>
+
+      <div class="mt-8 md:mt-10 flex flex-col  md:flex gap-4 md:gap-6">
+        <img src="./static/images/app.png" class="h-[48px] md:h-[56px]" />
+        <img src="./static/images/playstore.png" class="h-[48px] md:h-[56px]" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEWSLETTER + FOOTER WRAPPER -->
+<section class="w-full max-w-[1400px] px-4 sm:px-6 mx-auto mt-24">
+  <!-- OUTER CARD -->
+  <div class="w-full bg-gradient-to-br from-[#FFFFFF] to-[#D2DAFF]
+             rounded-[40px]
+             flex flex-col
+             overflow-hidden border-white border-[5px]">
+
+    <!-- NEWSLETTER (TOP) -->
+    <div class="py-20 px-6 text-center rounded-t-[40px]">
+      <h2 class="text-[30px] md:text-[36px] font-semibold text-black">
+        Join Our Newsletter
+      </h2>
+
+      <p class="mt-4 text-[16px] text-black font-medium max-w-xl mx-auto">
+        Subscribe to our newsletter so we can update you with services and offers.
+      </p>
+
+      <!-- INPUT + BUTTON -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex items-center bg-white rounded-full px-6 py-3
+                    w-full sm:w-[360px]
+                    shadow-[0_4px_8px_rgba(0,0,0,0.08)]">
+          <!-- ICON -->
+          <img src="./static/images/msg.png" class="w-[24px] h-[24px]">
+
+          <input type="email" placeholder="Enter your email"
+                 class="w-full outline-none text-[14px] pl-4 font-manrope text-[#BBBBBB] placeholder-gray-400" />
+        </div>
+
+        <button class="px-10 py-3 rounded-full
+                       bg-gradient-to-r from-[#5b6cff] to-[#3b4bff]
+                       text-white font-semibold text-[16px]
+                       shadow-[0_6px_12px_rgba(59,75,255,0.35)]
+                       hover:opacity-90 transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER (BOTTOM) -->
+    <footer class="bg-black text-white px-4 sm:px-10 py-16 mt-auto rounded-[40px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-[40px] text-center sm:text-left">
+
+        <!-- BRAND -->
+        <div class="mx-auto sm:mx-0 max-w-[315px]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-3 mb-5">
+            <div class="w-[77px] h-[56px] ">
+              <img src="./static/images/footer_logo.png">
+            </div>
+            <h3 class="text-[30px] font-bold">N - ME APP</h3>
+          </div>
+
+          <h1 class="text-[16px] text-white font-medium max-w-[315px] mx-auto sm:mx-0">
+            All your needs are simplified, secure and just a tap away in one app
+          </h1>
+
+          <div class="flex justify-center sm:justify-start gap-4 mt-6 text-gray-400 text-lg">
+            <span class="w-[20px] h-[20px]"><img src="./static/images/instagram.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/facebook.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/twitter.png"></span>
+            <span class="w-[24px] h-[24px]"><img src="./static/images/youtube.png"></span>
+          </div>
+        </div>
+
+        <!-- MOBILE ROW WRAPPER -->
+<div class="grid grid-cols-2 gap-6 sm:contents">
+
+  <!-- QUICK LINKS -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Quick Links
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Home</li>
+      <li>About</li>
+      <li>Blogs</li>
+      <li>FAQ</li>
+      <li>Service</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Backend Offerings
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Web Development</li>
+      <li>App Development</li>
+      <li>Digital Marketing</li>
+      <li>Graphic Designing</li>
+      <li>Branding</li>
+    </ul>
+  </div>
+
+</div>
+
+        <!-- CONTACT -->
+        <div class="mx-auto sm:mx-0">
+          <h2 class="font-semibold text-[24px] mb-5">Get in Touch</h2>
+          <ul class="space-y-3 text-[16px] font-medium font-manrope">
+            <li>Email: info@nmeapp.in</li>
+            <li>Email: cybexeltechnologies@gmail.com</li>
+            <li>Phone: +91 9072919991</li>
+            <li>Phone: +91 9745109190</li>
+            <li>
+              Location: Kochi, Thiruvananthapuram, Coimbatore,
+              Chennai, Bengaluru, Dubai
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="mt-12 pt-6 text-center text-[16px] text-white font-manrope">
+        <div class="mx-auto w-full sm:w-[95%] border-t-[2px] border-white mb-6"></div>
+        © 2025 N-me App. All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+</section>
+
+
+
+
+
+</body>
+</html>

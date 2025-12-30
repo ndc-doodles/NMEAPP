@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>N-Me App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./static/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+
+
+</head>
+
+<body class="bg-[#f3f4f6]">
+
+  <div id="sharedCircleWrapper" class="relative w-full">
+
+    <!-- THE ONE & ONLY CIRCLE -->
+    <div id="sharedCircle" class="absolute left-1/2 top-[calc(75vh-120px)]
+         -translate-x-1/2
+         w-[460px] h-[460px]
+         rounded-full
+         z-20
+         bg-gradient-to-br
+         from-[#3C5FFF]
+         to-[#C4CFFF]
+         shadow-[0_4px_23.2px_rgba(255,255,255,0.25)]">
+    </div>
+
+
+
+
+    <div id="heroSection"
+      class="relative max-w-[1450px] mx-auto mt-6 rounded-[40px] h-[48rem] border-[4px] border-white overflow-hidden">
+
+      <!-- TRUE FULL BG VIDEO (No gaps) -->
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="./static/images/bg-video.mp4" type="video/mp4" />
+      </video>
+
+      <!-- DARK OVERLAY TO MAKE TEXT VISIBLE -->
+      <div class="absolute inset-0  rounded-[40px] z-0"></div>
+
+      <!-- ALL CONTENT (kept above background with z-index) -->
+      <div class="relative z-10 p-6 md:p-10">
+
+
+        <!-- NAVBAR -->
+        <nav class="flex justify-between items-center w-full">
+
+          <!-- Logo Left -->
+          <img src="./static/images/logo.png" class="h-12" />
+
+          <div class="flex items-center gap-2">
+
+            <!-- NAV LINKS -->
+            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
+            px-10 py-5 rounded-full
+            bg-white/40 backdrop-blur-xl border border-white/60">
+
+              <li>
+                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  FAQs
+                </a>
+              </li>
+
+              <li>
+                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+
+
+            <!-- CHAT ICON -->
+            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
+                            shadow-md flex items-center justify-center">
+              <img src="./static/images/icon1.png" class="w-6" />
+            </div>
+
+          </div>
+        </nav>
+
+
+        <!-- MAIN HERO SECTION -->
+        <div class="flex flex-col lg:flex-row justify-between items-center mt-16">
+
+          <!-- LEFT SECTION -->
+          <div class="w-full lg:w-[35%] space-y-6 px-2 lg:px-0 flex flex-col justify-center mb-32 pt-20">
+
+            <!-- USERS ROW -->
+            <div class="flex items-center gap-3">
+              <img src="./static/images/heroclients.png" class="w-16 h-10 object-contain rounded-full">
+
+              <div class="flex items-center text-[14px] font-medium font-manrope text-[#1A1A1A]">
+                <span class="digit" data-target="7"></span><span class="comma">,</span>
+                <span class="digit" data-target="2"></span><span class="digit" data-target="0"></span><span
+                  class="digit" data-target="0"></span>
+                <span class="ml-2 ">+ Trusted Users</span>
+              </div>
+            </div>
+
+            <!-- HERO TITLE -->
+            <div class="space-y-2">
+              <h1 id="line1" class="text-black text-4xl md:text-5xl font-semibold flex gap-2 overflow-hidden"></h1>
+
+              <div id="scrollContainer" class="relative min-h-[70px] overflow-hidden">
+                <div id="scrollContent"
+                  class="absolute left-0 top-0 flex flex-col text-[48px] font-semibold text-[#3C79FF]"></div>
+              </div>
+            </div>
+
+            <p class="text-[18px] text-[#1A1A1A] leading-relaxed">
+              Everything you look for — simplified, secure,<br>
+              and just a tap away in one app.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="flex items-center gap-4">
+              <button class="bg-white shadow px-10 py-3 rounded-full text-black font-semibold">
+                Download
+              </button>
+
+              <button
+                class="w-[48px] h-[48px] rounded-full bg-black text-white flex items-center justify-center text-xl">
+                <img src="./static/images/icon2.png" class="w-[12px] h-[12px]" />
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- RIGHT QR -->
+          <div class="w-full lg:w-[22%] flex flex-col items-center mt-10 lg:mt-0 hidden md:block">
+            <p class="text-gray-700 text-lg font-medium mb-4">Scan QR code to download app</p>
+            <img src="./static/images/qr.png" class="w-[260px] md:w-[250px] rounded-[30px]" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- CENTER PHONE -->
+    <!-- PHONE (z-40 → ABOVE CIRCLE) -->
+    <div class="absolute left-1/2
+         top-[180px] pb-10
+         -translate-x-1/2
+         z-40
+         w-[314.84px] h-[654px]
+         flex items-center justify-center">
+
+      <img id="heroPhone" src="./static/images/phone.png" class="w-full h-full object-contain" alt="Hero Phone" />
+    </div>
+
+
+
+    <div class="white-smoke-line"></div>
+
+
+    <div id="heroCut" class="hero-clip-wrapper relative w-full max-w-[1400px] mx-auto mt-10 overflow-hidden">
+
+      <!-- BLUE CIRCLE -->
+      <!-- <div class="absolute left-1/2 top-[-375px] -translate-x-1/2
+              w-[460px] h-[460px]
+              rounded-full
+              bg-[#B9CCFF] z-0"> </div> -->
+
+      <svg class="absolute inset-0 w-full h-full z-20 pointer-events-none" viewBox="0 0 1400 340"
+        preserveAspectRatio="none">
+        <defs>
+          <!-- Mask: hide border where circle cut exists -->
+          <mask id="borderMask">
+            <rect width="1400" height="340" fill="white" />
+            <circle cx="700" cy="-124" r="230" fill="black" />
+          </mask>
+
+          <!-- Clip only LOWER half of circle -->
+          <clipPath id="lowerCircle">
+            <rect x="0" y="0" width="1400" height="340" />
+          </clipPath>
+        </defs>
+
+        <!-- TOP + SIDES BORDER (no bottom, no circle overlap) -->
+        <path d="
+      M40 2
+      H1360
+      A38 38 0 0 1 1398 40
+      V300
+
+      M2 300
+      V40
+      A38 38 0 0 1 40 2
+    " fill="none" stroke="white" stroke-width="5" mask="url(#borderMask)" />
+
+        <!-- LOWER PART OF CIRCLE BORDER -->
+        <circle cx="700" cy="-124" r="230" fill="none" stroke="white" stroke-width="5" stroke-linecap="round"
+          stroke-linejoin="round" clip-path="url(#lowerCircle)" />
+
+      </svg>
+
+
+      <!-- CUT BOX -->
+      <section class="hero-cut relative h-[340px]
+    bg-gradient-to-b from-[#B9CCFF] via-[#EAF1FF] to-[#f3f4f6]
+    px-12 pt-16 overflow-hidden  z-[99999] rounded-[40px]">
+
+        <div class="flex justify-between items-start">
+          <h2 class="text-[32px] font-medium text-[#1A1A1A]">
+            Build, Promote & Grow<br>With N-Me
+          </h2>
+
+          <p class="max-w-[380px] text-right text-[16px] text-[#1A1A1A]">
+            Strengthening growing brands with seamless design,
+            development, marketing support.
+          </p>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-[80px]
+      bg-gradient-to-b from-transparent to-[#f3f4f6]">
+        </div>
+        <!-- FEATURE PILLS -->
+        <div class="relative mt-16 overflow-hidden">
+          <div class="flex gap-5 w-max marquee-track">
+
+            <!-- PILL -->
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/dm.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Digital Marketing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/gd.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Graphic Designing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/wd.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Web Development</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/seo.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">SEO</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/ud.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">UI/UX Designing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/ad.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">App Development</p>
+            </div>
+
+            <!-- DUPLICATE FOR MARQUEE LOOP -->
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/dm.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Digital Marketing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/gd.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Graphic Designing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/wd.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">Web Development</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/seo.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">SEO</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/ud.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">UI/UX Designing</p>
+            </div>
+
+            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
+              <img src="./static/images/ad.png" class="w-[30px] h-[30px]" />
+              <p class="text-[20px] font-medium text-[#1A1A1A]">App Development</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+
+
+    <section id="circleSection">
+
+      <section id="targetCircle" class="relative w-[1400px] h-[820px] mx-auto mt-44 overflow-hidden">
+
+        <!-- OUTER RING -->
+        <div class="absolute left-1/2 top-1/2
+            w-[680px] h-[680px]
+            -translate-x-1/2 -translate-y-1/2
+            rounded-full border border-[#DCE1FF]
+            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+
+          <div class="ring-glow animate-[spin-slow_18s_linear_infinite]"></div>
+        </div>
+
+
+        <!-- MIDDLE RING -->
+        <div class="absolute left-1/2 top-1/2
+            w-[520px] h-[520px]
+            -translate-x-1/2 -translate-y-1/2
+            rounded-full border border-[#DCE1FF]
+            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+
+          <div class="ring-glow animate-[spin-slow_14s_linear_infinite]"></div>
+        </div>
+
+
+        <!-- INNER RING -->
+        <div id="circleCenter" class="absolute left-1/2 top-1/2
+            w-[360px] h-[360px]
+            -translate-x-1/2 -translate-y-1/2
+            rounded-full border border-[#DCE1FF]
+            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+
+          <div class="ring-glow animate-[spin-slow_10s_linear_infinite]"></div>
+        </div>
+
+
+
+
+        <!-- ================= AI CHAT BOT (LEFT SIDE) ================= -->
+        <div class="absolute left-[300px] top-[340px]
+              -translate-y-1/2
+              w-[153px] h-[153px]
+              border-[3px] border-white
+              rounded-full
+              bg-gradient-to-b from-[#3C5FFF] to-[#C4CFFF]
+              flex items-center justify-center
+              text-white font-semibold text-[16px]
+              text-center
+              
+              z-30">
+          <p>
+            AI Chat Bot<br>Nyra</p>
+        </div>
+
+        <!-- ================= OFFER & ADVERTISEMENT (RIGHT LOWER) ================= -->
+        <div class="absolute right-[330px] bottom-[260px]
+              w-[153px] h-[153px]
+              border-[3px] border-white
+              rounded-full
+              bg-gradient-to-b from-[#3C5FFF] to-[#C4CFFF]
+              flex items-center justify-center
+              text-white font-semibold text-[16px]
+              text-center
+              
+              z-30">
+          Offer &<br>Advertisement
+        </div>
+
+        <!-- ================= USERS (TOP LEFT) ================= -->
+        <div class="absolute left-[180px] top-[80px]">
+
+          <!-- CARD -->
+          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 rounded-[24px] shadow-lg">
+
+            <!-- TEXT -->
+            <h2 class="text-[#3C79FF] font-medium text-[20px]">Users</h2>
+            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed pr-10 w-[240px]">
+              Find nearby services quickly and safely.
+            </p>
+
+            <!-- IMAGE (OVERLAPPING) -->
+            <div class="absolute -right-20 top-1/2 -translate-y-1/2">
+              <img src="./static/images/u.jpg" class="w-[120px] h-[120px]
+        rounded-full
+        border-[10px] border-white
+        shadow-md object-cover" />
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="absolute right-[250px] top-[30px]  z-[99999]  ">
+          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
+
+            <!-- IMAGE -->
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+              <img src="./static/images/bo.jpg"
+                class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
+            </div>
+
+            <h2 class="text-[#3C79FF] font-medium text-[20px]">
+              Business Owners
+            </h2>
+
+            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed">
+              Display your offers and grow your reach.
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="absolute right-[150px] top-[240px]">
+          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
+
+            <!-- IMAGE -->
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+              <img src="./static/images/jr.jpg"
+                class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
+            </div>
+
+            <h2 class="text-[#3C79FF] font-medium text-[20px]">
+              Job Recruiters
+            </h2>
+
+            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed">
+              Post openings and hire faster.
+            </p>
+
+          </div>
+        </div>
+
+
+
+        <div class="absolute right-[300px] bottom-[100px] z-[99999]">
+          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
+
+            <!-- IMAGE -->
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+              <img src="./static/images/so.jpg"
+                class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
+            </div>
+
+            <h2 class="text-[#3C79FF] font-medium text-[20px]">
+              Shop Owners
+            </h2>
+
+            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed">
+              Reach more customers easily.
+            </p>
+
+          </div>
+        </div>
+
+
+
+        <!-- ================= SERVICE PROVIDERS (BOTTOM LEFT) ================= -->
+        <div class="absolute left-[250px] bottom-[220px]  z-[99999]">
+
+          <!-- CARD -->
+          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 rounded-[24px] shadow-lg">
+
+            <!-- TEXT -->
+            <h2 class="text-[#3C79FF] font-medium text-[20px]">Service Providers</h2>
+            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed pr-10 w-[240px]">
+              Get bookings easily and grow your work.
+            </p>
+
+            <!-- IMAGE (OVERLAPPING) -->
+            <div class="absolute -right-20 top-1/2 -translate-y-1/2">
+              <img src="./static/images/sp.jpg" class="w-[120px] h-[120px]
+        rounded-full
+        border-[10px] border-white
+        shadow-md object-cover" />
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+    </section>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <section class="max-w-[1400px] mx-auto py-20
+         grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,762px)]
+         gap-12 lg:gap-16 items-start px-4 lg:px-0">
+
+    <!-- LEFT CONTENT -->
+    <div class="pt-0 text-center lg:text-left">
+      <h2 class="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight">
+        Smart Features for a<br> Smooth Experience
+      </h2>
+
+      <p class="mt-6 text-[#1A1A1A] text-[15px] md:text-[16px] font-medium leading-relaxed max-w-md mx-auto lg:mx-0">
+        Experience a platform designed to make every interaction effortless and efficient.
+        With intelligent search, quick filters, and the right services in seconds.
+      </p>
+
+      <button class="inline-flex items-center justify-center
+             px-7 py-3 rounded-full
+             bg-[#3C49FF] text-white text-sm font-medium
+             shadow-[inset_0_0_9.36px_#D9F0FF]
+             hover:shadow-[inset_0_0_14px_#D9F0FF]
+             transition-all duration-200 mt-6">
+        Get App
+      </button>
+    </div>
+
+    <!-- RIGHT CARDS WRAPPER -->
+    <div class="flex flex-col gap-10 items-center lg:items-stretch">
+
+      <!-- CARD 1 -->
+      <div class="relative overflow-hidden rounded-[40px] lg:rounded-[50px]
+            border-[5px] lg:border-[10px] border-white
+            p-6 md:p-8 lg:p-10
+            bg-gradient-to-b from-[#e9efff] to-[#3C5FFF]/60
+            shadow-md flex flex-col lg:flex-row
+            items-center justify-between
+            w-full max-w-[762px]
+            h-auto lg:h-[432px]">
+
+        <!-- BG SHAPE (DESKTOP ONLY) -->
+        <img src="./static/images/amb.png" class="absolute hidden lg:block right-[-120px] top-[30px] -translate-y-1/2
+              w-[600px] h-[900px] opacity-40 z-0 pointer-events-none" />
+
+        <!-- CONTENT -->
+        <div class="relative z-10 w-full lg:w-[700px]
+              text-center lg:text-left
+              order-2 lg:order-1 mt-6 lg:mt-0">
+          <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium mb-4 text-left">
+            Speed, Smart, and Secure
+          </h2>
+
+          <p class="text-[#1A1A1A] mb-6 text-[14px] md:text-[16px] text-left">
+            Powered by our own dedicated server, that’s why N-ME App delivers
+            high-speed access, smart performance and complete data security.
+          </p>
+
+
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Fast Access</p>
+            </li>
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Secure Data</p>
+            </li>
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Smart UI</p>
+            </li>
+            <li class="hidden md:flex flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">User-Friendly Experience</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="flex justify-center w-full order-1 lg:order-2 mt-6 lg:mt-0">
+          <!-- Mobile Image (No animation) -->
+          <img src="./static/images/f11.png" class="relative z-10 w-[180px] md:w-[220px] lg:hidden mb-6" />
+
+          <!-- Desktop Image (With animation) -->
+          <img src="./static/images/f1.png" class="relative z-10 w-[260px] hidden lg:block pt-48 phone-anim" />
+        </div>
+      </div>
+
+
+      <!-- CARD 2 -->
+      <div class="relative overflow-hidden rounded-[40px] lg:rounded-[50px]
+            border-[5px] lg:border-[10px] border-white
+            p-6 md:p-8 lg:p-10
+            bg-gradient-to-b from-[#e9efff] to-[#3C5FFF]/60
+            shadow-md flex flex-col lg:flex-row
+            items-center justify-between
+            w-full max-w-[762px]
+            h-auto lg:h-[432px]">
+
+        <!-- BG SHAPE (DESKTOP ONLY - MIRRORED) -->
+        <img src="./static/images/amb.png" class="absolute hidden lg:block
+            left-[-120px] top-[30px] -translate-y-1/2
+            w-[600px] h-[900px]
+            opacity-40 z-0 pointer-events-none
+            -scale-x-100" />
+
+
+        <!-- IMAGE -->
+        <div class="flex justify-center w-full
+              order-1 lg:order-1 mt-6 lg:mt-0">
+          <!-- Mobile Image (No animation) -->
+          <img src="./static/images/f22.png" class="relative z-10 w-[180px] md:w-[220px] lg:hidden mb-6" />
+
+          <!-- Desktop Image (With animation) -->
+          <img src="./static/images/f2.png" class="relative z-10 w-[260px] hidden lg:block pb-48 phone-anim" />
+        </div>
+
+        <!-- CONTENT -->
+        <div class="relative z-10 w-full lg:w-[700px]
+              text-left
+              order-2 lg:order-2 mt-6 lg:mt-0">
+
+          <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium mb-4">
+            Excellent Reviews
+          </h2>
+
+          <p class="text-[#1A1A1A] mb-6 text-[14px] md:text-[16px]">
+            N-ME App lets users share genuine reviews and feedback,
+            helping businesses grow with trust and credibility.
+          </p>
+
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Real Feedback</p>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">More Visibility</p>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Trusted Profiles</p>
+            </li>
+
+            <li class="hidden md:flex items-center gap-3">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">
+                Customer Trust
+              </p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- CARD 3 -->
+      <div class="relative overflow-hidden rounded-[40px] lg:rounded-[50px]
+            border-[5px] lg:border-[10px] border-white
+            p-6 md:p-8 lg:p-10
+            bg-gradient-to-b from-[#e9efff] to-[#3C5FFF]/60
+            shadow-md flex flex-col lg:flex-row
+            items-center justify-between
+            w-full max-w-[762px]
+            h-auto lg:h-[432px]">
+
+        <!-- BG SHAPE (DESKTOP ONLY) -->
+        <img src="./static/images/amb.png" class="absolute hidden lg:block right-[-120px] top-[30px] -translate-y-1/2
+              w-[600px] h-[900px] opacity-40 z-0 pointer-events-none" />
+
+        <!-- CONTENT -->
+        <div class="relative z-10 w-full lg:w-[700px]
+              text-center lg:text-left
+              order-2 lg:order-1 mt-6 lg:mt-0">
+
+          <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium mb-4 text-left">
+            Unlimited Business Listing
+          </h2>
+
+          <p class="text-[#1A1A1A] mb-6 text-[14px] md:text-[16px] text-left">
+            The unique part of N-ME App is unlimited business listing,
+            giving you the freedom to showcase everything you offer.
+          </p>
+
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Endless Options</p>
+            </li>
+
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Easy Search</p>
+            </li>
+
+            <li class="flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">Easy to Connect</p>
+            </li>
+
+            <!-- HIDDEN ON MOBILE -->
+            <li class="hidden md:flex items-center gap-3 lg:justify-start">
+              <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <img src="./static/images/tick.png" />
+              </span>
+              <p class="text-[19.11px] md:text-[18px] font-semibold">
+                Wider Reach
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="flex justify-center w-full order-1 lg:order-2 mt-6 lg:mt-0">
+          <!-- Mobile Image (No animation) -->
+          <img src="./static/images/f33.png" class="relative z-10 w-[180px] md:w-[220px] lg:hidden mb-6" />
+
+          <!-- Desktop Image (With animation) -->
+          <img src="./static/images/f3.png" class="relative z-10 w-[260px] hidden lg:block pt-48 phone-anim" />
+        </div>
+
+      </div>
+
+
+      <!-- CARD 4 -->
+
+      <div class="relative overflow-hidden rounded-[40px] lg:rounded-[50px]
+            border-[5px] lg:border-[10px] border-white
+            p-6 md:p-8 lg:p-10
+            bg-gradient-to-b from-[#e9efff] to-[#3C5FFF]/60
+            shadow-md flex flex-col lg:flex-row
+            items-center justify-between
+            w-full max-w-[762px]
+            h-auto lg:h-[432px]">
+
+  <!-- BG SHAPE (DESKTOP ONLY - MIRRORED LEFT) -->
+  <img src="./static/images/amb.png"
+       class="absolute hidden lg:block
+              left-[-120px] top-[30px] -translate-y-1/2
+              w-[600px] h-[900px]
+              opacity-30 z-0 pointer-events-none
+              -scale-x-100" />
+
+  <!-- IMAGE -->
+  <div class="flex justify-center w-full
+              order-1 lg:order-1 mt-6 lg:mt-0">
+    <!-- Mobile Image (No animation) -->
+    <img src="./static/images/f44.png"
+         class="relative z-10 w-[180px] md:w-[220px] lg:hidden mb-6" />
+
+    <!-- Desktop Image (With animation) -->
+    <img src="./static/images/f4.png"
+         class="relative z-10 w-[260px] hidden lg:block pb-48 phone-anim" />
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-10 w-full lg:w-[700px]
+              text-left
+              order-2 lg:order-2 mt-6 lg:mt-0">
+
+    <h2 class="text-[20px] md:text-[28px] lg:text-[32px] font-medium mb-4">
+      An Affordable Plan
+    </h2>
+
+    <p class="text-[#1A1A1A] mb-6 text-[14px] md:text-[16px]">
+      Anyone can list their business on N-ME App at an affordable cost,
+      ensuring visibility and growth for all.
+    </p>
+
+    <ul class="space-y-3">
+      <li class="flex items-center gap-3">
+        <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+          <img src="./static/images/tick.png" />
+        </span>
+        <p class="text-[19.11px] md:text-[18px] font-semibold">Affordable Listing</p>
+      </li>
+
+      <li class="flex items-center gap-3">
+        <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+          <img src="./static/images/tick.png" />
+        </span>
+        <p class="text-[19.11px] md:text-[18px] font-semibold">Showcase Offers</p>
+      </li>
+
+      <li class="flex items-center gap-3">
+        <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+          <img src="./static/images/tick.png" />
+        </span>
+        <p class="text-[19.11px] md:text-[18px] font-semibold">Smart Advertising</p>
+      </li>
+
+      <li class="hidden md:flex items-center gap-3">
+        <span class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+          <img src="./static/images/tick.png" />
+        </span>
+        <p class="text-[19.11px] md:text-[18px] font-semibold">
+          Value for Every Business
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <script>
+    gsap.utils.toArray(".phone-anim").forEach((phone, index) => {
+
+      const card = phone.closest(".relative");
+
+      const moveDistance =
+        card.offsetHeight +
+        phone.offsetHeight +
+        400; // buffer
+
+      gsap.timeline({
+        repeat: -1,
+        delay: index * 0.3
+      })
+
+        // Pause at center
+        .to(phone, { duration: 2 })
+
+        // Move completely UP (fully hidden)
+        .to(phone, {
+          y: -moveDistance,
+          duration: 1.2,
+          ease: "power1.inOut"
+        })
+
+        // Jump to bottom (fully hidden)
+        .set(phone, {
+          y: moveDistance
+        })
+
+        // Move back to center
+        .to(phone, {
+          y: 0,
+          duration: 1.2,
+          ease: "power1.inOut"
+        })
+
+        // Pause again
+        .to(phone, { duration: 2 });
+
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="w-full  py-20 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Top Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- LEFT TEXT -->
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+            Smarter Features for <br /> Smarter Users
+          </h2>
+          <p class="text-gray-600 mt-4 max-w-md">
+            Enjoy unique benefits designed to save time and make your daily needs easier than ever.
+          </p>
+        </div>
+
+        <!-- RIGHT CARDS ROW -->
+        <div class="col-span-2 flex flex-col lg:flex-row gap-8">
+
+
+          <div class="w-full lg:w-[399px] h-auto lg:h-[224px]
+rounded-3xl border-[5px] border-white
+shadow-[0_4px_5px_rgba(0,0,0,0.25)]
+p-8 bg-gradient-to-br from-[#eef2ff] to-[#f7f8ff]">
+
+
+
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3">
+
+              <!-- ICON -->
+              <div class="relative w-20 h-20
+            shadow-[0_2.26px_13.12px_rgba(255,255,255,0.25)]">
+
+                <!-- OUTER WHITE RING -->
+                <div class="absolute inset-1 rounded-full bg-white"></div>
+
+                <!-- INNER GRADIENT RING -->
+                <div class="absolute inset-2 rounded-full 
+              bg-gradient-to-b from-[#f0f0f0] to-[#d9d9d9]
+              shadow-[inset_0_12px_8px_rgba(0,0,0,0.18)]">
+                </div>
+
+                <!-- ICON -->
+                <div class="absolute inset-0 flex items-center justify-center pt-[2.5px]">
+                  <img src="./static/images/icon3.png" class="w-[4.6rem] h-[4.6rem] object-contain" />
+                </div>
+
+              </div>
+
+              <!-- HEADING + SUBTITLE -->
+              <div class="self-center">
+                <h3 class="text-[20px] font-medium text-[#1A1A1A] leading-tight">
+                  My Job
+                </h3>
+                <p class="text-[14px] text-[#BBBBBB] font-medium">
+                  Find & Apply for Your Dream Job
+                </p>
+              </div>
+
+              <!-- DESCRIPTION (FORCED TO 2 LINES ONLY) -->
+              <p class="col-span-2 text-[#1A1A1A] leading-[24px] text-[15px] font-medium ">
+                Users can explore and apply to any job posted by recruiters directly through N-ME App.
+              </p>
+
+            </div>
+          </div>
+
+
+
+
+
+          <div class="w-full lg:w-[479px] h-auto lg:h-[224px]
+rounded-3xl border-[5px] border-white
+shadow-[0_4px_5px_rgba(0,0,0,0.25)]
+p-8 bg-gradient-to-br from-[#eef2ff] to-[#f7f8ff]">
+
+
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3">
+
+              <!-- ICON -->
+              <div class="relative w-20 h-20
+            shadow-[0_2.26px_13.12px_rgba(255,255,255,0.25)]">
+
+                <!-- OUTER WHITE RING -->
+                <div class="absolute inset-1 rounded-full bg-white"></div>
+
+                <!-- INNER GRADIENT RING -->
+                <div class="absolute inset-2 rounded-full 
+              bg-gradient-to-b from-[#f0f0f0] to-[#d9d9d9]
+              shadow-[inset_0_12px_8px_rgba(0,0,0,0.18)]">
+                </div>
+
+                <!-- ICON -->
+                <div class="absolute inset-0 flex items-center justify-center pt-[2.5px]">
+                  <img src="./static/images/icon3.png" class="w-[4.6rem] h-[4.6rem] object-contain" />
+                </div>
+
+              </div>
+
+              <!-- HEADING + SUBTITLE -->
+              <div class="self-center">
+                <h3 class="text-[20px] font-medium text-[#1A1A1A] leading-tight">
+                  Seasonal Deals </h3>
+                <p class="text-[14px] text-[#BBBBBB] font-medium">
+                  Save More Every Season
+                </p>
+              </div>
+
+              <!-- DESCRIPTION (FORCED TO 2 LINES ONLY) -->
+              <p class="col-span-2 text-[#1A1A1A] leading-[24px] text-[15px] font-medium ">
+                Know about exclusive festival and seasonal deals from the offer section and make your shopping smarter
+                and more budget-friendly.
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="mt-12 flex flex-col lg:flex-row gap-8">
+
+
+       <div class="w-full lg:w-[558px] h-auto lg:h-[224px]
+rounded-3xl border-[5px] border-white
+shadow-[0_4px_5px_rgba(0,0,0,0.25)]
+p-8 bg-gradient-to-br from-[#eef2ff] to-[#f7f8ff]">
+
+
+          <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3">
+
+            <!-- ICON -->
+            <div class="relative w-20 h-20
+            shadow-[0_2.26px_13.12px_rgba(255,255,255,0.25)]">
+
+              <!-- OUTER WHITE RING -->
+              <div class="absolute inset-1 rounded-full bg-white"></div>
+
+              <!-- INNER GRADIENT RING -->
+              <div class="absolute inset-2 rounded-full 
+              bg-gradient-to-b from-[#f0f0f0] to-[#d9d9d9]
+              shadow-[inset_0_12px_8px_rgba(0,0,0,0.18)]">
+              </div>
+
+              <!-- ICON -->
+              <div class="absolute inset-0 flex items-center justify-center pt-[2.5px]">
+                <img src="./static/images/icon3.png" class="w-[4.6rem] h-[4.6rem] object-contain" />
+              </div>
+
+            </div>
+
+            <!-- HEADING + SUBTITLE -->
+            <div class="self-center">
+              <h3 class="text-[20px] font-medium text-[#1A1A1A] leading-tight">
+                Find Nearby Businesses
+              </h3>
+              <p class="text-[14px] text-[#BBBBBB] font-medium">
+                Connect Easily, Anytime, Anywhere
+              </p>
+            </div>
+
+            <!-- DESCRIPTION (FORCED TO 2 LINES ONLY) -->
+            <p class="col-span-2 text-[#1A1A1A] leading-[24px] text-[15px] font-medium ">
+              Discover and contact businesses and service providers near you with ease. N-ME App connects you to what
+              you need, right where you are. </p>
+
+          </div>
+        </div>
+        <!-- CARD 4 -->
+        <div class="w-full lg:w-[742px] h-auto lg:h-[224px]
+rounded-3xl border-[5px] border-white
+shadow-[0_4px_5px_rgba(0,0,0,0.25)]
+p-8 bg-gradient-to-br from-[#eef2ff] to-[#f7f8ff]">
+
+
+          <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3">
+
+            <!-- ICON -->
+            <div class="relative w-20 h-20
+            shadow-[0_2.26px_13.12px_rgba(255,255,255,0.25)]">
+
+              <!-- OUTER WHITE RING -->
+              <div class="absolute inset-1 rounded-full bg-white"></div>
+
+              <!-- INNER GRADIENT RING -->
+              <div class="absolute inset-2 rounded-full 
+              bg-gradient-to-b from-[#f0f0f0] to-[#d9d9d9]
+              shadow-[inset_0_12px_8px_rgba(0,0,0,0.18)]">
+              </div>
+
+              <!-- ICON -->
+              <div class="absolute inset-0 flex items-center justify-center pt-[2.5px]">
+                <img src="./static/images/icon3.png" class="w-[4.6rem] h-[4.6rem] object-contain" />
+              </div>
+
+            </div>
+
+            <!-- HEADING + SUBTITLE -->
+            <div class="self-center">
+              <h3 class="text-[20px] font-medium text-[#1A1A1A] leading-tight">
+                Instant Help, When You Need It Most
+              </h3>
+              <p class="text-[14px] text-[#BBBBBB] font-medium">
+                Help Anytime, Anywhere
+              </p>
+            </div>
+
+            <!-- DESCRIPTION (FORCED TO 2 LINES ONLY) -->
+            <p class="col-span-2 text-[#1A1A1A] leading-[24px] text-[15px] font-medium ">
+              Easily access nearby emergency services like police stations, fire stations, hospitals, ambulances, and
+              more through the N-ME App. </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- STATS SECTION -->
+  <section class="w-full px-6 md:mt-20">
+    <div class="max-w-[1400px] mx-auto bg-white rounded-[32px]
+           shadow-[0_4px_5px_rgba(0,0,0,0.25)]
+           py-12 px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[160px] text-center">
+
+        <div class="space-y-3">
+          <h3 class="text-[64px] font-semibold text-[#1A1A1A]">7,500+</h3>
+          <p class="text-[16px] font-medium text-[#1A1A1A]">
+            Trusted by thousands of active users.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-[64px] font-semibold text-[#1A1A1A]">1,200+</h3>
+          <p class="text-[16px] font-medium text-[#1A1A1A]">
+            Shops and brands growing with N-Me.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-[64px] font-semibold text-[#1A1A1A]">900+</h3>
+          <p class="text-[16px] font-medium text-[#1A1A1A]">
+            Verified professionals offering quality services.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+<section class="w-full flex justify-center py-16 md:py-28 px-4">
+  <!-- SECTION CONTAINER -->
+  <div
+    class="flex flex-col lg:flex-row gap-10 items-center
+           w-full max-w-[1320px]
+           h-auto lg:h-[534px]">
+
+    <!-- LEFT CARD -->
+    <div
+      class="relative w-full max-w-[582px]
+             h-[420px] md:h-[460px]
+             rounded-[40px] bg-transparent
+             md:bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex justify-center
+             overflow-visible
+             md:border-fade">
+
+      <!-- SHADE PNG -->
+      <img
+        src="./static/images/shade.png"
+        alt=""
+        class="absolute
+               bottom-[-120px] md:bottom-[-155px]
+               left-1/2 -translate-x-1/2
+               w-[420px] md:w-[600px]
+               z-[9999]
+               pointer-events-none" />
+
+      <!-- PHONE WRAPPER -->
+      <div
+        class="absolute bottom-[-6px] md:bottom-0
+               w-[307px] md:w-[447px]
+               h-[302px] md:h-[537px]">
+
+        <!-- SCREEN -->
+        <div
+          class="absolute
+                 top-[14px] md:top-[25px]
+                 left-[40px] md:left-[18px]
+                 w-[230px] md:w-[407px]
+                 h-[289px] md:h-[507px]
+                 overflow-hidden
+                 rounded-t-[30px]
+                 z-10">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover object-top">
+            <source src="./static/images/phone-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- PHONE FRAME -->
+        <img
+          src="./static/images/phoneframe.png"
+          alt="Phone Frame"
+          class="absolute inset-0 w-full h-full object-contain z-20 pointer-events-none" />
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div
+      class="relative w-full max-w-[718px]
+             h-auto lg:h-[461px]
+             rounded-[40px]
+             bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex flex-col items-center justify-center
+             text-center px-6 md:px-16 py-12 border-fade">
+
+      <h2 class="text-[26px] md:text-[36px] font-semibold text-[#1a1a1a]">
+        Get the App Now!
+      </h2>
+
+      <p class="mt-4 text-[14px] md:text-[16px]
+                font-medium text-[#1A1A1A]
+                max-w-[480px]">
+        Join thousands of users who simplified their daily life
+      </p>
+
+      <div class="mt-8 md:mt-10 flex flex-col  md:flex gap-4 md:gap-6">
+        <img src="./static/images/app.png" class="h-[48px] md:h-[56px]" />
+        <img src="./static/images/playstore.png" class="h-[48px] md:h-[56px]" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEWSLETTER + FOOTER WRAPPER -->
+<section class="w-full max-w-[1400px] px-4 sm:px-6 mx-auto mt-24">
+  <!-- OUTER CARD -->
+  <div class="w-full bg-gradient-to-br from-[#FFFFFF] to-[#D2DAFF]
+             rounded-[40px]
+             flex flex-col
+             overflow-hidden border-white border-[5px]">
+
+    <!-- NEWSLETTER (TOP) -->
+    <div class="py-20 px-6 text-center rounded-t-[40px]">
+      <h2 class="text-[30px] md:text-[36px] font-semibold text-black">
+        Join Our Newsletter
+      </h2>
+
+      <p class="mt-4 text-[16px] text-black font-medium max-w-xl mx-auto">
+        Subscribe to our newsletter so we can update you with services and offers.
+      </p>
+
+      <!-- INPUT + BUTTON -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex items-center bg-white rounded-full px-6 py-3
+                    w-full sm:w-[360px]
+                    shadow-[0_4px_8px_rgba(0,0,0,0.08)]">
+          <!-- ICON -->
+          <img src="./static/images/msg.png" class="w-[24px] h-[24px]">
+
+          <input type="email" placeholder="Enter your email"
+                 class="w-full outline-none text-[14px] pl-4 font-manrope text-[#BBBBBB] placeholder-gray-400" />
+        </div>
+
+        <button class="px-10 py-3 rounded-full
+                       bg-gradient-to-r from-[#5b6cff] to-[#3b4bff]
+                       text-white font-semibold text-[16px]
+                       shadow-[0_6px_12px_rgba(59,75,255,0.35)]
+                       hover:opacity-90 transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER (BOTTOM) -->
+    <footer class="bg-black text-white px-4 sm:px-10 py-16 mt-auto rounded-[40px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-[40px] text-center sm:text-left">
+
+        <!-- BRAND -->
+        <div class="mx-auto sm:mx-0 max-w-[315px]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-3 mb-5">
+            <div class="w-[77px] h-[56px] ">
+              <img src="./static/images/footer_logo.png">
+            </div>
+            <h3 class="text-[30px] font-bold">N - ME APP</h3>
+          </div>
+
+          <h1 class="text-[16px] text-white font-medium max-w-[315px] mx-auto sm:mx-0">
+            All your needs are simplified, secure and just a tap away in one app
+          </h1>
+
+          <div class="flex justify-center sm:justify-start gap-4 mt-6 text-gray-400 text-lg">
+            <span class="w-[20px] h-[20px]"><img src="./static/images/instagram.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/facebook.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/twitter.png"></span>
+            <span class="w-[24px] h-[24px]"><img src="./static/images/youtube.png"></span>
+          </div>
+        </div>
+
+        <!-- MOBILE ROW WRAPPER -->
+<div class="grid grid-cols-2 gap-6 sm:contents">
+
+  <!-- QUICK LINKS -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Quick Links
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Home</li>
+      <li>About</li>
+      <li>Blogs</li>
+      <li>FAQ</li>
+      <li>Service</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Backend Offerings
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Web Development</li>
+      <li>App Development</li>
+      <li>Digital Marketing</li>
+      <li>Graphic Designing</li>
+      <li>Branding</li>
+    </ul>
+  </div>
+
+</div>
+
+        <!-- CONTACT -->
+        <div class="mx-auto sm:mx-0">
+          <h2 class="font-semibold text-[24px] mb-5">Get in Touch</h2>
+          <ul class="space-y-3 text-[16px] font-medium font-manrope">
+            <li>Email: info@nmeapp.in</li>
+            <li>Email: cybexeltechnologies@gmail.com</li>
+            <li>Phone: +91 9072919991</li>
+            <li>Phone: +91 9745109190</li>
+            <li>
+              Location: Kochi, Thiruvananthapuram, Coimbatore,
+              Chennai, Bengaluru, Dubai
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="mt-12 pt-6 text-center text-[16px] text-white font-manrope">
+        <div class="mx-auto w-full sm:w-[95%] border-t-[2px] border-white mb-6"></div>
+        © 2025 N-me App. All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+</section>
+
+
+
+
+  <script>
+    function rollDigit(el, target, speed, forceRoll) {
+      let container = document.createElement("div");
+      el.appendChild(container);
+
+      // Create rolling numbers
+      if (forceRoll) {
+        // Roll 0 → 9 → final
+        for (let i = 0; i <= 9; i++) {
+          let d = document.createElement("span");
+          d.textContent = i;
+          container.appendChild(d);
+        }
+        let final = document.createElement("span");
+        final.textContent = target;
+        container.appendChild(final);
+      } else {
+        // Normal count
+        for (let i = 0; i <= target; i++) {
+          let d = document.createElement("span");
+          d.textContent = i;
+          container.appendChild(d);
+        }
+      }
+
+      // Height of each number = 28px
+      let numberHeight = 28;
+      let stopIndex = forceRoll ? 10 : target;
+
+      setTimeout(() => {
+        container.style.transform = `translateY(-${stopIndex * numberHeight}px)`;
+        container.style.transitionDuration = speed + "ms";
+      }, 50);
+    }
+
+    window.onload = () => {
+      const digits = document.querySelectorAll(".digit");
+
+      rollDigit(digits[0], 7, 900, false);      // first digit (normal speed)
+      rollDigit(digits[1], 2, 2000, false);     // second digit (slow)
+      rollDigit(digits[2], 0, 900, true);       // 3rd digit rolls 0–9–0
+      rollDigit(digits[3], 0, 900, true);       // 4th digit same timing
+    };
+  </script>
+
+<script>
+  const wordDelay = 400;
+  const afterWordsPause = 300;
+  const slideDuration = 600;
+  const pauseBetweenSlides = 1200;
+  const slideHeight = 70;
+
+  const line1 = document.getElementById('line1');
+  const scrollContent = document.getElementById('scrollContent');
+
+  /* ---------- Animate 'All Your Needs' ---------- */
+  const line1Words = ["All", "Your", "Needs"];
+  line1Words.forEach((w, i) => {
+    const span = document.createElement('span');
+    span.className = 'word';
+    span.textContent = w;
+    line1.appendChild(span);
+
+    setTimeout(() => {
+      span.style.opacity = '1';
+      span.style.transform = 'translateX(0)';
+    }, i * wordDelay);
+  });
+
+  const allYourNeedsTotal = line1Words.length * wordDelay + afterWordsPause;
+
+  /* ---------- Animate words left->right ---------- */
+  function animateWordsLeftToRight(text, onComplete) {
+    const container = document.createElement('div');
+    container.style.display = 'flex';
+container.style.alignItems = 'center';
+container.style.gap = '8px'; // 🔥 FIX
+
+    scrollContent.appendChild(container);
+
+    const words = text.split(' ');
+    words.forEach((w, i) => {
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = w;
+      container.appendChild(span);
+
+      setTimeout(() => {
+        span.style.opacity = '1';
+        span.style.transform = 'translateX(0)';
+      }, i * wordDelay);
+    });
+
+    const total = words.length * wordDelay + afterWordsPause;
+    setTimeout(() => onComplete(container), total);
+  }
+
+  /* ---------- Sequence ---------- */
+  setTimeout(() => {
+
+    // 1️⃣ FIRST LINE
+    const strongDiv = document.createElement('div');
+    strongDiv.textContent = "One Strong Solution";
+    scrollContent.appendChild(strongDiv);
+
+    // 2️⃣ SECOND LINE
+    const smartDiv = document.createElement('div');
+    smartDiv.textContent = "One Smart Solution";
+    scrollContent.appendChild(smartDiv);
+
+    // 3️⃣ THIRD LINE (animated)
+    animateWordsLeftToRight("One Small Solution", () => {
+
+      let currentIndex = 0;
+      const totalLines = scrollContent.children.length;
+
+      function scrollNext() {
+        if (currentIndex < totalLines - 1) {
+          currentIndex++;
+          scrollContent.style.transition = `transform ${slideDuration}ms ease`;
+          scrollContent.style.transform = `translateY(-${slideHeight * currentIndex}px)`;
+          setTimeout(scrollNext, slideDuration + pauseBetweenSlides);
+        }
+      }
+
+      setTimeout(scrollNext, pauseBetweenSlides);
+    });
+
+  }, allYourNeedsTotal);
+</script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener("load", () => {
+
+      const phone = document.querySelector("#heroPhone");
+      const circleCenter = document.querySelector("#circleCenter");
+      const circleSection = document.querySelector("#circleSection");
+
+      // Clone phone
+      const clone = phone.cloneNode(true);
+      document.body.appendChild(clone);
+
+      // Measure positions
+      const phoneRect = phone.getBoundingClientRect();
+      const circleRect = circleCenter.getBoundingClientRect();
+
+      // Fixed X for straight movement
+      const fixedX = phoneRect.left;
+
+      // Start Y (hero)
+      const startY = phoneRect.top + window.scrollY;
+
+      // Target Y (circle center)
+      const targetY =
+        circleRect.top +
+        circleRect.height / 2 -
+        phoneRect.height / 2 +
+        window.scrollY;
+
+      // Initial clone state
+      gsap.set(clone, {
+        position: "absolute",
+        left: fixedX,
+        top: startY,
+        width: phoneRect.width,
+        height: phoneRect.height,
+        zIndex: 9999,
+        pointerEvents: "none",
+        visibility: "hidden",
+        transformOrigin: "center center",
+        scale: 1
+      });
+
+      // Swap visibility
+      ScrollTrigger.create({
+        trigger: circleSection,
+        start: "top bottom",
+        onEnter: () => {
+          phone.style.opacity = "0";
+          clone.style.visibility = "visible";
+        },
+        onLeaveBack: () => {
+          phone.style.opacity = "1";
+          clone.style.visibility = "hidden";
+        }
+      });
+
+      // Movement + size increase
+      gsap.to(clone, {
+        top: targetY,
+        scale: 1,              // ⬅ increases height + width
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: circleSection,
+          start: "top bottom",
+          end: "center center",
+          scrub: true
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

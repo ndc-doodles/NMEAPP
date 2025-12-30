@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailview</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+           manrope: ['Manrope', 'sans-serif'],
+          roboto: ['Roboto', 'sans-serif'],
+          inter: ['Inter', 'sans-serif'],
+
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="min-h-screen overflow-x-hidden" style="background-image: linear-gradient(135deg, rgba(49, 49, 49,0.07) 0%, rgba(49, 49, 49,0.07) 12.5%,rgba(76, 76, 76,0.07) 12.5%, rgba(76, 76, 76,0.07) 25%,rgba(102, 102, 102,0.07) 25%, rgba(102, 102, 102,0.07) 37.5%,rgba(129, 129, 129,0.07) 37.5%, rgba(129, 129, 129,0.07) 50%,rgba(155, 155, 155,0.07) 50%, rgba(155, 155, 155,0.07) 62.5%,rgba(182, 182, 182,0.07) 62.5%, rgba(182, 182, 182,0.07) 75%,rgba(208, 208, 208,0.07) 75%, rgba(208, 208, 208,0.07) 87.5%,rgba(235, 235, 235,0.07) 87.5%, rgba(235, 235, 235,0.07) 100%),linear-gradient(45deg, rgba(5, 5, 5,0.07) 0%, rgba(5, 5, 5,0.07) 12.5%,rgba(39, 39, 39,0.07) 12.5%, rgba(39, 39, 39,0.07) 25%,rgba(73, 73, 73,0.07) 25%, rgba(73, 73, 73,0.07) 37.5%,rgba(107, 107, 107,0.07) 37.5%, rgba(107, 107, 107,0.07) 50%,rgba(141, 141, 141,0.07) 50%, rgba(141, 141, 141,0.07) 62.5%,rgba(175, 175, 175,0.07) 62.5%, rgba(175, 175, 175,0.07) 75%,rgba(209, 209, 209,0.07) 75%, rgba(209, 209, 209,0.07) 87.5%,rgba(243, 243, 243,0.07) 87.5%, rgba(243, 243, 243,0.07) 100%),linear-gradient(90deg, #ffffff,#ffffff);">
+  <div class=" p-2 md:p-4 lg:p-6">
+
+<div class="ml-0 md:ml-20 m-4 md:m-5 px-4">
+  <a
+    href="index.html"
+    class="inline-flex items-center gap-2
+           py-2 px-6 rounded-full
+           bg-gray-50 border-2 border-white
+           text-black font-semibold
+           text-[14px] md:text-[15px]
+           font-manrope">
+    <i class="fa-solid fa-chevron-left"></i>
+    Blogs
+  </a>
+</div>
+
+
+<div class="ml-0 md:ml-20 mb-20 md:mb-40 px-4 w-full md:w-[1200px]">
+
+
+  <h1
+    class="font-poppins font-semibold
+           text-[28px] sm:text-[36px] md:text-[48px]
+           leading-tight">
+    Find Experting Consulting Services Near Me
+  </h1>
+
+
+  <p
+    class="font-manrope font-medium
+           text-[16px] sm:text-[18px] md:text-[20px]
+           my-5 md:my-7">
+    Have a business or personal challenge? Find nearby consulting experts ready to offer
+    <span class="block">
+      insights, strategies, and professional support.
+    </span>
+  </p>
+
+
+  <img
+    class="rounded-2xl md:rounded-3xl
+           w-full md:w-[1200px]
+           h-[280px] sm:h-[350px] md:h-[490px]
+           border-[3px] md:border-[5px] border-white
+           object-cover object-top"
+    src="consult2.png"
+    alt=""
+  />
+
+
+  <p
+    class="font-manrope font-medium
+           text-[15px] sm:text-[16px] md:text-[18px]
+           my-6 md:my-10 leading-relaxed">
+    To help you succeed, the consulting services listed on Near Me provide individualized solutions,
+    professional insights, and useful tactics. With just a few clicks, you may view consultant profiles,
+    evaluate their areas of expertise, and get in touch with them immediately.
+    Every consultant is validated, guaranteeing dependability and expertise in every encounter.
+  </p>
+
+  <p
+    class="font-manrope font-medium
+           text-[15px] sm:text-[16px] md:text-[18px]
+           mb-6 md:mb-10 leading-relaxed">
+    Use the Near Me app to locate consulting providers nearby and confidently accomplish your goals.
+    With Near Me, you can get professional guidance, make wise choices, and advance your company or career.
+  </p>
+
+
+  <div
+    class="w-full flex items-center justify-between gap-2">
+    <p class="text-[#3C79FF] font-manrope text-[16px] md:text-[20px] font-medium">
+      Consulting Service
+    </p>
+    <p class="text-[#848383] font-manrope text-[14px] md:text-[16px] font-medium">
+      Jan 9, 2025
+    </p>
+  </div>
+
+</div>
+
+
+    <div class="flex flex-wrap justify-between  px-4 m-5">
+
+
+
+
+  <div class="rounded-3xl p-1 w-full md:w-[32%] mb-10">
+
+    <img class="rounded-3xl w-full md:h-[55vh]"
+     src="https://i.pinimg.com/736x/84/93/14/84931415068abd5563b62154e79da443.jpg" alt="">
+    <div>
+      <h4 class="font-poppins text-[#3C79FF] text-xl mt-10 mb-2">CCTV Services</h4>
+<h2 class="font-poppins text-2xl font-semibold leading-normal">
+  Find Trusted CCTV Services
+  <span class="inline md:block">Near Me</span>
+</h2>
+    </div>
+
+  <div class="flex items-center gap-4 pt-2 mt-2">
+<button class="
+  relative overflow-hidden text-[16px] py-3 px-10 font-manrope rounded-full text-white
+  transition-all duration-700 ease-in-out
+  bg-gradient-to-b from-[#3C49FF] via-[#3b55ff] 
+  bg-[length:100%_200%] bg-top
+  hover:bg-bottom
+  hover:shadow-[0_0_0px_rgba(59,85,255,0.9)]
+  active:scale-50">
+  Read More
+</button>
+   <p class="ml-auto text-gray-500">Nov 9,2025</p>
+  </div>
+
+</div>
+
+
+  <div class="rounded-3xl p-1 w-full md:w-[32%] mb-10">
+
+    <img class="rounded-3xl w-full h-[30vh] md:h-[55vh]"
+     src="https://i.pinimg.com/1200x/3c/d5/af/3cd5af78cb1e05f56e11fa3d30873235.jpg" alt="">
+    <div>
+      <h4 class="font-poppins text-[#3C79FF] text-xl mt-10 mb-2">Water Wholesale</h4>
+<h2 class="font-poppins text-2xl font-semibold leading-normal">
+  Find Realiable Water Wholesale
+  <span class="inline md:block">Near Me</span>
+</h2>
+    </div>
+
+  <div class="flex items-center gap-4 pt-2 mt-2">
+<button class="
+  relative overflow-hidden text-[16px] py-3 px-10 font-manrope rounded-full text-white
+  transition-all duration-700 ease-in-out
+  bg-gradient-to-b from-[#3C49FF] via-[#3b55ff] 
+  bg-[length:100%_200%] bg-top
+  hover:bg-bottom
+  hover:shadow-[0_0_0px_rgba(59,85,255,0.9)]
+  active:scale-50">
+  Read More
+</button>
+   <p class="ml-auto text-gray-500">Nov 9,2025</p>
+  </div>
+
+</div>
+
+
+  <div class="rounded-3xl p-1 w-full md:w-[32%] mb-10">
+
+    <img class="rounded-3xl w-full h-[40vh] md:h-[55vh]"
+     src="https://i.pinimg.com/736x/be/90/8f/be908f660726d980e7322989a1dd1bd4.jpg" alt="">
+    <div>
+      <h4 class="font-poppins text-[#3C79FF] text-xl mt-10 mb-2">Best Stiching Center</h4>
+<h2 class="font-poppins text-2xl font-semibold leading-normal">
+  Find the Nearest Stiching Centre
+  <span class="inline md:block">Near Me</span>
+</h2>
+    </div>
+
+  <div class="flex items-center gap-4 pt-2 mt-2">
+<button class="
+  relative overflow-hidden text-[16px] py-3 px-10 font-manrope rounded-full text-white
+  transition-all duration-700 ease-in-out
+  bg-gradient-to-b from-[#3C49FF] via-[#3b55ff] 
+  bg-[length:100%_200%] bg-top
+  hover:bg-bottom
+  hover:shadow-[0_0_0px_rgba(59,85,255,0.9)]
+  active:scale-50">
+  Read More
+</button>
+   <p class="ml-auto text-gray-500">Nov 9,2025</p>
+  </div>
+
+</div>
+
+</div>
+
+
+   <div
+    class="relative m-4 mt-20 rounded-3xl overflow-hidden
+           min-h-[600px]
+           ring-4 ring-white/80
+           shadow-lg"
+    style="background-image: linear-gradient(#FFFFFF, #D2DAFF);"
+  >
+
+    <div class="text-center px-6">
+<h2 class="w-full font-poppins text-center 
+           text-[20px] leading-[135%] font-semibold 
+           md:text-4xl md:leading-loose 
+           mt-14 mb-4 md:mb-0">
+  Join Our Newsletter
+</h2>
+
+
+
+      <p class="font-manrope text-[17px] leading-[150%] text-center
+                max-w-xl mx-auto  text-gray-700 ">
+        Subscribe to our newsletter so we can update you with services and offers.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
+         <div class="flex items-center w-80 border border-gray-300 rounded-3xl shadow-sm bg-white">
+  
+  <span class="pl-4 pr-2 text-gray-400">
+    <i class="fas fa-envelope"></i>
+  </span>
+
+  <input
+    type="email"
+    placeholder="Enter your email"
+    class="w-full py-3 pr-4 text-gray-700 bg-transparent focus:outline-none rounded-3xl"
+  />
+</div>
+
+<button class="
+  relative overflow-hidden text-[16px] py-3 px-10 font-manrope rounded-full text-white
+  transition-all duration-700 ease-in-out
+  bg-gradient-to-b from-[#3C49FF] via-[#3b55ff] 
+  bg-[length:100%_200%] bg-top
+  hover:bg-bottom
+  hover:shadow-[0_0_0px_rgba(59,85,255,0.9)]
+  active:scale-50">
+  Subscribe
+</button>
+      </div>
+    </div>
+<div class="bg-black mt-12 min-h-[500px] rounded-3xl
+            px-6 py-12 md:p-16 overflow-x-hidden">
+
+  <div class="flex flex-wrap md:flex-nowrap gap-6 justify-between">
+
+    <div class="w-full md:w-[22%]">
+<div class="flex items-center gap-4 mb-4
+             justify-center md:justify-start md:text-left">
+
+  <img src="nmeblack.png"
+       class="w-[64px] h-[46px] md:w-[77px] md:h-[56px]" />
+
+  <h2 class="font-poppins text-2xl font-semibold text-white">
+    N - ME APP
+  </h2>
+
+</div>
+
+
+      <p class="font-manrope text-white text-center font-light leading-loose ml-2 md:text-start">
+      All your needs are simplified, secure, and just a tap away in one app.
+    </p>
+<div class="flex gap-6 mt-10 justify-center md:justify-start md:text-start">
+
+ <a href="https://www.instagram.com" target="_blank" class="text-white text-2xl hover:text-[#C13584] transition-colors">
+  <span class="iconify" data-icon="fa-brands:instagram"></span>
+</a>
+
+
+  <a href="https://www.facebook.com" target="_blank" class="text-white text-2xl hover:text-[#1877F2] transition-colors">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.464.098 2.796.142v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.twitter.com" target="_blank" class="text-white text-2xl hover:text-[#1DA1F2] transition-colors">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M459.4 151.7c.3 4.1.3 8.3.3 12.4 0 126.7-96.5 273-273 273-54.3 0-104.8-15.9-147.3-43.1 7.6.9 15.1 1.3 22.9 1.3 45 0 86.5-15.3 119.4-41.1-42.1-.8-77.6-28.5-89.9-66.6 5.9.9 11.9 1.5 18 1.5 8.7 0 17.1-1.2 25.1-3.4-44-8.9-77.2-47.6-77.2-94.2v-1.2c12.9 7.2 27.7 11.6 43.5 12.1-25.7-17.1-42.5-46.2-42.5-79.3 0-17.5 4.7-33.9 12.9-48 46.6 57.2 116.3 94.9 194.8 98.8-1.6-7.1-2.4-14.5-2.4-22.1 0-53.6 43.6-97.2 97.2-97.2 28 0 53.3 11.9 71.1 31 22.1-4.3 42.9-12.4 61.5-23.5-7.2 22.5-22.5 41.3-42.5 53.2 19.6-2.3 38.4-7.5 55.9-15.1-13 19.4-29.3 36.4-48.2 50.1z"/>
+    </svg>
+  </a>
+
+
+  <a href="https://www.youtube.com" target="_blank" class="text-white text-2xl hover:text-[#FF0000] transition-colors">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M549.655 124.083c-6.281-23.652-24.837-42.209-48.488-48.489C458.604 64 288 64 288 64s-170.604 0-213.167 11.594c-23.652 6.281-42.209 24.837-48.489 48.489C16 166.645 16 256 16 256s0 89.355 10.344 131.917c6.281 23.652 24.837 42.209 48.489 48.489C117.396 448 288 448 288 448s170.604 0 213.167-11.594c23.652-6.281 42.209-24.837 48.488-48.489C560 345.355 560 256 560 256s0-89.355-10.345-131.917zM232 334V178l142 78-142 78z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+    </div>
+
+  <div class="flex flex-row w-full md:w-[44%] gap-4 mt-8 md:mt-0">
+
+
+    <div class="w-1/2">
+    <h2 class="text-white text-lg md:text-2xl font-poppins font-semibold mb-4 whitespace-nowrap text-center md:text-left">
+      Quick Links
+    </h2>
+
+   <ul class="space-y-5 text-white font-manrope text-center md:text-left">
+  
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    Home
+  </a>
+</li>
+
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    About
+  </a>
+</li>
+
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    Blogs
+  </a>
+</li>
+
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    FAQ's
+  </a>
+</li>
+
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    Service
+  </a>
+</li>
+
+<li class="group relative">
+  <span class="hidden md:block
+           absolute left-0 top-1/2 -translate-y-1/2
+           w-2 h-2 rounded-full bg-white
+           opacity-0 scale-0
+           md:group-hover:opacity-100 md:group-hover:scale-100">
+  </span>
+  <a href="#" class="inline-block
+            duration-300
+            md:group-hover:translate-x-3">
+    Contact
+  </a>
+</li>
+</ul>
+
+  </div>
+
+  <div class="w-1/2">
+    <h2 class="text-white text-lg md:text-2xl font-poppins font-semibold mb-4 whitespace-nowrap text-center md:text-left">
+      Backend Offering
+    </h2>
+
+    <ul class="space-y-5 text-white font-manrope text-center md:text-left">
+      <li>Web Development</li>
+      <li>App Development</li>
+      <li>Digital Marketing</li>
+      <li>Graphic Design</li>
+      <li>Branding</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div class="w-full md:w-[22%] mt-8 ml-6 md:mt-0 mx-auto">
+
+  <h2 class="text-white text-2xl font-semibold font-poppins mb-6 text-center md:text-left">
+    Get in Touch
+  </h2>
+
+  <ul class="font-manrope font-light text-white space-y-4">
+
+<li class="grid grid-cols-[70px_1fr] md:grid-cols-[90px_1fr] gap-0 md:gap-2 font-medium text-xs md:text-base">
+<span class="font-medium">Email:</span>
+      <div class="flex flex-col">
+        <span>info@nmeapp.in</span>
+        <span>cybexeltechnologies@gmail.com</span>
+      </div>
+    </li>
+
+<li class="grid grid-cols-[70px_1fr] md:grid-cols-[90px_1fr] gap-0 md:gap-2 font-medium text-xs md:text-base">
+      <span class="font-medium">Phone:</span>
+      <div class="flex flex-col">
+        <span>+91 9072919991</span>
+        <span>+91 9745109190</span>
+      </div>
+    </li>
+
+
+<li class="grid grid-cols-[70px_1fr] md:grid-cols-[90px_1fr] gap-0 md:gap-2 font-medium text-xs md:text-base">
+      <span class="font-medium">Location:</span>
+      <div class="flex flex-col">
+        <span>Kochi,</span>
+        <span>Thiruvananthapuram</span>
+        <span>Coimbatore,Chennai,Bengaluru</span>
+        <span>Dubai</span>
+      </div>
+    </li>
+
+  </ul>
+</div>
+
+
+  </div>
+
+  <hr class="border-white mt-10 mb-4">
+  <p class="text-white text-center text-sm">
+    © 2025 N-ME App. All rights reserved.
+  </p>
+</div>
+
+
+
+  </div> 
+    </div>
+    
+</body>
+</html>

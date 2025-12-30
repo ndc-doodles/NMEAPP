@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Me App</title>
+<link rel="stylesheet" href="./static/css/style.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body class="bg-[#f3f3f3]">
+
+<!-- ================= TOP VIDEO HERO ================= -->
+<div class="relative max-w-[1400px] mx-auto mt-4 h-[506px] md:h-[720px] overflow-hidden rounded-[40px]">
+
+  <!-- TOP BORDER (SOLID) -->
+  <div class="absolute top-0 left-0 w-full h-[5px]
+              bg-white
+              rounded-tl-[40px] rounded-tr-[40px]
+              z-40">
+  </div>
+
+  <!-- LEFT BORDER (FADE DOWN) -->
+  <div class="absolute top-0 left-0 w-[5px] h-full
+              rounded-tl-[40px]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent
+              z-40">
+  </div>
+
+ <!-- RIGHT BORDER (CORNER + FADE FIXED) -->
+<div class="absolute top-0 right-0 w-[5px] h-full z-40 pointer-events-none">
+
+  <!-- CORNER CAP (SOLID) -->
+  <div class="absolute top-0 right-0 w-full h-[40px]
+              bg-white rounded-tr-[40px]">
+  </div>
+
+  <!-- FADE BODY -->
+  <div class="absolute top-[40px] right-0 w-full h-[calc(100%-40px)]
+              bg-gradient-to-b
+              from-white
+              via-white/60
+              to-transparent">
+  </div>
+
+</div>
+
+
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="./static/images/bg-video.mp4" type="video/mp4" />
+  </video>
+
+  <!-- GLASS OVERLAY -->
+  <div class="absolute inset-0 bg-white/60 z-10"></div>
+
+  <!-- 🔥 PERFECT BOTTOM BLEND (NO EDGE VISIBLE) -->
+  <div class="absolute bottom-0 left-0 w-full h-48
+              bg-gradient-to-b
+              from-transparent
+              via-[#F6F7FB]/90
+              to-[#F3f3f3]
+              z-20 pointer-events-none">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-50 p-6 md:p-10 h-full flex flex-col">
+
+    
+        <!-- NAVBAR -->
+        <nav class="flex justify-between items-center w-full">
+
+          <!-- Logo Left -->
+          <img src="./static/images/logo.png" class="h-12" />
+
+          <div class="flex items-center gap-2">
+
+            <!-- NAV LINKS -->
+            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
+            px-10 py-5 rounded-full
+            bg-white/40 backdrop-blur-xl border border-white/60">
+
+              <li>
+                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  FAQs
+                </a>
+              </li>
+
+              <li>
+                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+
+
+            <!-- CHAT ICON -->
+            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
+                            shadow-md flex items-center justify-center">
+              <img src="./static/images/icon1.png" class="w-6" />
+            </div>
+
+          </div>
+        </nav>
+
+    <!-- HERO TEXT -->
+    <div class="flex flex-col items-center justify-center text-center mt-32  mx-auto">
+      <h2 class="text-[26.83px] md:text-[48px] font-semibold text-[#1A1A1A]">
+        All Your Important <br>
+        <span class="text-blue-600">One Smart App.</span>
+      </h2>
+
+      <p class="mt-4 text-[16px] font-medium text-[#1A1A1A]">
+        Everything you need organised, secure and easy to access in one app.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<section
+  class="relative w-full mx-auto
+         mt-[-4rem] sm:mt-[-6rem] lg:mt-[-10rem]
+         z-[99999]
+         flex justify-center px-4">
+
+  <div
+    class="w-full max-w-[1025px]
+           flex flex-col md:flex-row
+           gap-6 md:gap-10
+           justify-center">
+
+    <!-- CARD -->
+    <div
+      class="w-full max-w-[491px]
+             h-auto md:h-[407px]
+             rounded-[29.95px]
+             overflow-hidden
+             bg-gradient-to-r from-[#D2DAFF]/5 to-[#D2DAFF]/30
+             border-[3.74px] border-white
+             shadow-[0px_20px_40px_rgba(0,0,0,0.08)]
+             flex flex-col items-center justify-center
+             text-center
+             px-6 sm:px-10 lg:px-14
+             py-10 md:py-0
+             gap-4
+             mx-auto">
+
+      <!-- IMAGE -->
+      <div class="w-[104px] h-[104px] flex items-center justify-center">
+        <img src="/static/images/customer.png"
+             class="w-[104px] h-[104px] object-contain">
+      </div>
+
+      <!-- TITLE -->
+      <h2 class="text-[28px] sm:text-[32px] font-medium text-[#111] leading-tight">
+        Customer
+      </h2>
+
+      <!-- DESCRIPTION -->
+      <p
+        class="text-[16px] sm:text-[18px]
+               leading-[22px]
+               font-medium text-[#1A1A1A]
+               max-w-[292px]">
+        Find answers about our services, billing,
+        account management, and customer support
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+    <div
+      class="w-full max-w-[491px]
+             h-auto md:h-[407px]
+             rounded-[29.95px]
+             overflow-hidden
+             bg-gradient-to-r from-[#D2DAFF]/5 to-[#D2DAFF]/30
+             border-[3.74px] border-white
+             shadow-[0px_20px_40px_rgba(0,0,0,0.08)]
+             flex flex-col items-center justify-center
+             text-center
+             px-6 sm:px-10 lg:px-14
+             py-10 md:py-0
+             gap-4
+             mx-auto">
+
+      <!-- IMAGE -->
+      <div class="w-[104px] h-[104px] flex items-center justify-center">
+        <img src="/static/images/users.png"
+             class="w-[104px] h-[104px] object-contain">
+      </div>
+
+      <!-- TITLE -->
+      <h2 class="text-[28px] sm:text-[32px] font-medium text-[#111] leading-tight">
+        User
+      </h2>
+
+      <!-- DESCRIPTION -->
+      <p
+        class="text-[16px] sm:text-[18px]
+               leading-[22px]
+               font-medium text-[#1A1A1A]
+               max-w-[292px]">
+        Get help with app features, tutorials, troubleshooting, and user account settings
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="max-w-[1320px] mx-auto py-16 md:py-24 px-4 md:px-6">
+
+  <!-- TITLE -->
+  <div class="text-center">
+    <h2 class="text-[28px] md:text-[36px] font-semibold text-[#1A1A1A]">
+      FAQ
+    </h2>
+    <p class="mt-2 text-[14px] md:text-[16px] font-medium text-[#1A1A1A]">
+      Quick answers to help you know us better.
+    </p>
+  </div>
+
+  <!-- CUSTOMER / USER TOGGLE -->
+  <div class="flex justify-center mt-8 md:mt-12 font-manrope">
+    <div
+      class="border-[5px] border-white rounded-full shadow-md flex
+             w-full max-w-[398px] h-[60px] md:h-[72px] overflow-hidden">
+      
+      <button
+        class="tab-toggle active w-1/2 h-full text-white
+               bg-gradient-to-b from-[#3C5FFF] to-[#C4CFFF]
+               font-medium text-[16px] md:text-[20px] rounded-full"
+        data-role="customer">
+        Customers
+      </button>
+
+      <button
+        class="tab-toggle w-1/2 h-full text-[#1A1A1A]
+               font-medium text-[16px] md:text-[20px] rounded-full"
+        data-role="user">
+        Users
+      </button>
+    </div>
+  </div>
+
+<div
+  class="mt-8 md:mt-12
+         w-full max-w-[1096px]
+         mx-auto
+         rounded-[24px] md:rounded-full
+         shadow-[0px_4px_5px_rgba(0,0,0,0.25)]
+         font-manrope text-[14px] md:text-[16px]
+         font-medium text-[#1A1A1A]">
+
+  <div
+    class="
+      grid grid-cols-3
+      gap-y-3 gap-x-4
+      place-items-center
+      px-6 py-4
+
+      md:flex md:items-center md:justify-between
+      md:px-16 md:py-0 md:h-[72px]
+    ">
+
+    <!-- ROW 1 -->
+    <button class="category-tab text-[#3C79FF]">N ME App</button>
+    <button class="category-tab">Benefit</button>
+    <button class="category-tab">Feature</button>
+
+    <!-- DIVIDER (mobile only) -->
+    <div class="col-span-3 w-full flex justify-center md:hidden">
+      <div
+        class="w-[80%] h-[1px]
+               bg-gradient-to-r
+               from-transparent
+               via-black/60
+               to-transparent">
+      </div>
+    </div>
+
+    <!-- ROW 2 (CENTERED) -->
+    <div class="col-span-3 flex justify-center gap-6 md:hidden">
+      <button class="category-tab">Registration</button>
+      <button class="category-tab">Safety</button>
+    </div>
+
+    <!-- Desktop only -->
+    <button class="category-tab hidden md:block">Registration</button>
+    <button class="category-tab hidden md:block">Safety</button>
+
+  </div>
+</div>
+
+  <!-- FAQ LIST -->
+  <div id="faqList" class="mt-10 md:mt-16 space-y-4"></div>
+
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+/* ================= FAQ DATA ================= */
+const faqData = {
+  customer: {
+    "N ME App": [
+      {
+        q: "Why NME App?",
+        a: "The NME app avoids intermediaries, enabling a direct connection between users and businesses."
+      },
+      {
+        q: "What is the difference between NME app and other business listing platforms?",
+        a: "NME eliminates intermediaries and provides equal visibility without hidden charges."
+      }
+    ],
+    Benefit: [{ q: "What are the benefits to customers by listing businesses and services on NME APP?", a: "Listing your business on NME allows customers to easily find and contact you, review your services, and directly interact with you. It increases visibility, attracts new customers, and provides a platform to showcase your services." },
+      { q: "Is there any option to run ads in the NME APP ?", a: "Yes, NME offers advertising features, including slider ads and an offer section. Businesses can use these features to promote their services, discounts, or special offers to a wider audience within the app." },
+      { q: "As a business owner, can I connect and network with other businesses on the NME app?", a: "As a business or service provider, connecting with others on NME enables B2B (business-to-business) and B2C (business-to-customer). These connections foster collaborations, partnerships, and networking. Engaging in these exchanges drives growth and mutual success." }
+    ],
+    Feature: [{ q: "How can I contact NME APP for support?", a: "NME offers 24/7 customer support, enabling customers to reach out anytime. Whether day or night, assistance is always available. You can contact the support team whenever you need help" },
+      { q: "How can I make my business and services stand out from others?", a: "To make your business stand out, you can use advertising options such as Slider Ads or the Offer Section in the NME app. These features enhance visibility and attract more customers. Boost your business presence and reach a wider audience effectively." }
+    ],
+    Registration: [{ q: "How do I get registered in the NME app ?", a: "Registering is simple! Provide basic details like your business name, contact number, location, and social media links. You can also add a website during registration if available. Completing the registration process grants you access to a variety of exciting features. It's a one-time process that opens up many opportunities for your business." },
+      { q: "Are there any conditions to list my business and services on NME APP?", a: "There are no specific conditions beyond providing accurate and truthful information about your business. Ensure your business complies with local regulations and operates legally." },
+      { q: "Do i need to renew my registration on NME APP?", a: "You can complete the registration quickly by providing all the necessary details to list your profile." },
+      { q: "How long does it take to complete the registration process?", a: "You can complete the registration quickly by providing all the necessary details to list your profile." },
+      { q: "Can I register multiple services on the NME app?", a: "Yes, you can list multiple businesses or services, each with a separate profile, to represent various offerings. This allows you to manage different businesses and services under distinct profiles for better organization." }
+    ],
+    Safety: [{ q: "Is my personal information safe on NME APP?", a: "Yes, NME APP takes privacy seriously and ensures that all personal information is securely stored and not shared without your consent." },
+      { q: "Does NME APP share my data with third parties?", a: "No, NME APP does not share your personal data with any third parties. Your data is completely safe and secure within the NME app." }
+    ]
+  },
+
+  user: {
+    "N ME App": [{ q: "What is NME APP?", a: "NME (Near Me) is a business and services listing application by N-ME 360. It enables businesses and products to reach their target audience directly, cutting out intermediaries. Any company, big or small, can register effortlessly and showcase its offerings to potential customers." },
+      { q: "Is NME APP free?", a: "Yes, NME is completely free to use for users. There are no hidden charges for searching businesses or contacting service providers through the app and no login credentials are required to access its features." },
+      { q: "How do I download NME APP?", a: "You can download the NME app from the Google Play Store for Android devices or the App Store for iOS devices. Search for \"NME\" in the App Store or Play Store, select the app, and tap \"Install\" to download it." }
+    ],
+    Benefit: [{ q: "How does the NME app help me daily?", a: "NME makes your daily life easier by helping you quickly find and connect with local businesses and service providers. Whether for home repairs, dining, or any other service, NME saves time and simplifies the process with direct access to reliable options." },
+      { q: "What types of businesses and services are listed on NME APP?", a: "NME lists all types of businesses and services, including local shops, freelancers, home service providers, restaurants, educational services, health professionals, and more." },
+      { q: "Can I contact a business and service provider directly?", a: "Yes, users can contact businesses and service providers directly through the contact details provided on their profiles, which may include phone numbers, social media links, and location information." }
+    ],
+    Feature: [{ q: "Is there any additional fee for using businesses and services in NME?", a: "No, using the NME app to search for businesses or services is completely free. There are no charges for accessing or browsing listings. You can find what you need at no cost." },
+      { q: "Are you providing any offers on businesses and services?", a: "You can explore various offers from businesses and service providers in the Offer Section of the NME app. This section highlights special deals and promotions. Stay updated on the latest offers to make the most of your purchases and services." },
+      { q: "Can I change or modify my business and services details on NME APP?", a: "Yes, you can update or modify your business and service details wYes, NME offers advertising features, including slider ads and an offer section. Businesses can use these features to promote their services, discounts, or special offers to a wider audience within the app." }
+    ],
+    Registration: [{ q: "What information do I need to provide for using the NME app?", a: "You don’t need to provide any personal information to use the NME app. Simply enable location services, and you’re ready to use it!" }],
+    Safety: [{ q: "The data provided in NME APP genuine and trustworthy?", a: "Yes, NME APP strives to ensure that all business listings are genuine. We encourage businesses to update their details regularly and maintain transparency to provide trustworthy information." },
+      { q: "Does NME offer support in case of safety concerns?", a: "Yes, NME APP offers support for safety concerns. If you face any issues, you can contact our support team, and we will assist in resolving the matter." }
+    ]
+  }
+};
+
+/* ================= STATE ================= */
+let activeRole = "customer";
+let activeCategory = "N ME App";
+
+/* ================= RENDER ================= */
+function renderFAQs() {
+  const list = document.getElementById("faqList");
+  list.innerHTML = "";
+
+  const faqs = faqData[activeRole][activeCategory] || [];
+
+  faqs.forEach(item => {
+    list.innerHTML += `
+      <div class="faq-card bg-white rounded-[20px] shadow cursor-pointer overflow-hidden">
+        <div class="faq-header flex justify-between items-center px-8 py-6">
+          <h2 class="text-[16px] md:text-[24px] font-semibold">${item.q}</h2>
+          <span class="faq-icon text-[32px]">+</span>
+        </div>
+        <div class="faq-body px-8 overflow-hidden transition-all duration-500"
+             style="max-height:0">
+          <p class="py-4">${item.a}</p>
+        </div>
+      </div>
+    `;
+  });
+}
+
+/* ================= ACCORDION ================= */
+document.getElementById("faqList").addEventListener("click", e => {
+  const card = e.target.closest(".faq-card");
+  if (!card) return;
+
+  const body = card.querySelector(".faq-body");
+  const icon = card.querySelector(".faq-icon");
+  const isOpen = body.dataset.open === "true";
+
+  // Close all
+  document.querySelectorAll(".faq-body").forEach(b => {
+    b.style.maxHeight = "0";
+    b.dataset.open = "false";
+  });
+  document.querySelectorAll(".faq-icon").forEach(i => i.textContent = "+");
+
+  // Open selected
+  if (!isOpen) {
+    body.style.maxHeight = body.scrollHeight + "px";
+    body.dataset.open = "true";
+    icon.textContent = "–";
+  }
+});
+
+/* ================= ROLE TOGGLE ================= */
+document.querySelectorAll(".tab-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    activeRole = btn.dataset.role;
+    activeCategory = "N ME App";
+
+    document.querySelectorAll(".tab-toggle").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    document.querySelectorAll(".category-tab")
+      .forEach(t => t.classList.remove("text-[#3C79FF]"));
+    document.querySelector(".category-tab").classList.add("text-[#3C79FF]");
+
+    renderFAQs();
+  });
+});
+
+/* ================= CATEGORY ================= */
+document.querySelectorAll(".category-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    activeCategory = tab.innerText.trim();
+
+    document.querySelectorAll(".category-tab")
+      .forEach(t => t.classList.remove("text-[#3C79FF]"));
+    tab.classList.add("text-[#3C79FF]");
+
+    renderFAQs();
+  });
+});
+
+/* ================= INITIAL LOAD ================= */
+renderFAQs();
+
+});
+</script>
+
+
+
+
+
+
+
+<section class="w-full  sm:py-24 md:py-28">
+  <div class="max-w-[900px] mx-auto text-center px-4 sm:px-6">
+
+    <!-- Heading -->
+    <h2 class="text-[28px] sm:text-[32px] md:text-[36px]
+               leading-[1.2] font-semibold text-[#1A1A1A]">
+      Still have questions?
+    </h2>
+
+    <!-- Subtitle -->
+    <p class="mt-4 text-[14px] sm:text-[15px] md:text-[16px]
+              text-[#1A1A1A]
+              max-w-[620px] mx-auto">
+      Our support team is here to help you 24/7. Get in touch with us through
+      your preferred channel.
+    </p>
+
+    <!-- Buttons -->
+    <div
+      class="mt-10
+             flex flex-col sm:flex-row
+             items-center justify-center
+             gap-4 sm:gap-6
+             flex-wrap
+             w-full sm:w-auto">
+
+      <!-- Button 1 -->
+      <a href="#"
+         class="relative overflow-hidden inline-flex items-center gap-3
+                px-6 sm:px-8 py-3 sm:py-4
+                rounded-full
+                text-white text-[15px] sm:text-[16px]
+                font-medium
+                bg-[#3C49FF]
+                shadow-[inset_0_0_9.36px_#D9F0FF]
+                transition duration-300
+                font-manrope
+                group">
+
+        <span class="pointer-events-none absolute bottom-[-18px] left-1/2
+                     w-[120%] h-[36px]
+                     -translate-x-1/2
+                     bg-white/70
+                     blur-[28px]
+                     opacity-0
+                     transition-all duration-300
+                     group-hover:opacity-100">
+        </span>
+
+        <img src="./static/images/mail2.png"
+             class="relative z-10 w-[22px] sm:w-[24px] h-[22px] sm:h-[24px] object-contain">
+
+        <span class="relative z-10">Contact Support</span>
+      </a>
+
+      <!-- Button 2 -->
+      <a href="#"
+         class="relative overflow-hidden inline-flex items-center gap-3
+                px-6 sm:px-8 py-3 sm:py-4
+                rounded-full
+                text-white text-[15px] sm:text-[16px]
+                font-medium
+                bg-[#3C49FF]
+                shadow-[inset_0_0_9.36px_#D9F0FF]
+                transition duration-300
+                font-manrope
+                group">
+
+        <span class="pointer-events-none absolute bottom-[-18px] left-1/2
+                     w-[120%] h-[36px]
+                     -translate-x-1/2
+                     bg-white/70
+                     blur-[28px]
+                     opacity-0
+                     transition-all duration-300
+                     group-hover:opacity-100">
+        </span>
+
+        <img src="./static/images/msg2.png"
+             class="relative z-10 w-[22px] sm:w-[24px] h-[22px] sm:h-[24px] object-contain">
+
+        <span class="relative z-10">Contact Support</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="w-full flex justify-center  md:py-28 px-4">
+  <!-- SECTION CONTAINER -->
+  <div
+    class="flex flex-col lg:flex-row gap-10 items-center
+           w-full max-w-[1320px]
+           h-auto lg:h-[534px]">
+
+    <!-- LEFT CARD -->
+    <div
+      class="relative w-full max-w-[582px]
+             h-[420px] md:h-[460px]
+             rounded-[40px] bg-transparent
+             md:bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex justify-center
+             overflow-visible
+             md:border-fade">
+
+      <!-- SHADE PNG -->
+      <img
+        src="./static/images/shade.png"
+        alt=""
+        class="absolute
+               bottom-[-120px] md:bottom-[-155px]
+               left-1/2 -translate-x-1/2
+               w-[420px] md:w-[600px]
+               z-[9999]
+               pointer-events-none" />
+
+      <!-- PHONE WRAPPER -->
+      <div
+        class="absolute bottom-[-6px] md:bottom-0
+               w-[307px] md:w-[447px]
+               h-[302px] md:h-[537px]">
+
+        <!-- SCREEN -->
+        <div
+          class="absolute
+                 top-[14px] md:top-[25px]
+                 left-[40px] md:left-[18px]
+                 w-[230px] md:w-[407px]
+                 h-[289px] md:h-[507px]
+                 overflow-hidden
+                 rounded-t-[30px]
+                 z-10">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover object-top">
+            <source src="./static/images/phone-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- PHONE FRAME -->
+        <img
+          src="./static/images/phoneframe.png"
+          alt="Phone Frame"
+          class="absolute inset-0 w-full h-full object-contain z-20 pointer-events-none" />
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div
+      class="relative w-full max-w-[718px]
+             h-auto lg:h-[461px]
+             rounded-[40px]
+             bg-gradient-to-t from-[#A4C2FF] to-[#DDE8FF00]
+             flex flex-col items-center justify-center
+             text-center px-6 md:px-16 py-12 border-fade">
+
+      <h2 class="text-[26px] md:text-[36px] font-semibold text-[#1a1a1a]">
+        Get the App Now!
+      </h2>
+
+      <p class="mt-4 text-[14px] md:text-[16px]
+                font-medium text-[#1A1A1A]
+                max-w-[480px]">
+        Join thousands of users who simplified their daily life
+      </p>
+
+      <div class="mt-8 md:mt-10 flex flex-col  md:flex gap-4 md:gap-6">
+        <img src="./static/images/app.png" class="h-[48px] md:h-[56px]" />
+        <img src="./static/images/playstore.png" class="h-[48px] md:h-[56px]" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEWSLETTER + FOOTER WRAPPER -->
+<section class="w-full max-w-[1400px] px-4 sm:px-6 mx-auto mt-24">
+  <!-- OUTER CARD -->
+  <div class="w-full bg-gradient-to-br from-[#FFFFFF] to-[#D2DAFF]
+             rounded-[40px]
+             flex flex-col
+             overflow-hidden border-white border-[5px]">
+
+    <!-- NEWSLETTER (TOP) -->
+    <div class="py-20 px-6 text-center rounded-t-[40px]">
+      <h2 class="text-[30px] md:text-[36px] font-semibold text-black">
+        Join Our Newsletter
+      </h2>
+
+      <p class="mt-4 text-[16px] text-black font-medium max-w-xl mx-auto">
+        Subscribe to our newsletter so we can update you with services and offers.
+      </p>
+
+      <!-- INPUT + BUTTON -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex items-center bg-white rounded-full px-6 py-3
+                    w-full sm:w-[360px]
+                    shadow-[0_4px_8px_rgba(0,0,0,0.08)]">
+          <!-- ICON -->
+          <img src="./static/images/msg.png" class="w-[24px] h-[24px]">
+
+          <input type="email" placeholder="Enter your email"
+                 class="w-full outline-none text-[14px] pl-4 font-manrope text-[#BBBBBB] placeholder-gray-400" />
+        </div>
+
+        <button class="px-10 py-3 rounded-full
+                       bg-gradient-to-r from-[#5b6cff] to-[#3b4bff]
+                       text-white font-semibold text-[16px]
+                       shadow-[0_6px_12px_rgba(59,75,255,0.35)]
+                       hover:opacity-90 transition">
+          Subscribe
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER (BOTTOM) -->
+    <footer class="bg-black text-white px-4 sm:px-10 py-16 mt-auto rounded-[40px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-[40px] text-center sm:text-left">
+
+        <!-- BRAND -->
+        <div class="mx-auto sm:mx-0 max-w-[315px]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-3 mb-5">
+            <div class="w-[77px] h-[56px] ">
+              <img src="./static/images/footer_logo.png">
+            </div>
+            <h3 class="text-[30px] font-bold">N - ME APP</h3>
+          </div>
+
+          <h1 class="text-[16px] text-white font-medium max-w-[315px] mx-auto sm:mx-0">
+            All your needs are simplified, secure and just a tap away in one app
+          </h1>
+
+          <div class="flex justify-center sm:justify-start gap-4 mt-6 text-gray-400 text-lg">
+            <span class="w-[20px] h-[20px]"><img src="./static/images/instagram.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/facebook.png"></span>
+            <span class="w-[20px] h-[20px]"><img src="./static/images/twitter.png"></span>
+            <span class="w-[24px] h-[24px]"><img src="./static/images/youtube.png"></span>
+          </div>
+        </div>
+
+        <!-- MOBILE ROW WRAPPER -->
+<div class="grid grid-cols-2 gap-6 sm:contents">
+
+  <!-- QUICK LINKS -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Quick Links
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Home</li>
+      <li>About</li>
+      <li>Blogs</li>
+      <li>FAQ</li>
+      <li>Service</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="mx-auto sm:mx-0">
+    <h2 class="font-semibold text-[20px] sm:text-[24px] mb-5">
+      Backend Offerings
+    </h2>
+    <ul class="space-y-3 text-[14px] sm:text-[16px] font-medium font-manrope">
+      <li>Web Development</li>
+      <li>App Development</li>
+      <li>Digital Marketing</li>
+      <li>Graphic Designing</li>
+      <li>Branding</li>
+    </ul>
+  </div>
+
+</div>
+
+        <!-- CONTACT -->
+        <div class="mx-auto sm:mx-0">
+          <h2 class="font-semibold text-[24px] mb-5">Get in Touch</h2>
+          <ul class="space-y-3 text-[16px] font-medium font-manrope">
+            <li>Email: info@nmeapp.in</li>
+            <li>Email: cybexeltechnologies@gmail.com</li>
+            <li>Phone: +91 9072919991</li>
+            <li>Phone: +91 9745109190</li>
+            <li>
+              Location: Kochi, Thiruvananthapuram, Coimbatore,
+              Chennai, Bengaluru, Dubai
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="mt-12 pt-6 text-center text-[16px] text-white font-manrope">
+        <div class="mx-auto w-full sm:w-[95%] border-t-[2px] border-white mb-6"></div>
+        © 2025 N-me App. All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+</section>
+
+
+
+
+
+
+<script>
+/* ===============================
+   CUSTOMER / USER TOGGLE
+================================ */
+const roleTabs = document.querySelectorAll('.tab-toggle');
+roleTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    roleTabs.forEach(t => {
+      t.classList.remove('bg-gradient-to-b', 'from-[#3C5FFF]', 'to-[#C4CFFF]', 'text-white');
+      t.classList.add('text-[#1A1A1A]');
+    });
+    tab.classList.add('bg-gradient-to-b', 'from-[#3C5FFF]', 'to-[#C4CFFF]', 'text-white');
+    tab.classList.remove('text-[#1A1A1A]');
+  });
+});
+
+/* ===============================
+   CATEGORY TABS
+================================ */
+const categoryTabs = document.querySelectorAll('.category-tab');
+categoryTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    categoryTabs.forEach(t => {
+      t.classList.remove('text-[#3C79FF]');
+      t.classList.add('text-[#1A1A1A]');
+    });
+    tab.classList.add('text-[#3C79FF]');
+    tab.classList.remove('text-[#1A1A1A]');
+  });
+});
+
+/* ===============================
+   FAQ ACCORDION (+ / -)
+================================ */
+const faqCards = document.querySelectorAll('.faq-card');
+
+faqCards.forEach(card => {
+  const header = card.querySelector('.faq-header');
+  const body = card.querySelector('.faq-body');
+  const icon = card.querySelector('.faq-icon');
+
+  header.addEventListener('click', () => {
+    const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+    // Close all cards
+    faqCards.forEach(c => {
+      c.querySelector('.faq-body').style.maxHeight = '0';
+      c.querySelector('.faq-icon').textContent = '+';
+    });
+
+    // Open clicked card
+    if (!isOpen) {
+      body.style.maxHeight = body.scrollHeight + 'px';
+      icon.textContent = '−';
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
