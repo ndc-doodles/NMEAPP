@@ -1,10 +1,25 @@
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
+} */
+
+
+.hamburger-line {
+  transition: all 0.3s ease;
 }
 
+.hamburger.active .line-1 {
+  transform: translateY(8px) rotate(45deg);
+}
 
+.hamburger.active .line-2 {
+  opacity: 0;
+}
+
+.hamburger.active .line-3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 
 html, body {
@@ -137,34 +152,82 @@ h1,input,p {
   gap: 2rem;
   animation: scroll 10s linear infinite;
 }
+
+/* ================= PILL STYLES ================= */
 .pill-neu {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   box-shadow:
     inset 5px 5px 10px rgba(255, 255, 255, 0.9),
     inset -5px -5px 10px rgba(136, 150, 163, 0.25);
-    background-color:  rgba(136, 150, 163,0.07);
+  background-color: rgba(136, 150, 163, 0.07);
   border-radius: 9999px;
+  flex-shrink: 0;
+  width: 272px;
+  height: 66px;
 }
 
+/* ================= DESKTOP HORIZONTAL MARQUEE ================= */
 .marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
   animation: marquee 20s linear infinite;
 }
+
 @keyframes marquee {
-  from {
-    transform: translateX(0);
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ================= MOBILE AUTO VERTICAL MARQUEE ================= */
+@media (max-width: 768px) {
+
+  .marquee-track {
+    flex-direction: column;
+    animation: verticalMarquee 12s linear infinite;
   }
-  to {
-    transform: translateX(-50%);
+
+  /* wrapper shows ONLY one pill */
+  .relative.mt-16 {
+    height: 56px;
+    overflow: hidden;
+  }
+
+  .pill-neu {
+    width: 220px;
+    height: 56px;
+    margin: 0 auto;
+  }
+
+  @keyframes verticalMarquee {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-336px); }
+    /* 56px × 6 pills = 336px */
   }
 }
+@media (max-width: 768px) {
+
+  /* CENTER THE WHOLE FEATURE PILLS SECTION */
+  .relative.mt-16 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pill-container {
+    width: 220px;          /* same as pill width */
+    margin: 0 auto;
+  }
+}
+
+
 
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
 
 .ring-glow {
   position: absolute;
@@ -238,3 +301,15 @@ h1,input,p {
     animation: floatLR 3s ease-in-out infinite;
   }
 
+.cards-scale-wrapper {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  transform-origin: top center;
+}
+@media (max-width: 640px) {
+  section {
+    overflow-x: hidden;
+  }
+}

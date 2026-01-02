@@ -319,15 +319,16 @@
         <div class="absolute top-2 right-2 z-20 text-white text-[14px] md:text-[18px] font-medium font-manrope">
           Founder & CEO
         </div>
-        <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
-          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
-          <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
-                    opacity-0 translate-y-2 md:translate-y-4
-                    transition-all duration-500
-                    group-hover:opacity-100 group-hover:translate-y-0">
-            Leading with vision, building with purpose
-          </p>
-        </div>
+        <div class="absolute bottom-0 z-20 w-full px-4 md:px-6 pb-2 md:pb-4 text-white">
+  <h2 class="text-[16px] md:text-[30px] mb-1 md:mb-2">Arjun Mehta</h2>
+  <p class="text-xs md:text-sm leading-relaxed
+            opacity-0 translate-y-2 md:translate-y-4
+            transition-all duration-500
+            group-hover:opacity-100 group-hover:translate-y-0">
+    Leading with vision, building with purpose
+  </p>
+</div>
+
       </div>
 
       <!-- CARD 1 -->
@@ -344,7 +345,7 @@
           Founder & CEO
         </div>
         <div class="absolute bottom-0 z-20 p-4 md:p-6 text-white">
-          <h2 class="text-[16px] md:text-[30px] ">Arjun Mehta</h2>
+          <h2 class="text-[16px] md:text-[30px]  ">Arjun Mehta</h2>
           <p class="mt-1 md:mt-2 text-xs md:text-sm leading-relaxed
                     opacity-0 translate-y-2 md:translate-y-4
                     transition-all duration-500
@@ -422,7 +423,7 @@
 
 
 <!-- ================= EXPERIENCE N-ME APP ================= -->
-<section class="max-w-[1400px] mx-auto px-6 py-20">
+<section class="max-w-[1400px] mx-auto px-6 py-10">
 
   <!-- TITLE -->
   <div class="text-center mb-16">
@@ -436,13 +437,21 @@
 <div class="max-w-[1400px] mx-auto">
 
   <!-- CUSTOM GRID -->
-  <div class="grid grid-cols-[512px_782px] gap-6 justify-center">
+<div class="
+  grid
+  grid-cols-1
+  xl:grid-cols-[512px_782px]
+  gap-6
+  justify-center
+">
 
    <!-- ================= LEFT CARD ================= -->
 <div class="relative rounded-[32px] border-[3px] border-white
             bg-gradient-to-b from-[#eef4ff] to-[#cddcff]
             shadow-xl p-10 overflow-hidden
-            w-[512px] h-[421px]">
+            w-full max-w-[512px]
+h-[421px] sm:h-[421px] h-auto
+">
 
   <h3 class="text-[22px] font-semibold text-black">Easy Navigation</h3>
   <p class="text-gray-600 mt-2 max-w-[320px]">
@@ -450,55 +459,62 @@
   </p>
 
   <!-- MAP AREA -->
-<div class="relative mt-8 h-[260px]">
+<div class="relative mt-8 h-[220px] sm:h-[260px]">
 
 
 <svg
-  class="absolute left-0 top-0 pointer-events-none z-0"
-  width="100%"
-  height="260"
+  class="absolute left-0 top-0 pointer-events-none z-0 w-full h-full"
   viewBox="0 0 380 160"
   preserveAspectRatio="xMidYMid meet"
 >
 
+  <!-- MOBILE PATH -->
+  <path
+    id="routePathMobile"
+    class="block md:hidden"
+    d="
+      M40 20
+      L90 45
+      L130 100
+      L180 100
+      L240 45
+      L290 85
+    "
+    stroke="white"
+    stroke-width="3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 
-    <!-- ROUTE LINE -->
-    <path
-      id="routePath"
-      d="
-        M60 30
-        L120 55
-        L170 120
-        L230 120
-        L300 45
-        L350 100
-      "
-      stroke="white"
-      stroke-width="4"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+  <!-- DESKTOP PATH -->
+  <path
+    id="routePathDesktop"
+    class="hidden md:block"
+    d="
+      M60 30
+      L120 55
+      L170 120
+      L230 120
+      L300 45
+      L350 100
+    "
+    stroke="white"
+    stroke-width="4"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 
-    <!-- MOVING BALL -->
-<circle
-  r="8"
-  fill="#453CFF"
-  filter="drop-shadow(0 0 6px #453CFF)"
->
-  <animateMotion
-    dur="6s"
-    repeatCount="indefinite"
-    keyPoints="0;1;0"
-    keyTimes="0;0.5;1"
-    calcMode="linear"
-  >
-    <mpath href="#routePath" />
-  </animateMotion>
-</circle>
+  <!-- MOVING BALL -->
+  <circle
+    id="ball"
+    r="8"
+    fill="#453CFF"
+    filter="drop-shadow(0 0 6px #453CFF)"
+  />
+</svg>
 
-
-  </svg>
 
 <div id="flagIcon"
   class="absolute left-[-2px] top-[5px]
@@ -524,7 +540,7 @@
 
 <!-- DESTINATION -->
 <div id="destIcon"
-  class="absolute right-[-6px] top-[141px]
+  class="absolute right-[-6px] top-[86px] md:top-[141px]
          w-[80px] h-[80px] rounded-full
          bg-gradient-to-b from-[#eef4ff] to-[#cddcff]
          backdrop-blur-md
@@ -542,17 +558,17 @@
 
   <!-- DECORATIVE DOTS -->
 
-<div class="absolute left-[72px] top-[160px] w-[40px] h-[40px] float-lr-slow">
+<div class="absolute left-[72px] top-[160px] w-[27.58px] h-[27.58px]  w-[40px] h-[40px] float-lr-slow">
   <img src="./static/images/e1.png" class="opacity-60" />
 </div>
 
 
- <div class="absolute left-[120px] top-[14px] w-[50px] h-[50px] float-lr">
+ <div class="absolute left-[100px] top-[14px] w-[34.47px] h-[34.47px]  w-[50px] h-[50px] float-lr">
   <img src="./static/images/e2.png" class="opacity-60" />
 </div>
 
 
-<div class="absolute right-[100px] top-[10px] w-[68px] h-[68px] float-lr-fast">
+<div class="absolute right-[30px] top-[10px] w-[46.88px] h-[46.88px] md:w-[68px] md:h-[68px] float-lr-fast">
   <img src="./static/images/e3.png" class="opacity-60" />
 </div>
 
@@ -562,27 +578,215 @@
 </div>
 
 
+
+<!-- ================= RIGHT CARD ================= -->
+<div class="relative rounded-[32px] border-[3px] border-white
+            bg-gradient-to-b from-[#e8f0ff] to-[#bcd3ff] 
+            shadow-xl overflow-hidden
+            w-full max-w-[782px]
+            h-auto sm:h-[431px]
+            p-6 sm:p-10">
+
+  <!-- TITLE -->
+  <h3 class="text-[16px] sm:text-[22px] font-semibold text-black">
+    My Job
+  </h3>
+
+  <p class="text-[13px] sm:text-[16px] text-gray-600 mt-2 max-w-[360px]">
+    Find and apply for relevant and professional jobs that match your skills instantly.
+  </p>
+
+  <!-- ANIMATION SECTION -->
+  <div class="relative mt-6 sm:mt-8 
+              h-[220px] sm:h-[260px]
+              overflow-hidden
+              sm:-mx-10">
+
+    <div id="backCard"
+     class="absolute top-16 left-2 md:left-10
+            scale-[0.85] sm:scale-100
+            origin-top-left
+            w-[270px] h-[118px]
+            md:w-[469px] md:h-[144px]
+            rounded-[20px]
+            bg-white/70 backdrop-blur-xl
+            border-[2px] border-white
+            p-6
+            z-10">
+
+
+      <div class="flex items-start gap-4">
+
+        <!-- ICON -->
+        <div class="w-[64px] h-[64px] sm:w-[98px] sm:h-[98px]
+                    flex items-center justify-center">
+          <img src="./static/images/cook.png"
+               class="w-full h-full object-contain">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="flex-1">
+          <h2 class="text-[7.26px] sm:text-[16px]
+                     font-semibold text-[#1A1A1A]">
+            Cook
+          </h2>
+
+          <p class="text-[5.45px] sm:text-[12px]
+                    text-[#1A1A1A] mt-1 leading-snug">
+            Prepare Delicious Meals, Maintain Kitchen Standards
+          </p>
+
+          <div class="flex items-center justify-between mt-3 sm:mt-4">
+
+           <p class="text-[5.45px] sm:text-[12px]
+                      text-[#1A1A1A] flex items-center gap-1">
+              <img src="./static/images/blackloc.png"
+                   class="w-3 h-3">
+              Not Disclosed | Vacancy : 20
+            </p>
+
+            <button class="px-2 py-1
+                           text-[5.45px]
+                           sm:text-[12px]
+                           rounded-full bg-[#3C49FF]
+                           w-[78px] sm:w-[89px]
+                           h-[26px] sm:h-[30px]">
+              <span class="text-white">Apply Now</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="frontCard"
+     class="absolute top-0 right-2
+            scale-[0.85] sm:scale-100
+            origin-top-right
+            w-[270px] h-[118px]
+            md:w-[469px] md:h-[144px]
+            rounded-[20px]
+            bg-white/70 backdrop-blur-xl
+            border-[2px] border-white
+            p-6
+            z-20">
+    
+
+      <!-- DOT MENU -->
+      <div class="absolute top-4 right-4 sm:top-5 sm:right-5 text-gray-500">
+        ⋮
+      </div>
+
+      <div class="flex items-start gap-4">
+
+        <!-- ICON -->
+        <div class="w-[64px] h-[64px] sm:w-[98px] sm:h-[98px]
+                    flex items-center justify-center">
+          <img src="./static/images/salesman.png"
+               class="w-full h-full object-contain">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="flex-1">
+          <h2 class="text-[7.26px] sm:text-[16px]
+                     font-semibold text-[#1A1A1A]">
+            Sales Man
+          </h2>
+
+          <p class="text-[5.45px] sm:text-[12px]
+                    text-[#1A1A1A] mt-1 leading-snug">
+            Drive Sales, Build Client Relationships, and Succeed with us.
+          </p>
+
+          <div class="flex items-center justify-between max-md:w-[141.182861328125px] mt-3 sm:mt-4">
+
+            <p class="text-[5.45px] sm:text-[12px]
+                      text-[#1A1A1A] flex items-center gap-1">
+              <img src="./static/images/blackloc.png"
+                   class="md:w-3 md:h-3">
+              Not Disclosed | Vacancy : 20
+            </p>
+
+            <button
+  id="applyBtn"
+  class="flex items-center justify-center
+         rounded-full
+         bg-[#3C49FF]
+         w-[40.4px] sm:w-[89px]
+         h-[13.62px] sm:h-[30px]
+         overflow-hidden">
+
+  <span
+    class="text-[5.35px] sm:text-[12px]
+           leading-none
+           text-white
+           whitespace-nowrap">
+    Apply Now
+  </span>
+
+</button>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLICK ARROW (POSITION UNCHANGED, ONLY SCALE) -->
+    <div id="clickArrow"
+         class="absolute right-[70px] top-[100px]
+                scale-[0.8] sm:scale-100
+                opacity-0 z-30 transition">
+      <img src="./static/images/arrow.png" class="w-8 sm:w-10">
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
 <script>
-const path = document.getElementById("routePath");
+let path, svg, pathLength;
+
 const flagIcon = document.getElementById("flagIcon");
 const destIcon = document.getElementById("destIcon");
+
 const flagImg = document.getElementById("flagImg");
 const destImg = document.getElementById("destImg");
+const ball = document.getElementById("ball");
 
-const pathLength = path.getTotalLength();
+const duration = 12000;
 let startTime = null;
-const duration = 6000;
 
+/* 🔥 Get active path based on screen */
+function setActivePath() {
+  path =
+    window.innerWidth < 768
+      ? document.getElementById("routePathMobile")
+      : document.getElementById("routePathDesktop");
+
+  svg = path.ownerSVGElement;
+  pathLength = path.getTotalLength();
+}
+
+/* Center of icons (screen coords) */
 function getCenter(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    x: rect.left + rect.width / 2,
-    y: rect.top + rect.height / 2
-  };
+  const r = el.getBoundingClientRect();
+  return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
 }
 
 function animate(time) {
   if (!startTime) startTime = time;
+
   const elapsed = (time - startTime) % duration;
 
   const progress =
@@ -591,149 +795,46 @@ function animate(time) {
       : 1 - (elapsed - duration / 2) / (duration / 2);
 
   const point = path.getPointAtLength(progress * pathLength);
-  const svgRect = path.ownerSVGElement.getBoundingClientRect();
 
-  const ballX = svgRect.left + point.x;
-  const ballY = svgRect.top + point.y;
+  // Move ball
+  ball.setAttribute("cx", point.x);
+  ball.setAttribute("cy", point.y);
 
+  // Convert to screen coords
+  const pt = svg.createSVGPoint();
+  pt.x = point.x;
+  pt.y = point.y;
+  const screenPoint = pt.matrixTransform(svg.getScreenCTM());
+
+  // Distances
   const flagPos = getCenter(flagIcon);
   const destPos = getCenter(destIcon);
 
-  const distFlag = Math.hypot(ballX - flagPos.x, ballY - flagPos.y);
-  const distDest = Math.hypot(ballX - destPos.x, ballY - destPos.y);
+  const distFlag = Math.hypot(screenPoint.x - flagPos.x, screenPoint.y - flagPos.y);
+  const distDest = Math.hypot(screenPoint.x - destPos.x, screenPoint.y - destPos.y);
 
-  flagImg.style.transform =
-    distFlag < 38 ? "scale(1.35)" : "scale(1)";
-
-  destImg.style.transform =
-    distDest < 38 ? "scale(1.35)" : "scale(1)";
+  flagImg.style.transform = distFlag < 42 ? "scale(1.35)" : "scale(1)";
+  destImg.style.transform = distDest < 42 ? "scale(1.35)" : "scale(1)";
 
   requestAnimationFrame(animate);
 }
 
+/* INIT */
+setActivePath();
 requestAnimationFrame(animate);
+
+/* UPDATE ON RESIZE */
+window.addEventListener("resize", () => {
+  startTime = null;
+  setActivePath();
+});
 </script>
 
 
 
-<!-- ================= RIGHT CARD ================= -->
-<div class="relative rounded-[32px] border-[3px] border-white
-            bg-gradient-to-b from-[#e8f0ff] to-[#bcd3ff] 
-            shadow-xl p-10 overflow-hidden
-            w-[782px] h-[431px]">
-
-  <h3 class="text-[22px] font-semibold text-black">My Job</h3>
-  <p class="text-gray-600 mt-2 max-w-[360px]">
-    Find and apply for relevant and professional jobs that match your skills instantly.
-  </p>
-
-<!-- animation section -->
-<div class="relative mt-8 h-[260px] overflow-hidden -mx-10">
-
-  <!-- BACK CARD (Cook) -->
-<div id="backCard"  class="absolute top-16 left-10
-            w-[469px] h-[144px]
-            rounded-[20px]
-            bg-white/70
-            backdrop-blur-xl
-            border-[2px] border-white
-            
-            p-6
-            z-10">
-
-
-    <div class="flex items-start gap-4">
-
-      <!-- Icon -->
-      <div class="w-[98px] h-[98px] rounded-2xl  flex items-center justify-center">
-        <img src="./static/images/cook.png">
-      </div>
-
-      <!-- Content -->
-      <div class="flex-1">
-        <h2 class="text-[16px] font-semibold text-[#1A1A1A]">Cook</h2>
-        <p class="text-[12px] text-[#1A1A1A] mt-1 leading-snug">
-          Prepare Delicious Meals, Maintain Kitchen Standards
-        </p>
-
-        <div class="flex items-center justify-between mt-4 w-[311px] h-[30px]">
-          <p class="text-[12px] text-[#1A1A1A] flex items-center gap-1">
-            <img src="./static/images/blackloc.png"> Not Disclosed &nbsp;|&nbsp; Vacancy : 20
-          </p>
-
-          <button class="px-2 py-1.5 text-[12px]
-                         rounded-full
-                         bg-[#3C49FF] text- w-[89px] h-[30px]">
-            <p class="text-[12px] text-white">Apply Now</p>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div id="frontCard" class="absolute top-0 right-2
-            w-[469px] h-[144px]
-            rounded-[20px]
-            bg-white/70
-            backdrop-blur-xl
-            border-[2px] border-white
-            
-            p-6
-            z-20">
-
-
-    <!-- 3 dots -->
-    <div class="absolute top-5 right-5 text-gray-500">⋮</div>
-
-    <div class="flex items-start gap-4">
-
-      <!-- Icon -->
-      <div class="w-[98px] h-[98px] rounded-2xl  flex items-center justify-center">
-        <img src="./static/images/salesman.png">
-      </div>
-
-      <!-- Content -->
-      <div class="flex-1">
-        <h2 class="text-[16px] font-semibold text-[#1A1A1A]">Sales man</h2>
-        <p class="text-[12px] text-[#1A1A1A] mt-1 leading-snug">
-Drive Sales, Build Client Relationships, and Succeed with us . Apply now!        </p>
-
-        <div class="flex items-center justify-between mt-4">
-          <p class="text-[12px] text-[#1A1A1A] flex items-center gap-1">
-            <img src="./static/images/blackloc.png"> Not Disclosed &nbsp;|&nbsp; Vacancy : 20
-          </p>
-
-          <button id="applyBtn"  class="px-2 py-1.5 text-[12px]
-                         rounded-full
-                         bg-[#3C49FF] text- w-[89px] h-[30px]">
-            <p class="text-[12px] text-white">Apply Now</p>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<!-- CLICK ARROW -->
-<div id="clickArrow"
-     class="absolute right-[70px] top-[100px]
-            opacity-0 z-30
-            transition">
-  <img src="./static/images/arrow.png" class="w-10">
-</div>
-
-
-</div>
 
 
 
-</div>
-
-
-  </div>
-</div>
-
-</section>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 
 <script>
@@ -741,15 +842,17 @@ function playAnimation() {
 
   const btn = document.getElementById("applyBtn");
 
-  // RESET STATES (for next loop)
+  /* ================= RESET STATES ================= */
   gsap.set("#backCard", { x: -220, y: 0, opacity: 0 });
+
   gsap.set("#frontCard", {
     x: 220,
     y: 0,
     opacity: 0,
     scale: 1,
-    backgroundColor: "rgba(255,255,255,0.7)" // reset only at loop start
+    backgroundColor: "rgba(255,255,255,0.7)"
   });
+
   gsap.set("#clickArrow", {
     opacity: 0,
     x: 0,
@@ -757,8 +860,14 @@ function playAnimation() {
     scale: 1
   });
 
-  // Reset button
-  btn.innerHTML = `<p class="text-[12px] text-white">Apply Now</p>`;
+  /* ================= RESET BUTTON (FIXED) ================= */
+  btn.innerHTML = `
+    <span class="text-[5.35px] sm:text-[12px]
+                 leading-none
+                 whitespace-nowrap
+                 text-white">
+      Apply Now
+    </span>`;
   btn.classList.remove("bg-green-500");
   btn.classList.add("bg-[#3C49FF]");
 
@@ -767,7 +876,7 @@ function playAnimation() {
     onComplete: () => setTimeout(playAnimation, 100)
   });
 
-  // 1️⃣ Cards enter
+  /* ================= 1️⃣ CARDS ENTER ================= */
   tl.to("#backCard", {
     x: 0,
     opacity: 1,
@@ -781,7 +890,7 @@ function playAnimation() {
     ease: "power3.out"
   }, "-=0.9")
 
-  // 2️⃣ Arrow comes from bottom
+  /* ================= 2️⃣ ARROW COMES ================= */
   .to("#clickArrow", {
     opacity: 1,
     y: 0,
@@ -789,7 +898,7 @@ function playAnimation() {
     ease: "power3.out"
   })
 
-  // 3️⃣ FIRST CLICK → Front card bottom-center
+  /* ================= 3️⃣ CLICK FRONT CARD ================= */
   .to("#clickArrow", {
     x: -10,
     y: 30,
@@ -799,14 +908,12 @@ function playAnimation() {
   .to("#clickArrow", { scale: 0.85, duration: 0.25 })
   .to("#clickArrow", { scale: 1, duration: 0.25 })
 
-  // 🔵 Front card turns BLUE and STAYS
   .to("#frontCard", {
     backgroundColor: "#5A8EFF",
     duration: 0.4,
     ease: "power2.out"
   }, "<")
 
-  // subtle card press
   .to("#frontCard", {
     scale: 0.97,
     duration: 0.3,
@@ -814,7 +921,7 @@ function playAnimation() {
     repeat: 1
   }, "<")
 
-  // 4️⃣ Cards move slightly toward center
+  /* ================= 4️⃣ CARDS ADJUST ================= */
   .to("#backCard", {
     x: 30,
     duration: 0.8,
@@ -826,7 +933,7 @@ function playAnimation() {
     ease: "power2.out"
   }, "<")
 
-  // 5️⃣ SECOND CLICK → Apply button
+  /* ================= 5️⃣ ARROW → APPLY BUTTON ================= */
   .to("#clickArrow", {
     x: 32,
     y: 12,
@@ -836,7 +943,6 @@ function playAnimation() {
   .to("#clickArrow", { scale: 0.85, duration: 0.25 })
   .to("#clickArrow", { scale: 1, duration: 0.25 })
 
-  // button press
   .to("#applyBtn", {
     scale: 0.95,
     duration: 0.25,
@@ -844,14 +950,20 @@ function playAnimation() {
     repeat: 1
   }, "<")
 
-  // 6️⃣ Button becomes Applied
+  /* ================= 6️⃣ APPLIED STATE (FIXED) ================= */
   .call(() => {
-    btn.innerHTML = `<p class="text-[12px] text-white">Applied</p>`;
+    btn.innerHTML = `
+      <span class="text-[5.35px] sm:text-[12px]
+                   leading-none
+                   whitespace-nowrap
+                   text-white">
+        Applied
+      </span>`;
     btn.classList.remove("bg-[#3C49FF]");
     btn.classList.add("bg-green-500");
   })
 
-  // 7️⃣ Cards exit downward
+  /* ================= 7️⃣ EXIT ================= */
   .to(["#frontCard", "#backCard"], {
     y: 150,
     opacity: 0,
@@ -859,14 +971,13 @@ function playAnimation() {
     ease: "power3.in"
   }, "+=0.6")
 
-  // 8️⃣ Arrow fades
   .to("#clickArrow", {
     opacity: 0,
     duration: 0.6
   }, "-=0.8");
 }
 
-// START LOOP
+/* ================= START LOOP ================= */
 playAnimation();
 </script>
 
@@ -878,6 +989,76 @@ playAnimation();
 
 
 
+<div class="cards-wrapper w-[1318px] mx-auto grid md:grid-cols-3 gap-[20px]">
+<!-- Card 1 -->
+<div class="service-card bg-gradient-to-b from-[#DDE8FF]/10 to-[#A4C2FF]
+            rounded-[40px] border-[5px] border-white
+            shadow-lg
+            w-[426px] h-[421px]
+            overflow-hidden relative p-6">
+
+  <!-- FIXED HEADER -->
+  <div class="flex flex-col items-start gap-2 mb-4 z-10 relative">
+    <h2 class="text-[24px] font-semibold">Register Today</h2>
+    <p class="text-[16px] font-medium ">
+      Your gateway to fast, reliable, and nearby services begins here.
+    </p>
+  </div>
+
+  <!-- Scrollable Content -->
+  <div class="absolute bottom-0 left-0 right-0 top-28 h-[330px] overflow-hidden ">
+    <div id="sectionsWrapper" class="flex flex-col">
+      <!-- SECTION 1 -->
+      <section class="h-[330px] flex flex-col items-center justify-center gap-6">
+        <div class="px-6 py-3 rounded-[20px] bg-white/40 border-2 border-white
+                    backdrop-blur-md w-[245px] h-[54px] flex items-center justify-center">
+          <p class="text-[18px]">Install N ME App</p>
+        </div>
+        <div class="w-[160px] h-[160px] rounded-[32px]
+                    bg-white/40 border border-white
+                    flex items-center justify-center backdrop-blur-md">
+          <img src="/static/images/about-logo.png" class="w-[110px]" />
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section class="h-[330px] flex flex-col items-center justify-center gap-6 ">
+        <div class="w-[245px] h-[54px] text-center py-3 rounded-full bg-white/40 border-2 border-white
+                    backdrop-blur-md">
+          <h1 class="text-[18px] font-medium font-manrope">One-Time Registration</h1>
+        </div>
+        <div class="w-[332px] h-[64px] rounded-[28px]
+              bg-white/40 border-2 border-white
+              backdrop-blur-md
+              flex items-center justify-center">
+          <h2 class="text-[32px] font-medium leading-none">
+            +91 98********
+          </h2>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section class="h-[330px] flex flex-col items-center justify-center gap-6">
+        <div class="w-[245px] h-[54px] px-8 py-3 rounded-[20px] bg-white/40 border-[2px] border-white
+                    backdrop-blur-md text-center">
+          <h1 class="text-[18px] font-manrope font-medium">Life Long Profile</h1>
+        </div>
+        <div class="w-[332px] h-[150px] px-6 py-6 rounded-[32px]
+                    bg-white/40 border-2 border-white
+                    backdrop-blur-md flex items-center gap-6">
+          <div class="w-[103px] h-[103px] rounded-full bg-white/60
+                      flex items-center justify-center">
+            <img src="./static/images/rahul.png">
+          </div>
+          <div>
+            <h1 class="text-[20px] font-semibold">Rahual Menon</h1>
+            <p class="text-[14px] font-medium opacity-80">Business Owners</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 
 
 
@@ -886,10 +1067,660 @@ playAnimation();
 
 
 
+<!-- Card 2 -->
+<div class="service-card bg-gradient-to-b from-[#DDE8FF]/10 to-[#A4C2FF]
+            rounded-[40px] border-[5px] border-white p-6 shadow-lg
+            relative w-[426px] h-[421px] overflow-hidden">
+
+  <h3 class="text-[24px] font-semibold mb-2">Direct Contact / Chat</h3>
+  <p class="text-[16px] font-medium mb-6">
+    Connect with shops instantly through call or chat.
+  </p>
+
+  <!-- Animation Area -->
+ <div class="relative w-full h-[260px] flex items-center justify-center">
+
+<svg
+  class="absolute inset-0 w-full h-full pointer-events-none"
+  viewBox="0 0 426 260"
+  preserveAspectRatio="xMidYMid meet"
+>
+
+  <!-- LEFT TOP -->
+  <line id="line1"
+        x1="188" y1="105" x2="120" y2="40"
+        stroke="#fff" stroke-width="2"
+        stroke-dasharray="120"
+        stroke-dashoffset="120" />
+
+  <!-- RIGHT TOP -->
+  <line id="line3"
+        x1="238" y1="105" x2="306" y2="40"
+        stroke="#fff" stroke-width="2"
+        stroke-dasharray="120"
+        stroke-dashoffset="120" />
+
+  <!-- LEFT BOTTOM -->
+  <line id="line2"
+        x1="188" y1="155" x2="120" y2="220"
+        stroke="#fff" stroke-width="2"
+        stroke-dasharray="120"
+        stroke-dashoffset="120" />
+
+  <!-- RIGHT BOTTOM -->
+  <line id="line4"
+        x1="238" y1="155" x2="306" y2="220"
+        stroke="#fff" stroke-width="2"
+        stroke-dasharray="120"
+        stroke-dashoffset="120" />
+
+</svg>
 
 
 
-<section class="w-full flex justify-center py-16 md:py-28 px-4">
+  <!-- MAIN ICON -->
+  <div id="mainIcon"
+       class="w-[72px] h-[72px] rounded-full bg-blue-500
+              flex items-center justify-center z-10">
+    <img src="./static/images/i0.png" />
+  </div>
+
+  <!-- SIDE ICONS -->
+  <div class="icon icon1 z-60"><img src="./static/images/i1.png"></div>
+  <div class="icon icon2 z-60"><img src="./static/images/i2.png"></div>
+  <div class="icon icon3 z-60"><img src="./static/images/i3.png"></div>
+  <div class="icon icon4 z-60"><img src="./static/images/i4.png"></div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- Card 3 -->
+<div class="service-card bg-gradient-to-b from-[#DDE8FF]/10 to-[#A4C2FF]
+            rounded-[40px] border-[5px] border-white
+            p-6 shadow-lg flex flex-col
+            w-[426px] h-[421px] overflow-hidden">
+
+  <h3 class="text-[24px] font-semibold mb-2">Offers & Deals</h3>
+
+  <p class="text-[16px] font-medium mb-6">
+    Know the latest offers and deals from shops near you.
+  </p>
+
+  <!-- Scrolling container -->
+  <div class="relative h-full overflow-hidden">
+    
+    <!-- Animated list -->
+    <div class="absolute w-full animate-scroll-y space-y-20">
+
+      <div class="flex items-center gap-4">
+
+  
+
+  <!-- Percentage Icon -->
+<div class="w-[73px] h-[73px]
+              flex items-center justify-center
+              rounded-full
+              
+              border-[2.12px] border-white
+              shadow-md text-blue-600 font-bold">
+    <img src="./static/images/percentage.png" class="w-[41.4px] h-[41.4px]">
+  </div>
+  <div class="px-6 py-3 w-[263px] h-[54px]
+            w-[300px]
+            bg-white/70
+            rounded-[20px]
+            text-sm font-medium
+            border-[2px] border-white text-center">
+  <p class="text-[18px]">Affordable Promotion Plan</p>
+  </div>
+
+
+</div>
+
+
+  <div class="flex items-center gap-4">
+
+<div class="px-6 py-3 w-[263px] h-[54px]
+            w-[300px]
+            bg-white/70
+            text-center
+            rounded-[20px]
+            text-sm font-medium
+            border-[2px] border-white">
+  <p class="text-[18px]">User can post their Offer</p>
+  </div>
+
+
+  <div class="w-[73px] h-[73px]
+              flex items-center justify-center
+              rounded-full
+              
+              border-[2.12px] border-white
+              shadow-md text-blue-600 font-bold">
+    <img src="./static/images/percentage.png" class="w-[41.4px] h-[41.4px]">
+  </div>
+
+</div>
+
+      <div class="flex items-center gap-4">
+
+  
+
+  <!-- Percentage Icon -->
+<div class="w-[73px] h-[73px]
+              flex items-center justify-center
+              rounded-full
+              
+              border-[2.12px] border-white
+              shadow-md text-blue-600 font-bold">
+    <img src="./static/images/percentage.png" class="w-[41.4px] h-[41.4px]">
+  </div>
+  <div class="px-6 py-3 w-[263px] h-[54px]
+            w-[300px]
+            text-center
+            bg-white/70
+            rounded-[20px]
+            text-sm font-medium
+            border-[2px] border-white">
+  <p class="text-[18px]">Seasonal Deals</p>
+  </div>
+
+
+</div>
+
+        <div class="flex items-center gap-4">
+
+<div class="px-6 py-3 w-[263px] h-[54px]
+            w-[300px]
+            text-center
+            bg-white/70
+            rounded-[20px]
+            text-sm font-medium
+            border-[2px] border-white">
+  <p class="text-[18px]">Instant live Update</p>
+  </div>
+
+
+  <div class="w-[73px] h-[73px]
+              flex items-center justify-center
+              rounded-full
+              
+              border-[2.12px] border-white
+              shadow-md text-blue-600 font-bold">
+    <img src="./static/images/percentage.png" class="w-[41.4px] h-[41.4px]">
+  </div>
+
+</div>
+
+      <div class="flex items-center gap-4">
+
+  
+
+  <!-- Percentage Icon -->
+<div class="w-[73px] h-[73px]
+              flex items-center justify-center
+              rounded-full
+              
+              border-[2.12px] border-white
+              shadow-md text-blue-600 font-bold">
+    <img src="./static/images/percentage.png" class="w-[41.4px] h-[41.4px]">
+  </div>
+  <div class="px-6 py-3 w-[263px] h-[54px]
+            w-[300px]
+            bg-white/70
+            rounded-[20px]
+            text-sm font-medium
+            border-[2px] border-white text-center">
+  <p class="text-[18px]">Wide Category Coverage</p>
+  </div>
+
+
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</div>
+
+<style>
+/* =========================
+   RESPONSIVE GRID
+========================= */
+
+/* Desktop – default (your current layout stays same) */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cards-wrapper {
+    width: 100%;
+    padding: 0 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    min-height: 360px;
+    border-radius: 28px;
+    padding: 16px;
+  }
+
+  .service-card h2,
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+}
+</style>
+
+<script>
+const container = document.getElementById("sectionsWrapper");
+const sectionHeight = 330; // height of each section
+const totalSections = 3;
+
+// Duplicate sections for smooth loop
+container.innerHTML += container.innerHTML;
+
+let index = 0;
+
+function scrollStep() {
+  container.style.transition = "transform 0.8s ease-in-out";
+  container.style.transform = `translateY(-${index * sectionHeight}px)`;
+  index++;
+
+  // Reset seamlessly when reaching the original last section
+  if (index > totalSections) {
+    setTimeout(() => {
+      container.style.transition = "none";
+      container.style.transform = `translateY(0px)`;
+      index = 1;
+    }, 800); // match transition duration
+  }
+}
+
+// Scroll every 3 seconds
+setInterval(scrollStep, 2000);
+</script>
+<style>
+.icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+</style>
+
+<script>
+const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+tl.to(".icon1", { x: -110, y: -75, scale: 1, opacity: 1, duration: 0.5 }, 0)
+  .to(".icon2", { x: -100, y:  75, scale: 1, opacity: 1, duration: 0.5 }, 0)
+  .to(".icon3", { x:  100, y: -75, scale: 1, opacity: 1, duration: 0.5 }, 0)
+  .to(".icon4", { x:  100, y:  75, scale: 1, opacity: 1, duration: 0.5 }, 0)
+
+  // Draw lines one by one
+  .to("#line3", { strokeDashoffset: 0, duration: 0.3 })
+  .to("#line2", { strokeDashoffset: 0, duration: 0.3 })
+  .to("#line4", { strokeDashoffset: 0, duration: 0.3 })
+  .to("#line1", { strokeDashoffset: 0, duration: 0.3 })
+
+  .to({}, { duration: 0.8 })
+
+  .to(".icon", {
+    x: 0,
+    y: 0,
+    scale: 0,
+    opacity: 0,
+    duration: 0.5
+  })
+
+  .to("line", {
+    strokeDashoffset: 120,
+    duration: 0.4
+  }, "-=0.4");
+
+</script>
+
+
+
+
+<style>
+  @keyframes scrollY {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-y {
+  animation: scrollY 12s linear infinite;
+}
+
+</style>
+
+
+<section class="max-w-[1318px] mx-auto md:py-20 px-4">
+  <div class="grid grid-cols-1 lg:grid-cols-[782px_512px] gap-[24px]">
+
+    <!-- LEFT CARD -->
+    <div
+      class="h-auto lg:h-[421px] relative rounded-[40px] border-[4px] border-white
+             bg-gradient-to-b from-[#DDE8FF]/10 to-[#A4C2FF]
+             shadow-xl p-6 sm:p-8 lg:p-10">
+
+      <h2 class="text-[22px] sm:text-[24px] lg:text-[26px] font-semibold mb-2">
+        Smart Filters
+      </h2>
+
+      <p class="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 max-w-md mb-6">
+        Refine your search with easy filters that help
+        you reach the right result quickly.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+
+        <!-- SEARCH -->
+        <div class="relative w-full sm:w-[503px]" id="searchBox">
+
+          <div class="relative overflow-hidden rounded-full z-20 bg-white shadow-md h-[52px] sm:h-[56px] flex items-center">
+            <img
+              src="./static/images/search.png"
+              class="absolute left-4 sm:left-5 w-[30px] sm:w-[39px] h-[30px] sm:h-[39px]
+                     object-contain opacity-60 pointer-events-none"
+            />
+
+            <div
+              id="typingText"
+              class="pl-12 sm:pl-16 text-gray-400 text-[14px] sm:text-[15px] typing-cursor">
+            </div>
+          </div>
+
+          <div
+            id="dropdown"
+            class="dropdown rounded-b-[28px] bg-white/70 backdrop-blur-md
+                   border border-white border-t-0 p-5 sm:p-6 pt-[3rem]
+                   space-y-5 text-[16px] sm:text-[18px] font-medium">
+            <p>Shopping Mall</p>
+            <p>Medical Shop</p>
+            <p>Health & Medicals</p>
+            <p>Electrical Repair Shop</p>
+            <p>Hostels & Lodge</p>
+            <p>Travels</p>
+          </div>
+        </div>
+
+        <!-- SEARCH BUTTON -->
+        <button
+          class="w-full sm:w-[161px] h-[48px] rounded-full
+                 bg-gradient-to-r from-[#5a6cff] to-[#3a4bff]
+                 text-white inner-white-shadow">
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div
+      class="h-auto lg:h-[421px] relative rounded-[40px] border-[4px] border-white
+             bg-gradient-to-b from-[#DDE8FF]/10 to-[#A4C2FF]
+              p-6 sm:p-8 lg:p-10 overflow-hidden">
+
+      <h2 class="text-[22px] sm:text-[24px] lg:text-[26px] font-semibold mb-2">
+        Easy Ad Publishing
+      </h2>
+
+      <p class="text-[14px] sm:text-[15px] lg:text-[16px] text-gray-600 mb-6">
+        Publish your advertisements quickly and
+        reach more people in just a few taps.
+      </p>
+
+      <!-- CARD STACK -->
+      <div class="relative mt-4 h-[240px] sm:h-[260px]">
+        <div class="relative h-full overflow-hidden">
+
+          <!-- BACK CARD -->
+          <div
+            id="saleBackCard"
+            class="absolute top-0 right-4 sm:right-6
+                   w-[260px] sm:w-[293px] h-[115px] sm:h-[127px]
+                   rounded-[24px] bg-gray-300/80 shadow-md
+                   p-4 flex items-center justify-between">
+
+            <div>
+              <h2 class="text-[20px] sm:text-[26px] font-medium">FINAL SALE</h2>
+              <p class="text-[7px] sm:text-[8px] font-bold">Grocery Delights Await</p>
+              <p class="text-[4px] mt-1 leading-tight">
+                Lorem Ipsum is simply dummy text.
+              </p>
+            </div>
+
+            <div class="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px]
+                        flex items-center justify-center rounded-full bg-blue-500/20">
+              <img src="./static/images/final_sale.png" class="w-full h-full object-contain">
+            </div>
+          </div>
+
+          <!-- FRONT CARD -->
+          <div
+            id="saleFrontCard"
+            class="absolute top-16 sm:top-20 left-0 z-10
+                   w-[300px] sm:w-[353px] h-[140px] sm:h-[153px]
+                   rounded-[28px] bg-white
+                   p-4 sm:p-6 flex items-center gap-4">
+
+            <div class="w-[130px] sm:w-[165px] h-[100px] sm:h-[113px]">
+              <img src="./static/images/discount.png" class="w-full h-full object-contain">
+            </div>
+
+            <div class="w-[120px] flex flex-col justify-center">
+              <h1 class="text-[9px]">Special Discounts</h1>
+              <h2 class="text-[40px] sm:text-[51px] font-medium leading-none">50%</h2>
+              <h1 class="text-[9px] font-medium text-center -mt-2">
+                Trusted Health Partner
+              </h1>
+              <h1 class="text-[4px] text-center">
+                Embracing Care
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<style>
+  /* Blinking cursor */
+.typing-cursor::after {
+  content: "";
+  display: inline-block;
+
+  width: 2px;
+  height: 20px;              /* 👈 INCREASE HEIGHT HERE */
+  margin-left: 6px;
+
+  background-color: black;
+  vertical-align: middle;
+
+  animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ================= DROPDOWN BASE ================= */
+.dropdown {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    margin-top 0.4s ease;
+
+  /* Hide scrollbar (all browsers) */
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge */
+}
+
+.dropdown::-webkit-scrollbar {
+  display: none;               /* Chrome / Safari */
+}
+
+/* ================= OPEN STATE ================= */
+.dropdown-open {
+  max-height: 170px;           /* 👈 exactly 3 options visible */
+  opacity: 1;
+  margin-top: -24px;
+  overflow-y: auto; 
+            /* 👈 scrolling enabled */
+}
+
+/* ================= CLOSE STATE ================= */
+.dropdown-close {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+
+
+</style>
+<script>
+const dropdown = document.getElementById("dropdown");
+
+function runSearchAnimation() {
+
+  dropdown.classList.remove("dropdown-open", "dropdown-close");
+  dropdown.scrollTop = 0;
+
+  // OPEN
+  setTimeout(() => {
+    dropdown.classList.add("dropdown-open");
+  }, 1200);
+
+  // AUTO SCROLL (shows next options)
+  setTimeout(() => {
+    dropdown.scrollTo({
+      top: dropdown.scrollHeight,
+      behavior: "smooth"
+    });
+  }, 2600);
+
+  // CLOSE
+  setTimeout(() => {
+    dropdown.classList.add("dropdown-close");
+  }, 4600);
+}
+
+// START
+runSearchAnimation();
+setInterval(runSearchAnimation, 6000);
+
+</script>
+
+<style>
+.inner-white-shadow {
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.6),
+    inset 0 -2px 4px rgba(255,255,255,0.25),
+    0 8px 16px rgba(0,0,0,0.15);
+}
+</style>
+<script>
+  gsap.set("#saleBackCard", { y: 140, opacity: 0 });
+  gsap.set("#saleFrontCard", { y: 140, opacity: 0 });
+
+  const saleCardTl = gsap.timeline({
+    defaults: { ease: "power3.out" },
+    repeat: -1,
+    repeatDelay: 0.6,
+    repeatRefresh: true,
+    onRepeat: () => {
+      gsap.set("#saleBackCard", { y: 140, opacity: 0 });
+      gsap.set("#saleFrontCard", { y: 140, opacity: 0 });
+    }
+  });
+
+  saleCardTl
+    // 1️⃣ Back card comes from bottom
+    .to("#saleBackCard", {
+      y: 0,
+      opacity: 1,
+      duration: 0.8
+    })
+
+    // 2️⃣ Front card comes from bottom
+    .to("#saleFrontCard", {
+      y: 0,
+      opacity: 1,
+      duration: 0.8
+    }, "-=0.3")
+
+    // pause
+    .to({}, { duration: 0.5 })
+
+    // 3️⃣ Front card scrolls up (INSIDE MASK)
+    .to("#saleFrontCard", {
+      y: -240,
+      duration: 0.8
+    })
+
+    // 4️⃣ Back card scrolls up (INSIDE MASK)
+    .to("#saleBackCard", {
+      y: -220,
+      duration: 0.8
+    }, "-=0.4");
+</script>
+
+
+<section class="w-full flex justify-center md:py-28 px-4">
   <!-- SECTION CONTAINER -->
   <div
     class="flex flex-col lg:flex-row gap-10 items-center

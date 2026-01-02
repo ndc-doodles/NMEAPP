@@ -29,21 +29,29 @@
 
     <!-- THE ONE & ONLY CIRCLE -->
     <div id="sharedCircle" class="absolute left-1/2 top-[calc(75vh-120px)]
-         -translate-x-1/2
-         w-[460px] h-[460px]
+         -translate-x-1/2 w-[246.35px] h-[246.35px]
+         md:w-[460px] md:h-[460px]
          rounded-full
          z-20
          bg-gradient-to-br
          from-[#3C5FFF]
          to-[#C4CFFF]
-         shadow-[0_4px_23.2px_rgba(255,255,255,0.25)]">
+         shadow-[0_4px_23.2px_rgba(255,255,255,0.25)] max-md:top-[706.23px]">
     </div>
 
 
 
 
     <div id="heroSection"
-      class="relative max-w-[1450px] mx-auto mt-6 rounded-[40px] h-[48rem] border-[4px] border-white overflow-hidden">
+  class="relative
+         w-[92%] max-w-[380px]
+         md:w-[1450px] md:max-w-none
+         mx-auto mt-6
+         rounded-[40px]
+         h-[52rem] md:h-[48rem]
+         border-[4px] border-white
+         overflow-hidden">
+
 
       <!-- TRUE FULL BG VIDEO (No gaps) -->
       <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
@@ -58,132 +66,206 @@
 
 
         <!-- NAVBAR -->
-        <nav class="flex justify-between items-center w-full">
+<nav class="flex justify-between items-center w-full relative">
 
-          <!-- Logo Left -->
-          <img src="./static/images/logo.png" class="h-12" />
+  <!-- Logo -->
+  <img src="./static/images/logo.png" class="h-12" />
 
-          <div class="flex items-center gap-2">
+  <div class="flex items-center gap-3">
 
-            <!-- NAV LINKS -->
-            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
-            px-10 py-5 rounded-full
-            bg-white/40 backdrop-blur-xl border border-white/60">
+    <!-- DESKTOP NAV -->
+    <ul
+      class="hidden md:flex gap-10 text-[#1A1A1A]
+             px-10 py-5 rounded-full
+             bg-white/40 backdrop-blur-xl
+             border border-white/60">
 
-              <li>
-                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
-                  Home
-                </a>
-              </li>
+      <li><a href="home.html" class="text-blue-600 font-semibold">Home</a></li>
+      <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+      <li><a href="blog.html" class="hover:text-blue-600">Blogs</a></li>
+      <li><a href="faq.html" class="hover:text-blue-600">FAQs</a></li>
+      <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+    </ul>
 
-              <li>
-                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  About
-                </a>
-              </li>
+    <!-- MOBILE HAMBURGER -->
+    <button id="menuBtn"
+      class="md:hidden flex flex-col justify-center items-center
+             w-12 h-12 rounded-xl
+             backdrop-blur-xl bg-[#3C49FF]
+             shadow-lg border border-white/30 hamburger">
+      <span class="hamburger-line line-1 w-6 h-0.5 bg-white rounded-full mb-1.5"></span>
+      <span class="hamburger-line line-2 w-6 h-0.5 bg-white rounded-full mb-1.5"></span>
+      <span class="hamburger-line line-3 w-6 h-0.5 bg-white rounded-full"></span>
+    </button>
 
-              <li>
-                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Blogs
-                </a>
-              </li>
+    <!-- CHAT ICON (DESKTOP ONLY) -->
+    <div
+      class="hidden md:flex h-12 w-12 rounded-full
+             bg-gradient-to-br from-blue-500 to-blue-700
+             shadow-md items-center justify-center">
+      <img src="./static/images/icon1.png" class="w-6" />
+    </div>
 
-              <li>
-                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  FAQs
-                </a>
-              </li>
+  </div>
 
-              <li>
-                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Services
-                </a>
-              </li>
+  <!-- MOBILE MENU -->
+  <div
+    id="mobileMenu"
+    class="absolute top-[70px] left-1/2 -translate-x-1/2
+           w-[335px] h-[246px]
+           md:hidden
+           backdrop-blur-xl bg-white/30
+           rounded-2xl shadow-2xl
+           border border-white/60
+           origin-top scale-y-0 opacity-0
+           pointer-events-none
+           transition-all duration-300 z-50 py-2">
 
-              <li>
-                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Contact
-                </a>
-              </li>
+    <a href="home.html" class="font-manrope text-[16px] px-6 py-3 hover:text-blue-600">Home</a>
+    <a href="about.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">About</a>
+    <a href="blog.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Blogs</a>
+    <a href="faq.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">FAQs</a>
+    <a href="services.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Services</a>
+    <a href="contact.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Contact</a>
+  </div>
 
-            </ul>
+</nav>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("scale-y-100");
+    mobileMenu.classList.toggle("opacity-100");
+    mobileMenu.classList.toggle("pointer-events-auto");
+  });
 
-            <!-- CHAT ICON -->
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
-                            shadow-md flex items-center justify-center">
-              <img src="./static/images/icon1.png" class="w-6" />
-            </div>
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove(
+        "scale-y-100",
+        "opacity-100",
+        "pointer-events-auto"
+      );
+    });
+  });
+</script>
 
-          </div>
-        </nav>
 
 
         <!-- MAIN HERO SECTION -->
-        <div class="flex flex-col lg:flex-row justify-between items-center mt-16">
+<div class="flex flex-col lg:flex-row justify-between items-center mt-10 md:mt-16">
 
-          <!-- LEFT SECTION -->
-          <div class="w-full lg:w-[35%] space-y-6 px-2 lg:px-0 flex flex-col justify-center mb-32 pt-20">
+  <!-- LEFT SECTION -->
+  <div
+    class="w-full lg:w-[35%]
+           space-y-5
+           px-4 lg:px-0
+           flex flex-col
+           justify-center
+           mb-20 md:mb-32
+           pt-14 md:pt-20
+           text-center lg:text-left">
 
-            <!-- USERS ROW -->
-            <div class="flex items-center gap-3">
-              <img src="./static/images/heroclients.png" class="w-16 h-10 object-contain rounded-full">
+    <!-- USERS ROW -->
+    <div class="flex items-center justify-center lg:justify-start gap-3">
+      <img
+        src="./static/images/heroclients.png"
+        class="w-[75px] h-[26px] object-contain rounded-full">
 
-              <div class="flex items-center text-[14px] font-medium font-manrope text-[#1A1A1A]">
-                <span class="digit" data-target="7"></span><span class="comma">,</span>
-                <span class="digit" data-target="2"></span><span class="digit" data-target="0"></span><span
-                  class="digit" data-target="0"></span>
-                <span class="ml-2 ">+ Trusted Users</span>
-              </div>
-            </div>
+      <div class="flex items-center text-[14px] font-medium text-[#1A1A1A]">
+        <span class="digit" data-target="7"></span><span class="comma">,</span>
+        <span class="digit" data-target="2"></span>
+        <span class="digit" data-target="0"></span>
+        <span class="digit" data-target="0"></span>
+        <span class="ml-2">+ Trusted Users</span>
+      </div>
+    </div>
 
-            <!-- HERO TITLE -->
-            <div class="space-y-2">
-              <h1 id="line1" class="text-black text-4xl md:text-5xl font-semibold flex gap-2 overflow-hidden"></h1>
+    <!-- HERO TITLE -->
+    <div class="space-y-2">
+      <h1
+        id="line1"
+        class="text-black
+               text-[30px]
+               md:text-5xl
+               font-semibold
+               flex justify-center lg:justify-start
+               gap-2
+               overflow-hidden">
+      </h1>
 
-              <div id="scrollContainer" class="relative min-h-[70px] overflow-hidden">
-                <div id="scrollContent"
-                  class="absolute left-0 top-0 flex flex-col text-[48px] font-semibold text-[#3C79FF]"></div>
-              </div>
-            </div>
+      <!-- DESKTOP SCROLL TEXT -->
+<div
+  id="scrollContainer"
+  class="hidden md:block
+         relative
+         min-h-[70px]
+         overflow-hidden">
 
-            <p class="text-[18px] text-[#1A1A1A] leading-relaxed">
-              Everything you look for — simplified, secure,<br>
-              and just a tap away in one app.
-            </p>
+  <div
+    id="scrollContent"
+    class="absolute
+           left-0 top-0
+           flex flex-col
+           text-[48px]
+           font-semibold
+           text-[#3C79FF]
+           text-left">
+  </div>
 
-            <!-- BUTTONS -->
-            <div class="flex items-center gap-4">
-              <button class="bg-white shadow px-10 py-3 rounded-full text-black font-semibold">
-                Download
-              </button>
+</div>
 
-              <button
-                class="w-[48px] h-[48px] rounded-full bg-black text-white flex items-center justify-center text-xl">
-                <img src="./static/images/icon2.png" class="w-[12px] h-[12px]" />
-              </button>
-            </div>
-          </div>
+      <!-- MOBILE STATIC TEXT -->
+<div class="block md:hidden text-[30px] font-semibold text-[#3C79FF] text-center">
+  One Small Solution
+</div>
 
+    </div>
 
+    <!-- DESCRIPTION -->
+    <p class="text-[16px] md:text-[18px] text-[#1A1A1A] leading-relaxed">
+      Everything you look for - simplified, secure<br class="hidden md:block">
+      and just a tap away in one app.
+    </p>
 
-          <!-- RIGHT QR -->
-          <div class="w-full lg:w-[22%] flex flex-col items-center mt-10 lg:mt-0 hidden md:block">
-            <p class="text-gray-700 text-lg font-medium mb-4">Scan QR code to download app</p>
-            <img src="./static/images/qr.png" class="w-[260px] md:w-[250px] rounded-[30px]" />
-          </div>
+    <!-- BUTTONS (DESKTOP ONLY – already correct) -->
+    <div class="hidden md:flex items-center gap-4">
+      <button class="bg-white shadow px-10 py-3 rounded-full text-black font-semibold">
+        Download
+      </button>
 
-        </div>
+      <button
+        class="w-[48px] h-[48px] rounded-full bg-black text-white flex items-center justify-center">
+        <img src="./static/images/icon2.png" class="w-[12px] h-[12px]" />
+      </button>
+    </div>
+  </div>
+
+  <!-- RIGHT QR (DESKTOP ONLY) -->
+  <div class="hidden md:flex w-full lg:w-[22%] flex-col items-center mt-10 lg:mt-0">
+    <p class="text-gray-700 text-lg font-medium mb-4">
+      Scan QR code to download app
+    </p>
+    <img src="./static/images/qr.png" class="w-[250px] rounded-[30px]" />
+  </div>
+
+</div>
+
       </div>
     </div>
     <!-- CENTER PHONE -->
     <!-- PHONE (z-40 → ABOVE CIRCLE) -->
-    <div class="absolute left-1/2
-         top-[180px] pb-10
-         -translate-x-1/2
-         z-40
-         w-[314.84px] h-[654px]
-         flex items-center justify-center">
+    <div class="absolute
+     left-1/2
+     top-[493px] md:top-[180px]
+     -translate-x-1/2
+     z-40
+     w-[180px] h-[380px]
+     md:w-[314.84px] md:h-[654px]
+     flex items-center justify-center">
+
 
       <img id="heroPhone" src="./static/images/phone.png" class="w-full h-full object-contain" alt="Hero Phone" />
     </div>
@@ -192,180 +274,169 @@
 
     <div class="white-smoke-line"></div>
 
+<!-- ================= HERO CUT WRAPPER ================= -->
+<div
+  id="heroCut"
+  class="hero-clip-wrapper relative max-w-[1400px] mx-auto mt-10 overflow-hidden max-lg:px-4">
 
-    <div id="heroCut" class="hero-clip-wrapper relative w-full max-w-[1400px] mx-auto mt-10 overflow-hidden">
+  <!-- SVG BORDER (DESKTOP ONLY) -->
+  <svg
+    class="absolute inset-0 w-full h-full z-20 pointer-events-none max-md:hidden"
+    viewBox="0 0 1400 340"
+    preserveAspectRatio="none">
 
-      <!-- BLUE CIRCLE -->
-      <!-- <div class="absolute left-1/2 top-[-375px] -translate-x-1/2
-              w-[460px] h-[460px]
-              rounded-full
-              bg-[#B9CCFF] z-0"> </div> -->
+    <defs>
+      <mask id="borderMask">
+        <rect width="1400" height="340" fill="white" />
+        <circle cx="700" cy="-124" r="230" fill="black" />
+      </mask>
+    </defs>
 
-      <svg class="absolute inset-0 w-full h-full z-20 pointer-events-none" viewBox="0 0 1400 340"
-        preserveAspectRatio="none">
-        <defs>
-          <!-- Mask: hide border where circle cut exists -->
-          <mask id="borderMask">
-            <rect width="1400" height="340" fill="white" />
-            <circle cx="700" cy="-124" r="230" fill="black" />
-          </mask>
+    <path
+      d="
+        M40 2
+        H1360
+        A38 38 0 0 1 1398 40
+        V300
+        M2 300
+        V40
+        A38 38 0 0 1 40 2
+      "
+      fill="none"
+      stroke="white"
+      stroke-width="5"
+      mask="url(#borderMask)" />
 
-          <!-- Clip only LOWER half of circle -->
-          <clipPath id="lowerCircle">
-            <rect x="0" y="0" width="1400" height="340" />
-          </clipPath>
-        </defs>
+    <circle
+      cx="700"
+      cy="-124"
+      r="230"
+      fill="none"
+      stroke="white"
+      stroke-width="5" />
+  </svg>
 
-        <!-- TOP + SIDES BORDER (no bottom, no circle overlap) -->
-        <path d="
-      M40 2
-      H1360
-      A38 38 0 0 1 1398 40
-      V300
+  <!-- ================= HERO CUT SECTION ================= -->
+  <section
+    class="hero-cut relative h-[340px]
+           bg-gradient-to-b from-[#B9CCFF] via-[#EAF1FF] to-[#f3f4f6]
+           px-12 pt-16 overflow-hidden
+           z-10 rounded-[40px]
+           max-md:h-auto max-md:px-6 max-md:pt-[7.5rem]">
 
-      M2 300
-      V40
-      A38 38 0 0 1 40 2
-    " fill="none" stroke="white" stroke-width="5" mask="url(#borderMask)" />
+    <!-- HEADER TEXT -->
+    <div
+      class="flex justify-between items-start
+             max-md:flex-col max-md:gap-4 max-md:text-center">
 
-        <!-- LOWER PART OF CIRCLE BORDER -->
-        <circle cx="700" cy="-124" r="230" fill="none" stroke="white" stroke-width="5" stroke-linecap="round"
-          stroke-linejoin="round" clip-path="url(#lowerCircle)" />
+      <h2 class="text-[32px] font-medium text-[#1A1A1A] max-md:text-[24px]">
+        Build, Promote & Grow<br />With N-Me
+      </h2>
 
-      </svg>
-
-
-      <!-- CUT BOX -->
-      <section class="hero-cut relative h-[340px]
-    bg-gradient-to-b from-[#B9CCFF] via-[#EAF1FF] to-[#f3f4f6]
-    px-12 pt-16 overflow-hidden  z-[99999] rounded-[40px]">
-
-        <div class="flex justify-between items-start">
-          <h2 class="text-[32px] font-medium text-[#1A1A1A]">
-            Build, Promote & Grow<br>With N-Me
-          </h2>
-
-          <p class="max-w-[380px] text-right text-[16px] text-[#1A1A1A]">
-            Strengthening growing brands with seamless design,
-            development, marketing support.
-          </p>
-        </div>
-
-        <div class="absolute bottom-0 left-0 w-full h-[80px]
-      bg-gradient-to-b from-transparent to-[#f3f4f6]">
-        </div>
-        <!-- FEATURE PILLS -->
-        <div class="relative mt-16 overflow-hidden">
-          <div class="flex gap-5 w-max marquee-track">
-
-            <!-- PILL -->
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/dm.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Digital Marketing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/gd.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Graphic Designing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/wd.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Web Development</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/seo.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">SEO</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/ud.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">UI/UX Designing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/ad.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">App Development</p>
-            </div>
-
-            <!-- DUPLICATE FOR MARQUEE LOOP -->
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/dm.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Digital Marketing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/gd.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Graphic Designing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/wd.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">Web Development</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/seo.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">SEO</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/ud.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">UI/UX Designing</p>
-            </div>
-
-            <div class="pill-neu flex items-center justify-center gap-[10px] w-[272px] h-[66px]">
-              <img src="./static/images/ad.png" class="w-[30px] h-[30px]" />
-              <p class="text-[20px] font-medium text-[#1A1A1A]">App Development</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <p
+        class="max-w-[380px] text-right text-[16px] text-[#1A1A1A]
+               max-md:text-center max-md:max-w-full">
+        Strengthening growing brands with seamless design,
+        development, marketing support.
+      </p>
     </div>
 
+   <!-- ================= FEATURE PILLS ================= -->
+<div class="relative mt-16 overflow-hidden max-md:mt-10">
+  <div class="pill-container marquee-track">
+    <!-- PILL 1 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/dm.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">Digital Marketing</p>
+    </div>
+
+    <!-- PILL 2 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/gd.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">Graphic Designing</p>
+    </div>
+
+    <!-- PILL 3 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/wd.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">Web Development</p>
+    </div>
+
+    <!-- PILL 4 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/seo.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">SEO</p>
+    </div>
+
+    <!-- PILL 5 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/ud.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">UI/UX Designing</p>
+    </div>
+
+    <!-- PILL 6 -->
+    <div class="pill-neu flex items-center justify-center gap-[10px]">
+      <img src="./static/images/ad.png" class="w-[30px] h-[30px]" />
+      <p class="text-[20px] font-medium max-md:text-[16px]">App Development</p>
+    </div>
+  </div>
+</div>
+
+  </section>
+</div>
 
 
 
 
 
 
-    <section id="circleSection">
-
-      <section id="targetCircle" class="relative w-[1400px] h-[820px] mx-auto mt-44 overflow-hidden">
-
-        <!-- OUTER RING -->
-        <div class="absolute left-1/2 top-1/2
-            w-[680px] h-[680px]
-            -translate-x-1/2 -translate-y-1/2
-            rounded-full border border-[#DCE1FF]
-            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
-
-          <div class="ring-glow animate-[spin-slow_18s_linear_infinite]"></div>
-        </div>
 
 
-        <!-- MIDDLE RING -->
-        <div class="absolute left-1/2 top-1/2
-            w-[520px] h-[520px]
-            -translate-x-1/2 -translate-y-1/2
-            rounded-full border border-[#DCE1FF]
-            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
-
-          <div class="ring-glow animate-[spin-slow_14s_linear_infinite]"></div>
-        </div>
+<section
+  id="circleSection"
+  class="relative w-full overflow-visible
+         max-md:mt-20 max-sm:mt-10">
 
 
-        <!-- INNER RING -->
-        <div id="circleCenter" class="absolute left-1/2 top-1/2
-            w-[360px] h-[360px]
-            -translate-x-1/2 -translate-y-1/2
-            rounded-full border border-[#DCE1FF]
-            shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
 
-          <div class="ring-glow animate-[spin-slow_10s_linear_infinite]"></div>
-        </div>
+      <section id="targetCircle" class="relative w-[355px] h-[513.88px] md:w-[1400px] md:h-[820px] mx-auto mt-0 md:mt-44 overflow-hidden">
+
+<!-- ================= OUTER RING ================= -->
+    <div class="absolute left-1/2 top-1/2
+      
+      w-[354.98px] h-[354.98px]
+      md:w-[680px] md:h-[680px]
+      -translate-x-1/2 -translate-y-1/2
+      rounded-full
+      border border-[#DCE1FF]
+      shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+      <div class="ring-glow animate-[spin-slow_18s_linear_infinite]"></div>
+    </div>
+
+    <!-- ================= MIDDLE RING ================= -->
+    <div class="absolute left-1/2 top-1/2
+      w-[280px] h-[280px]
+      
+      md:w-[520px] md:h-[520px]
+      -translate-x-1/2 -translate-y-1/2
+      rounded-full
+      border border-[#DCE1FF]
+      shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+      <div class="ring-glow animate-[spin-slow_14s_linear_infinite]"></div>
+    </div>
+
+    <!-- ================= INNER RING ================= -->
+    <div  id="circleCenter" class="absolute left-1/2 top-1/2
+      w-[180px] h-[180px]
+      sm:w-[220px] sm:h-[220px]
+      md:w-[360px] md:h-[360px]
+      -translate-x-1/2 -translate-y-1/2
+      rounded-full
+      border border-[#DCE1FF]
+      shadow-[inset_0_0_10px_rgba(111,111,112,0.25)]">
+      <div class="ring-glow animate-[spin-slow_10s_linear_infinite]"></div>
+    </div>
+
 
 
 
@@ -401,35 +472,36 @@
         </div>
 
         <!-- ================= USERS (TOP LEFT) ================= -->
-        <div class="absolute left-[180px] top-[80px]">
+        <div class="absolute top-[387px] left-[-5px] md:left-[180px] md:top-[80px] ">
 
           <!-- CARD -->
-          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 rounded-[24px] shadow-lg">
+          <div class="relative w-[198px] h-[70.67px] md:w-[273px] md:h-[111px] bg-white px-6 py-5 rounded-[24px] shadow-lg">
 
             <!-- TEXT -->
-            <h2 class="text-[#3C79FF] font-medium text-[20px]">Users</h2>
-            <p class="mt-1 text-[14px] font-medium text-[#1A1A1A] leading-relaxed pr-10 w-[240px]">
+            <h2 class="text-[#3C79FF] font-medium text-[12.16px] md:text-[20px]">Users</h2>
+            <p class="mt-1 text-[10.47px] md:text-[14px] font-medium text-[#1A1A1A] leading-relaxed pr-[5.5rem] md:pr-10 w-[240px]">
               Find nearby services quickly and safely.
             </p>
 
-            <!-- IMAGE (OVERLAPPING) -->
-            <div class="absolute -right-20 top-1/2 -translate-y-1/2">
-              <img src="./static/images/u.jpg" class="w-[120px] h-[120px]
-        rounded-full
-        border-[10px] border-white
-        shadow-md object-cover" />
-            </div>
+            <div class="absolute -right-20 top-1/2 -translate-y-1/2 max-md:hidden">
+  <img src="./static/images/u.jpg"
+    class="w-[120px] h-[120px]
+           rounded-full
+           border-[10px] border-white
+           shadow-md object-cover" />
+</div>
+
 
           </div>
 
         </div>
 
 
-        <div class="absolute right-[250px] top-[30px]  z-[99999]  ">
+        <div class="absolute right-[185px] top-[135px] md:right-[250px] md:top-[30px]  z-[99999]  ">
           <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
 
             <!-- IMAGE -->
-            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2 max-md:hidden">
               <img src="./static/images/bo.jpg"
                 class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
             </div>
@@ -450,7 +522,7 @@
           <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
 
             <!-- IMAGE -->
-            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2 max-md:hidden">
               <img src="./static/images/jr.jpg"
                 class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
             </div>
@@ -469,10 +541,10 @@
 
 
         <div class="absolute right-[300px] bottom-[100px] z-[99999]">
-          <div class="relative w-[273px] h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
+          <div class="relative w-[198px] h-[66.34px] md:w-[273px] md:h-[111px] bg-white px-6 py-5 pl-14 rounded-[24px] shadow-lg">
 
             <!-- IMAGE -->
-            <div class="absolute -left-20 top-1/2 -translate-y-1/2">
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2 max-md:hidden">
               <img src="./static/images/so.jpg"
                 class="w-[120px] h-[120px] rounded-full border-[10px] border-white shadow-md object-cover" />
             </div>
@@ -503,7 +575,7 @@
             </p>
 
             <!-- IMAGE (OVERLAPPING) -->
-            <div class="absolute -right-20 top-1/2 -translate-y-1/2">
+            <div class="absolute -right-20 top-1/2 -translate-y-1/2 max-md:hidden">
               <img src="./static/images/sp.jpg" class="w-[120px] h-[120px]
         rounded-full
         border-[10px] border-white
