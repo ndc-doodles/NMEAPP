@@ -17,52 +17,25 @@
 <body class="bg-[#f3f4f6]">
 
 <!-- ================= TOP VIDEO HERO ================= -->
-<div class="relative max-w-[1400px] mx-auto mt-4 h-[506px] md:h-[720px] overflow-hidden rounded-[40px]">
+<div
+  class="hero-border relative max-w-[363px] md:max-w-[1400px] mx-auto mt-4 h-[720px]
+         overflow-hidden rounded-[40px]">
 
-  <!-- TOP BORDER (SOLID) -->
-  <div class="absolute top-0 left-0 w-full h-[5px]
-              bg-white
-              rounded-tl-[40px] rounded-tr-[40px]
-              z-40">
-  </div>
 
-  <!-- LEFT BORDER (FADE DOWN) -->
-  <div class="absolute top-0 left-0 w-[5px] h-full
-              rounded-tl-[40px]
-              bg-gradient-to-b
-              from-white
-              via-white/60
-              to-transparent
-              z-40">
-  </div>
 
- <!-- RIGHT BORDER (CORNER + FADE FIXED) -->
-<div class="absolute top-0 right-0 w-[5px] h-full z-40 pointer-events-none">
 
-  <!-- CORNER CAP (SOLID) -->
-  <div class="absolute top-0 right-0 w-full h-[40px]
-              bg-white rounded-tr-[40px]">
-  </div>
 
-  <!-- FADE BODY -->
-  <div class="absolute top-[40px] right-0 w-full h-[calc(100%-40px)]
-              bg-gradient-to-b
-              from-white
-              via-white/60
-              to-transparent">
-  </div>
 
+<!-- GRADIENT BACKGROUND -->
+<!-- GRADIENT BACKGROUND (CLIPPED PROPERLY) -->
+<div
+  class="absolute inset-0 z-0 rounded-[40px] overflow-hidden bg-move-box"
+  style="background: linear-gradient(135deg, #E4EEFF, #7D99FF);">
 </div>
 
+<!-- SHIMMER / SOFT LIGHT -->
+<div class="absolute inset-0 shimmer opacity-30 z-10 pointer-events-none"></div>
 
-  <!-- VIDEO BACKGROUND -->
-  <video autoplay muted loop playsinline
-    class="absolute inset-0 w-full h-full object-cover z-0">
-    <source src="./static/images/bg-video.mp4" type="video/mp4" />
-  </video>
-
-  <!-- GLASS OVERLAY -->
-  <div class="absolute inset-0 bg-white/60 z-10"></div>
 
   <!-- 🔥 PERFECT BOTTOM BLEND (NO EDGE VISIBLE) -->
   <div class="absolute bottom-0 left-0 w-full h-48
@@ -77,67 +50,72 @@
   <div class="relative z-50 p-6 md:p-10 h-full flex flex-col">
 
     
-        <!-- NAVBAR -->
-        <nav class="flex justify-between items-center w-full">
+                <!-- NAVBAR -->
+<nav class="flex justify-between items-center w-full relative">
 
-          <!-- Logo Left -->
-          <img src="./static/images/logo.png" class="h-12" />
+  <!-- Logo -->
+  <img src="./static/images/logo.png" class="h-12" />
 
-          <div class="flex items-center gap-2">
+  <div class="flex items-center gap-3">
 
-            <!-- NAV LINKS -->
-            <ul class="hidden md:flex gap-10 text-[#1A1A1A]
-            px-10 py-5 rounded-full
-            bg-white/40 backdrop-blur-xl border border-white/60">
+    <!-- DESKTOP NAV -->
+    <ul
+      class="hidden md:flex gap-10 text-[#1A1A1A]
+             px-10 py-5 rounded-full
+             bg-white/40 backdrop-blur-xl
+             border border-white/60">
 
-              <li>
-                <a href="home.html" class="text-blue-600 font-semibold text-[16px]">
-                  Home
-                </a>
-              </li>
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="about.html" class="text-blue-600 font-semibold">About</a></li>
+      <li><a href="blog.html" class="hover:text-blue-600">Blogs</a></li>
+      <li><a href="faq.html" class="hover:text-blue-600">FAQs</a></li>
+      <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+    </ul>
 
-              <li>
-                <a href="about.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  About
-                </a>
-              </li>
+    <!-- MOBILE HAMBURGER -->
+    <button id="menuBtn"
+      class="md:hidden flex flex-col justify-center items-center
+             w-12 h-12 rounded-xl
+             backdrop-blur-xl bg-[#3C49FF]
+             shadow-lg border border-white/30 hamburger">
+      <span class="hamburger-line line-1 w-6 h-0.5 bg-white rounded-full mb-1.5"></span>
+      <span class="hamburger-line line-2 w-6 h-0.5 bg-white rounded-full mb-1.5"></span>
+      <span class="hamburger-line line-3 w-6 h-0.5 bg-white rounded-full"></span>
+    </button>
 
-              <li>
-                <a href="blog.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Blogs
-                </a>
-              </li>
+    <!-- CHAT ICON (DESKTOP ONLY) -->
+    <div
+      class="hidden md:flex h-12 w-12 rounded-full
+             bg-gradient-to-br from-blue-500 to-blue-700
+             shadow-md items-center justify-center">
+      <img src="./static/images/icon1.png" class="w-6" />
+    </div>
 
-              <li>
-                <a href="faq.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  FAQs
-                </a>
-              </li>
+  </div>
 
-              <li>
-                <a href="services.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Services
-                </a>
-              </li>
+  <!-- MOBILE MENU -->
+  <div
+    id="mobileMenu"
+    class="absolute top-[70px] left-1/2 -translate-x-1/2
+           w-[335px] h-[275px]
+           md:hidden
+           backdrop-blur-xl bg-white/30
+           rounded-2xl shadow-2xl
+           border border-white/60
+           origin-top scale-y-0 opacity-0
+           pointer-events-none
+           transition-all duration-300 z-50 py-2">
 
-              <li>
-                <a href="contact.html" class="hover:text-blue-600 transition-colors text-[16px]">
-                  Contact
-                </a>
-              </li>
+    <a href="index.html" class="font-manrope text-[16px] px-6 py-3 hover:text-blue-600">Home</a>
+    <a href="about.html" class="font-manrope text-[16px] block px-6 py-3 text-blue-600">About</a>
+    <a href="blog.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Blogs</a>
+    <a href="faq.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">FAQs</a>
+    <a href="services.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Services</a>
+    <a href="contact.html" class="font-manrope text-[16px] block px-6 py-3 hover:text-blue-600">Contact</a>
+  </div>
 
-            </ul>
-
-
-            <!-- CHAT ICON -->
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700
-                            shadow-md flex items-center justify-center">
-              <img src="./static/images/icon1.png" class="w-6" />
-            </div>
-
-          </div>
-        </nav>
-
+</nav>
     <!-- HERO TEXT -->
     <div class="flex flex-col items-center justify-center text-center mt-32  mx-auto">
       <h2 class="text-[26.83px] md:text-[48px] font-semibold text-[#1A1A1A]">
@@ -673,7 +651,7 @@
 </section>
 
 
-
+<script src="./static/js/script.js"></script>
 
 </body>
 </html>
