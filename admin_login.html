@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+
+</head>
+<body class="bg-[#F6F9F8]">
+
+<div class="flex min-h-screen">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="w-64 bg-white shadow-lg flex flex-col">
+
+    <!-- Logo -->
+    <div class="h-20 flex items-center justify-center border-b">
+      <img src="/static/images/logo.png" alt="Logo" class="h-10">
+    </div>
+
+<nav class="flex-1 px-4 py-6 space-y-2">
+  <!-- Dashboard -->
+  <a onclick="showPage('dashboard', this)" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 cursor-pointer transition">
+    <i class="fa-solid fa-house"></i>
+    Dashboard
+  </a>
+
+  <!-- Blogs -->
+  <a onclick="showPage('blogs', this)" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 cursor-pointer transition">
+    <i class="fa-solid fa-pen-nib text-lg"></i>
+    Blogs
+  </a>
+
+  <!-- Added Blogs -->
+  <a onclick="showPage('addedBlogs', this)" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 cursor-pointer transition">
+    <i class="fa-solid fa-newspaper text-lg"></i>
+    Added Blogs
+  </a>
+
+  <!-- Enquiry -->
+  <a onclick="showPage('enquiry', this)" class="nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 cursor-pointer transition">
+    <i class="fa-solid fa-envelope-open-text text-lg"></i>
+    Enquiry
+  </a>
+</nav>
+
+
+
+
+    <!-- Bottom -->
+    <div class="p-4 border-t">
+      <a href="#" class="flex items-center gap-3 text-gray-600 hover:text-red-500">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+      </a>
+    </div>
+
+  </aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="flex-1 bg-[#F6F9F8]">
+<div id="dashboard" class="page">
+  <!-- HERO IMAGE HEADER -->
+  <section  class=" relative h-[320px] rounded-[32px] overflow-hidden mx-6 mt-6">
+
+<img
+  src="./static/images/admin_bg2.png"
+  class="absolute inset-0 w-full h-full object-cover opacity-40"
+  alt="Dashboard Background"
+/>
+
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/10"></div>
+
+   <!-- HERO TEXT OVER IMAGE -->
+<div class="relative z-10 h-full flex items-center px-8">
+
+ <div class="max-w-2xl">
+
+  <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 leading-tight">
+    Find What You Need. Nearby.
+  </h1>
+
+  <p class="mt-4 text-lg text-gray-800">
+    N-ME helps you discover nearby facilities, services and essential places
+    around you  quickly, accurately and effortlessly.
+  </p>
+
+  <p class="mt-3 text-gray-600 text-sm">
+    Smart location discovery, designed for everyday needs.
+  </p>
+
+</div>
+
+
+</div>
+
+
+  </section>
+<section class="p-6">
+  <div class="bg-white rounded-3xl shadow-sm border border-gray-100">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 py-5 border-b">
+      <h2 class="text-lg font-semibold text-gray-800">Team Members</h2>
+
+      <button
+        onclick="openModal()"
+        class="bg-gray-900 text-white px-5 py-2.5 rounded-xl text-sm hover:bg-gray-800 transition">
+        + Add Member
+      </button>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto">
+      <table class="w-full border-separate border-spacing-y-2 text-sm">
+
+        <thead>
+          <tr class="text-gray-500">
+            <th class="text-left px-6 py-3">Member</th>
+            <th class="text-left px-6 py-3">Designation</th>
+            <th class="text-right px-6 py-3">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="teamTable">
+
+          <!-- Row -->
+          <tr class="bg-gray-50 hover:bg-gray-100 transition rounded-xl">
+
+            <td class="px-6 py-4">
+              <div class="flex items-center gap-4">
+
+                <!-- Photo -->
+                <label class="relative cursor-pointer">
+                  <img
+                    src="./static/images/user.png"
+                    class="h-11 w-11 rounded-full object-cover ring-2 ring-white shadow"
+                  >
+                  <input type="file" class="hidden" onchange="previewPhoto(this)">
+                </label>
+
+                <!-- Name -->
+                <input
+                  class="bg-transparent font-medium text-gray-800 outline-none border-b border-transparent focus:border-gray-300"
+                  value="John Doe"
+                  disabled
+                >
+              </div>
+            </td>
+
+            <!-- Designation -->
+            <td class="px-6 py-4">
+              <input
+                class="bg-transparent text-gray-600 outline-none border-b border-transparent focus:border-gray-300"
+                value="Project Manager"
+                disabled
+              >
+            </td>
+
+            <!-- Actions -->
+            <td class="px-6 py-4 text-right">
+              <div class="flex justify-end gap-3">
+
+                <button
+                  onclick="enableEdit(this)"
+                  class="p-2 rounded-lg hover:bg-white shadow-sm text-gray-500 hover:text-blue-600 transition">
+                  ✏️
+                </button>
+
+                <button
+                  onclick="deleteRow(this)"
+                  class="p-2 rounded-lg hover:bg-white shadow-sm text-gray-500 hover:text-red-500 transition">
+                  🗑️
+                </button>
+
+              </div>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div
+  id="memberModal"
+  class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+
+  <div class="bg-white rounded-2xl p-6 w-[360px]">
+
+    <h3 class="text-lg font-semibold mb-4">Add Team Member</h3>
+
+    <!-- PHOTO -->
+    <label class="flex flex-col items-center gap-2 mb-4 cursor-pointer">
+      <img
+        id="modalPreview"
+        src="./static/images/user.png"
+        class="h-20 w-20 rounded-full object-cover border"
+      >
+      <span class="text-xs text-gray-500">Click to upload photo</span>
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        class="hidden"
+        onchange="previewModalPhoto(this)"
+      >
+    </label>
+
+    <input
+      id="nameInput"
+      type="text"
+      placeholder="Name"
+      class="w-full mb-3 px-3 py-2 border rounded-lg">
+
+    <input
+      id="designationInput"
+      type="text"
+      placeholder="Designation"
+      class="w-full mb-4 px-3 py-2 border rounded-lg">
+
+    <div class="flex justify-end gap-3">
+      <button onclick="closeModal()" class="text-gray-500">Cancel</button>
+      <button onclick="addMember()" class="bg-black text-white px-4 py-2 rounded-lg">
+        Add
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function enableEdit(el) {
+  const row = el.closest('tr');
+  const inputs = row.querySelectorAll('input[type="text"]');
+
+  inputs.forEach(input => {
+    input.disabled = !input.disabled;
+    input.classList.toggle('border-transparent');
+  });
+}
+
+function previewPhoto(input) {
+  const img = input.previousElementSibling;
+  if (input.files[0]) {
+    img.src = URL.createObjectURL(input.files[0]);
+  }
+}
+
+function previewModalPhoto(input) {
+  const preview = document.getElementById('modalPreview');
+  preview.src = URL.createObjectURL(input.files[0]);
+}
+
+function deleteRow(btn) {
+  btn.closest('tr').remove();
+}
+
+function openModal() {
+  document.getElementById('memberModal').classList.remove('hidden');
+  document.getElementById('memberModal').classList.add('flex');
+}
+
+function closeModal() {
+  document.getElementById('memberModal').classList.add('hidden');
+  document.getElementById('memberModal').classList.remove('flex');
+}
+
+function addMember() {
+  const name = nameInput.value;
+  const designation = designationInput.value;
+  const photo = modalPreview.src;
+
+  if (!name || !designation) return;
+
+  teamTable.insertAdjacentHTML('beforeend', `
+    <tr class="border-b">
+      <td class="py-4 flex items-center gap-3">
+        <label class="cursor-pointer">
+          <img src="${photo}" class="h-10 w-10 rounded-full object-cover">
+          <input type="file" accept="image/*" class="hidden" onchange="previewPhoto(this)">
+        </label>
+        <input class="bg-transparent border-b border-transparent outline-none" value="${name}" disabled>
+      </td>
+      <td>
+        <input class="bg-transparent border-b border-transparent outline-none" value="${designation}" disabled>
+      </td>
+      <td class="text-right space-x-3">
+        <button onclick="enableEdit(this)" class="text-blue-500">✏️</button>
+        <button onclick="deleteRow(this)" class="text-red-500">🗑️</button>
+      </td>
+    </tr>
+  `);
+
+  closeModal();
+  modalPreview.src = "./static/images/user.png";
+  nameInput.value = '';
+  designationInput.value = '';
+}
+</script>
+
+</div>
+
+
+
+
+
+
+
+<section id="blogs" class="page hidden p-6">
+  <div class="bg-white rounded-3xl p-6 shadow">
+    <h2 class="text-xl font-semibold mb-4">Create Blog</h2>
+
+    <input placeholder="Blog Title"
+      class="w-full mb-4 px-4 py-2 border rounded-lg">
+
+    <textarea placeholder="Blog Content"
+      class="w-full h-40 px-4 py-2 border rounded-lg"></textarea>
+
+    <button class="mt-4 bg-black text-white px-6 py-2 rounded-lg">
+      Publish Blog
+    </button>
+  </div>
+</section>
+
+<section id="addedBlogs" class="page hidden p-6">
+  <div class="bg-white rounded-3xl p-6 shadow">
+    <h2 class="text-xl font-semibold mb-4">Added Blogs</h2>
+
+    <table class="w-full text-sm">
+      <thead class="text-gray-500 border-b">
+        <tr>
+          <th class="py-3 text-left">Title</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="py-4">Top Nearby Hospitals</td>
+          <td class="text-green-600">Published</td>
+          <td>Jan 09, 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="enquiry" class="page hidden p-6">
+  <div class="bg-white rounded-3xl p-6 shadow">
+    <h2 class="text-xl font-semibold mb-4">User Enquiries</h2>
+
+    <div class="space-y-4">
+      <div class="p-4 border rounded-xl">
+        <p class="font-medium">Rahul Sharma</p>
+        <p class="text-sm text-gray-600">
+          Need nearby emergency services.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+function showPage(pageId, element) {
+  // Highlight the clicked link
+  const links = document.querySelectorAll('.nav-link');
+  links.forEach(link => {
+    link.classList.remove('bg-blue-600/30', 'text-blue-600');
+  });
+  element.classList.add('bg-blue-600/30', 'text-blue-600');
+
+  // Show the selected page and hide others
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => {
+    if (page.id === pageId) {
+      page.classList.remove('hidden');
+    } else {
+      page.classList.add('hidden');
+    }
+  });
+}
+
+// Set default page and highlight on load
+window.addEventListener('DOMContentLoaded', () => {
+  const defaultLink = document.querySelector('.nav-link'); // first link = dashboard
+  showPage('dashboard', defaultLink);
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+</body>
+</html>
